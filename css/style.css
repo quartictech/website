@@ -46,6 +46,14 @@
 		border-bottom: dotted 1px;
 	}
 
+    /* Used to offset the anchors to deal with fixed bar at the top */
+    a.anchor {
+        display: block;
+        position: relative;
+        top: -67.2px;
+        visibility: hidden;
+    }
+
 		a:hover {
 			border-bottom-color: transparent;
 		}
