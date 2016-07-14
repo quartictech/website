@@ -8,6 +8,10 @@
 */
 
 /* Basic */
+    img.headshot {
+        height: 160px;
+    }
+
 
 	body, #skel-layers-wrapper {
 		background: #f3f6fa;
@@ -809,6 +813,7 @@
 	@-ms-keyframes reveal-banner { 0% { opacity: 0; } 100% { opacity: 1; } }
 	@keyframes reveal-banner { 0% { opacity: 0; } 100% { opacity: 1; } }
 
+
 	#banner {
 		background-attachment: scroll, scroll, scroll, fixed;
 		background-color: #645862;
@@ -1107,3 +1112,5 @@
 			display: inline-block;
 			width: 5em;
 		}
+
+
