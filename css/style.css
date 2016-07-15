@@ -12,6 +12,10 @@
         height: 160px;
     }
 
+    h2.centered {
+        text-align: center;
+    }
+
 
 	body, #skel-layers-wrapper {
 		background: #f3f6fa;
