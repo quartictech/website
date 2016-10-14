@@ -1,5 +1,5 @@
 @import url(font-awesome.min.css);
-@import url("https://fonts.googleapis.com/css?family=Roboto:400,700");
+@import url("https://fonts.googleapis.com/css?family=Lato:400,700");
 
 /*
 	Eventually by HTML5 UP
@@ -292,7 +292,7 @@
 
 	body, input, select, textarea {
 		color: rgba(255, 255, 255, 0.75);
-		font-family: "Roboto", sans-serif;
+		font-family: "Lato", sans-serif;
 		font-size: 16pt;
 		font-weight: 400;
 		letter-spacing: -0.01em;
@@ -366,11 +366,12 @@
 
 	p {
 		margin: 0 0 2em 0;
+		width: 50%;
 	}
 
 	h1, h2, h3, h4, h5, h6 {
 		color: #fff;
-		font-weight: 700;
+		font-weight: 400;
 		line-height: 1em;
 		margin: 0 0 1em 0;
 	}
@@ -628,7 +629,7 @@
 			}
 
 			form .message.success {
-				color: #1cb495;
+				color: #af005f;
 			}
 
 				form .message.success:before {
@@ -790,7 +791,7 @@
 			-ms-animation: focus 0.1s;
 			animation: focus 0.1s;
 			background-color: rgba(255, 255, 255, 0.125);
-			border-color: #1cb495;
+			border-color: #af005f;
 		}
 
 	.select-wrapper {
@@ -952,7 +953,7 @@
 		-webkit-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, opacity 0.2s ease-in-out;
 		-ms-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, opacity 0.2s ease-in-out;
 		transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, opacity 0.2s ease-in-out;
-		background-color: #1cb495;
+		background-color: #af005f;
 		border-radius: 6px;
 		border: 0;
 		color: #ffffff !important;
@@ -972,7 +973,7 @@
 		input[type="button"]:hover,
 		button:hover,
 		.button:hover {
-			background-color: #1fcaa7;
+			background-color: #d33682;
 		}
 
 		input[type="submit"]:active,
@@ -980,7 +981,7 @@
 		input[type="button"]:active,
 		button:active,
 		.button:active {
-			background-color: #199e83;
+			background-color: #d33682;
 		}
 
 		input[type="submit"].disabled, input[type="submit"]:disabled,
