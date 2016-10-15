@@ -562,13 +562,13 @@ nav ul {
 nav ul li {
 	display: inline-block;
 	margin-left: 1em;
+	text-transform: uppercase;
 }
 
 nav ul li a, nav ul li span {
 	border: 0;
 	color: inherit;
 	display: inline-block;
-	text-transform: uppercase;
 	font-weight: bold;
 	height: inherit;
 	line-height: inherit;
