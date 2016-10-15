@@ -531,6 +531,16 @@ nav {
 	position: absolute;
 	right: 2em;
 	top: 2em;
+
+	-moz-transition: opacity 0.5s ease-in-out;
+	-webkit-transition: opacity 0.5s ease-in-out;
+	-ms-transition: opacity 0.5s ease-in-out;
+	transition: opacity 0.5s ease-in-out;
+	opacity: 0.5;
+}
+
+nav:hover {
+	opacity: 1;
 }
 
 nav ul {
