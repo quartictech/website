@@ -474,12 +474,24 @@
 		text-align: center;
 	}
 
-	header p {
+	p {
 		color: rgba(255, 255, 255, 0.5);
 		position: relative;
-		width: 75%;
 		margin: 0 0 1.5em 0;
 	}
+
+	@media screen and (max-width: 1680px) {
+		p {
+			width: 60%;
+		}
+	}
+
+	@media screen and (max-width: 1000px) {
+		p {
+			width: 100%;
+		}
+	}
+
 
 	header h2 + p {
 		font-size: 1.25em;
