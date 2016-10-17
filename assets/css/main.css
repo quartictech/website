@@ -480,7 +480,7 @@
 		margin: 0 0 1.5em 0;
 	}
 
-	@media screen and (max-width: 1680px) {
+	@media screen and (max-width: 3000px) {
 		p {
 			width: 60%;
 		}
