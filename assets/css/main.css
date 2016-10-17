@@ -478,9 +478,10 @@
 		color: rgba(255, 255, 255, 0.5);
 		position: relative;
 		margin: 0 0 1.5em 0;
+		width: 40%;
 	}
 
-	@media screen and (max-width: 3000px) {
+	@media screen and (max-width: 1680px) {
 		p {
 			width: 60%;
 		}
