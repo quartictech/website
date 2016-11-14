@@ -1369,6 +1369,24 @@
 		}
 	}
 
+	/* Main */
+
+	#main {
+		background-attachment: fixed;
+		background-color: _palette(accent2);
+		background-image: url('../../images/map.png');
+		background-position: center center;
+		background-size: cover;
+		box-shadow: 0 0.25em 0.5em 0 rgba(0,0,0,0.25);
+		z-index: (_misc(max-spotlight) + 1);
+
+		.container {
+			position: relative;
+			vertical-align: middle;
+			z-index: 1;
+		}
+	}
+
 /* Banner */
 
 	#banner {
@@ -1389,17 +1407,6 @@
 			height: 100vh;
 			vertical-align: middle;
 			width: 1%;
-		}
-
-		&:after {
-			@include vendor('background-image', ('linear-gradient(top, #{_palette(bg-transparent)}, #{_palette(bg-transparent)})', 'url("images/overlay.png");'));
-			content: '';
-			display: block;
-			height: 100%;
-			left: 0;
-			position: absolute;
-			top: 0;
-			width: 100%;
 		}
 
 		.content {
