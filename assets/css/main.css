@@ -2469,8 +2469,6 @@ body.landing #header {
 #main {
   background-attachment: fixed;
   background-color: #272833;
-  background-image: url("../../images/map.png");
-  background-position: center center;
   background-size: cover;
   box-shadow: 0 0.25em 0.5em 0 rgba(0, 0, 0, 0.25);
   z-index: 21; }
@@ -2483,8 +2481,6 @@ body.landing #header {
 #banner {
   background-attachment: fixed;
   background-color: #272833;
-  background-image: url("../../images/map.png");
-  background-position: center center;
   background-size: cover;
   box-shadow: 0 0.25em 0.5em 0 rgba(0, 0, 0, 0.25);
   min-height: 100vh;
