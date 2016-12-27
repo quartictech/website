@@ -1207,7 +1207,7 @@ body, input, select, textarea {
   color: rgba(0, 0, 0, 0.75);
   font-family: "Roboto", Helvetica, sans-serif;
   font-size: 15pt;
-  font-weight: 100;
+  font-weight: 300;
   line-height: 1.75em; }
 
 a {
@@ -1674,7 +1674,7 @@ input[type="radio"] {
     cursor: pointer;
     display: inline-block;
     font-size: 1em;
-    font-weight: 100;
+    font-weight: 300;
     padding-left: 2.55em;
     padding-right: 0.75em;
     position: relative; }
@@ -2028,7 +2028,7 @@ input[type="button"],
   .button.special {
     background-color: #dd137b;
     box-shadow: none;
-    color: #000000 !important; }
+    color: #e3e2d9 !important; }
     input[type="submit"].special:hover,
     input[type="reset"].special:hover,
     input[type="button"].special:hover,
@@ -2151,7 +2151,7 @@ input[type="button"],
     -webkit-transition: -webkit-transform 1s ease, opacity 1s ease;
     -ms-transition: -ms-transform 1s ease, opacity 1s ease;
     transition: transform 1s ease, opacity 1s ease;
-    background: rgba(232, 231, 223, 0.85);
+    background: rgba(232, 231, 223, 0.95);
     border-style: solid;
     opacity: 1;
     position: absolute; }

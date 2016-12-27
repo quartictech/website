@@ -859,7 +859,7 @@
         &.special {
             background-color: _palette(accent1);
             box-shadow: none;
-            color: _palette(fg-bold) !important;
+            color: _palette(fg-button) !important;
 
             &:hover {
                 background-color: lighten(_palette(accent1), 5);
