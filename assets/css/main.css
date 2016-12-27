@@ -1191,7 +1191,7 @@ body {
     margin-left: 8.33333%; } }
 /* Basic */
 html, body {
-  background: #fff; }
+  background: #f3f3ef; }
 
 body.is-loading *, body.is-loading *:before, body.is-loading *:after {
   -moz-animation: none !important;
@@ -1343,14 +1343,14 @@ pre {
     -ms-transform: scale(1) rotate(0deg);
     transform: scale(1) rotate(0deg); }
   99% {
-    color: #fff;
+    color: #f3f3ef;
     z-index: 100001;
     -moz-transform: scale(0.5) rotate(360deg);
     -webkit-transform: scale(0.5) rotate(360deg);
     -ms-transform: scale(0.5) rotate(360deg);
     transform: scale(0.5) rotate(360deg); }
   100% {
-    color: #fff;
+    color: #f3f3ef;
     z-index: -1;
     -moz-transform: scale(0.5) rotate(360deg);
     -webkit-transform: scale(0.5) rotate(360deg);
@@ -1365,14 +1365,14 @@ pre {
     -ms-transform: scale(1) rotate(0deg);
     transform: scale(1) rotate(0deg); }
   99% {
-    color: #fff;
+    color: #f3f3ef;
     z-index: 100001;
     -moz-transform: scale(0.5) rotate(360deg);
     -webkit-transform: scale(0.5) rotate(360deg);
     -ms-transform: scale(0.5) rotate(360deg);
     transform: scale(0.5) rotate(360deg); }
   100% {
-    color: #fff;
+    color: #f3f3ef;
     z-index: -1;
     -moz-transform: scale(0.5) rotate(360deg);
     -webkit-transform: scale(0.5) rotate(360deg);
@@ -1387,14 +1387,14 @@ pre {
     -ms-transform: scale(1) rotate(0deg);
     transform: scale(1) rotate(0deg); }
   99% {
-    color: #fff;
+    color: #f3f3ef;
     z-index: 100001;
     -moz-transform: scale(0.5) rotate(360deg);
     -webkit-transform: scale(0.5) rotate(360deg);
     -ms-transform: scale(0.5) rotate(360deg);
     transform: scale(0.5) rotate(360deg); }
   100% {
-    color: #fff;
+    color: #f3f3ef;
     z-index: -1;
     -moz-transform: scale(0.5) rotate(360deg);
     -webkit-transform: scale(0.5) rotate(360deg);
@@ -1409,14 +1409,14 @@ pre {
     -ms-transform: scale(1) rotate(0deg);
     transform: scale(1) rotate(0deg); }
   99% {
-    color: #fff;
+    color: #f3f3ef;
     z-index: 100001;
     -moz-transform: scale(0.5) rotate(360deg);
     -webkit-transform: scale(0.5) rotate(360deg);
     -ms-transform: scale(0.5) rotate(360deg);
     transform: scale(0.5) rotate(360deg); }
   100% {
-    color: #fff;
+    color: #f3f3ef;
     z-index: -1;
     -moz-transform: scale(0.5) rotate(360deg);
     -webkit-transform: scale(0.5) rotate(360deg);
@@ -1650,7 +1650,7 @@ textarea {
   padding: 0.75em 1em; }
 
 select option {
-  background-color: #fff;
+  background-color: #f3f3ef;
   color: #000000; }
 select:focus::-ms-value {
   background: transparent; }
@@ -1773,10 +1773,10 @@ input[type="radio"] + label:before {
       font-weight: normal;
       text-transform: none !important; }
     .icon.alt:before {
-      color: #fff !important;
+      color: #f3f3ef !important;
       text-shadow: 1px 0 0 #000000, -1px 0 0 #000000, 0 1px 0 #000000, 0 -1px 0 #000000; }
   .icon.major {
-    background: #fff;
+    background: #f3f3ef;
     border-radius: 100%;
     cursor: default;
     display: inline-block;
@@ -1797,7 +1797,7 @@ input[type="radio"] + label:before {
         font-weight: normal;
         text-transform: none !important; }
       .icon.major.alt:before {
-        color: #fff !important;
+        color: #f3f3ef !important;
         text-shadow: 1px 0 0 #000000, -1px 0 0 #000000, 0 1px 0 #000000, 0 -1px 0 #000000; }
 
 /* Image */
@@ -2028,7 +2028,7 @@ input[type="button"],
   .button.special {
     background-color: #dd137b;
     box-shadow: none;
-    color: #fff !important; }
+    color: #f3f3ef !important; }
     input[type="submit"].special:hover,
     input[type="reset"].special:hover,
     input[type="button"].special:hover,
@@ -2151,7 +2151,7 @@ input[type="button"],
     -webkit-transition: -webkit-transform 1s ease, opacity 1s ease;
     -ms-transition: -ms-transform 1s ease, opacity 1s ease;
     transition: transform 1s ease, opacity 1s ease;
-    background: rgba(255, 255, 255, 0.95);
+    background: rgba(243, 243, 239, 0.95);
     border-style: solid;
     opacity: 1;
     position: absolute; }
@@ -2318,7 +2318,7 @@ body.is-touch .spotlight {
 
 /* Dropotron */
 .dropotron {
-  background: rgba(255, 255, 255, 0.965);
+  background: rgba(243, 243, 239, 0.965);
   border-radius: 4px;
   box-shadow: 0 0.075em 0.35em 0 rgba(0, 0, 0, 0.125);
   list-style: none;
@@ -2346,7 +2346,7 @@ body.is-touch .spotlight {
       -webkit-transform: rotate(45deg);
       -ms-transform: rotate(45deg);
       transform: rotate(45deg);
-      background: #fff;
+      background: #f3f3ef;
       content: '';
       display: block;
       height: 1em;
@@ -2363,7 +2363,7 @@ body.landing .dropotron.level-0 {
   padding-top: 3.5em; }
 
 #header {
-  background: rgba(255, 255, 255, 0.965);
+  background: rgba(243, 243, 239, 0.965);
   box-shadow: 0 0 0.25em 0 rgba(0, 0, 0, 0.25);
   cursor: default;
   height: 3.5em;
@@ -2416,7 +2416,7 @@ body.landing #header {
 /* Main */
 #main {
   background-attachment: fixed;
-  background-color: #fff;
+  background-color: #f3f3ef;
   background-size: cover;
   box-shadow: 0 0.25em 0.5em 0 rgba(0, 0, 0, 0.25);
   z-index: 21; }
@@ -2428,7 +2428,7 @@ body.landing #header {
 /* Banner */
 #banner {
   background-attachment: fixed;
-  background-color: #fff;
+  background-color: #f3f3ef;
   background-size: cover;
   box-shadow: 0 0.25em 0.5em 0 rgba(0, 0, 0, 0.25);
   min-height: 100vh;
@@ -2476,7 +2476,7 @@ body.is-touch #banner {
 
 /* Footer */
 #footer {
-  background: #fff;
+  background: #f3f3ef;
   padding: 6em 0;
   text-align: center; }
   #footer .icons .icon.alt {
@@ -2489,7 +2489,7 @@ body.is-touch #banner {
       font-weight: normal;
       text-transform: none !important; }
     #footer .icons .icon.alt:before {
-      color: #fff !important;
+      color: #f3f3ef !important;
       text-shadow: 1px 0 0 rgba(0, 0, 0, 0.5), -1px 0 0 rgba(0, 0, 0, 0.5), 0 1px 0 rgba(0, 0, 0, 0.5), 0 -1px 0 rgba(0, 0, 0, 0.5); }
   #footer .copyright {
     color: rgba(0, 0, 0, 0.5);
@@ -2562,7 +2562,7 @@ body.is-touch #banner {
       max-height: 40vh;
       overflow: hidden; }
     .spotlight .content {
-      background-color: #fff;
+      background-color: #f3f3ef;
       border-width: 0 !important;
       border-top-width: 0.35em !important;
       bottom: auto !important;
@@ -2699,7 +2699,7 @@ body.is-touch #banner {
     top: 0;
     width: 100%;
     z-index: 10001;
-    background: #fff;
+    background: #f3f3ef;
     box-shadow: 0 0.125em 0.125em 0 rgba(0, 0, 0, 0.125); }
     #titleBar .title {
       color: #000000;
@@ -2729,7 +2729,7 @@ body.is-touch #banner {
         text-transform: none !important; }
       #titleBar .toggle:before {
         background: #dd137b;
-        color: #fff;
+        color: #f3f3ef;
         content: '\f0c9';
         display: block;
         font-size: 18px;
@@ -2762,7 +2762,7 @@ body.is-touch #banner {
     top: 0;
     width: 275px;
     z-index: 10002;
-    background: #fafafa;
+    background: #efefe9;
     padding: 0.75em 1.25em; }
     #navPanel .link {
       border: 0;
