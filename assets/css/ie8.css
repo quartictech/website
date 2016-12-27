@@ -5,19 +5,19 @@
 */
 /* Basic */
 body {
-  color: #ffffff; }
+  color: #000000; }
 
 body, html, #page-wrapper {
   height: 100%; }
 
 blockquote {
-  border-left: solid 4px #606167; }
+  border-left: solid 4px #9f9e98; }
 
 code {
-  background: #33343c; }
+  background: #cccbc3; }
 
 hr {
-  border-bottom: solid 1px #606167; }
+  border-bottom: solid 1px #9f9e98; }
 
 /* Icon */
 .icon.major {
@@ -62,20 +62,20 @@ input[type="radio"] {
 
 /* Table */
 table tbody tr {
-  border: solid 1px #606167; }
+  border: solid 1px #9f9e98; }
 table thead {
-  border-bottom: solid 1px #606167; }
+  border-bottom: solid 1px #9f9e98; }
 table tfoot {
-  border-top: solid 1px #606167; }
+  border-top: solid 1px #9f9e98; }
 table.alt tbody tr td {
-  border: solid 1px #606167; }
+  border: solid 1px #9f9e98; }
 
 /* Button */
 input[type="submit"],
 input[type="reset"],
 input[type="button"],
 .button {
-  border: solid 1px #ffffff !important; }
+  border: solid 1px #000000 !important; }
   input[type="submit"].special,
   input[type="reset"].special,
   input[type="button"].special,
@@ -90,7 +90,7 @@ input[type="button"],
 .spotlight {
   height: 100%; }
   .spotlight .content {
-    background: #272833; }
+    background: #e3e2d9; }
 
 /* Wrapper */
 .wrapper.style2 input[type="text"]:focus,
@@ -98,7 +98,7 @@ input[type="button"],
 .wrapper.style2 input[type="email"]:focus,
 .wrapper.style2 select:focus,
 .wrapper.style2 textarea:focus {
-  border-color: #ffffff; }
+  border-color: #000000; }
 .wrapper.style2 input[type="submit"].special:hover, .wrapper.style2 input[type="submit"].special:active,
 .wrapper.style2 input[type="reset"].special:hover,
 .wrapper.style2 input[type="reset"].special:active,
@@ -110,11 +110,11 @@ input[type="button"],
 
 /* Dropotron */
 .dropotron {
-  background: #272833;
+  background: #e3e2d9;
   box-shadow: none !important;
   -ms-behavior: url("assets/js/ie/PIE.htc"); }
   .dropotron > li a, .dropotron > li span {
-    color: #ffffff !important; }
+    color: #000000 !important; }
   .dropotron.level-0 {
     margin-top: 0; }
     .dropotron.level-0:before {
@@ -122,7 +122,7 @@ input[type="button"],
 
 /* Header */
 #header {
-  background: #272833; }
+  background: #e3e2d9; }
 
 /* Banner */
 #banner {
