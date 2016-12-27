@@ -2729,7 +2729,7 @@ body.is-touch #banner {
         text-transform: none !important; }
       #titleBar .toggle:before {
         background: #dd137b;
-        color: rgba(0, 0, 0, 0.5);
+        color: #e3e2d9;
         content: '\f0c9';
         display: block;
         font-size: 18px;
