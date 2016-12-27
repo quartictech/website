@@ -30,9 +30,9 @@
 
 // Palette.
     $palette: (
-        bg:                 #e3e2d9,
-        bg-transparent:     rgba(232,231,223,0.95),
-        fg-button:          #e3e2d9,
+        bg:                 #fff,
+        bg-transparent:     rgba(255,255,255,0.95),
+        fg-button:          #fff,
         fg-bold:            #000000,
         fg:                 rgba(0,0,0,0.75),
         fg-light:           rgba(0,0,0,0.5),
@@ -42,8 +42,8 @@
         border2:            rgba(0,0,0,0.5),
         border2-bg:         rgba(0,0,0,0.25),
         accent1:            #dd137b,
-        accent2:            #e3e2d9,
-        accent2-transparent:rgba(227,228,217,0.965),
+        accent2:            #fff,
+        accent2-transparent:rgba(255,255,255,0.965),
         accent3:            #5480f1,
         accent4:            #39c088
     );
