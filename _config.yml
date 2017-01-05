@@ -1,0 +1,9 @@
+#https://jekyllrb.com/docs/configuration/
+
+encoding: utf-8
+timezone: Europe/London
+
+#careful with <destination> folder specifcation. Contents are cleared on build.
+
+profile: true
+port: 4000
