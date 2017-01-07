@@ -1,12 +1,34 @@
 # Website
 
-You'll need to install SASS first:
+## Prerequisites
 
-    sudo gem install sass
+Ruby:
 
-Then run the following to auto-generate CSS from SASS upon change:
+```
+brew install ruby
+```
 
-    sass watch assets/sass:assets/css
+[Bundler](http://bundler.io/):
+
+```
+gem install bundler
+```
+
+## Running locally
+
+First install dependencies:
+
+```
+bundle install
+```
+
+Then get Jekyll to watch:
+
+```
+bundle exec jekyll serve
+```
+
+You should be able to see the content at http://localhost:4000.
 
 ## CI
 
