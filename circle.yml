@@ -1,6 +1,6 @@
 dependencies:
   pre:
-    - if [ ! -d "~/.ssh/google_compute_engine" ]; then ssh-keygen -f ~/.ssh/google_compute_engine -N ""; fi
+    - if [ ! -d ~/.ssh/google_compute_engine ]; then ssh-keygen -f ~/.ssh/google_compute_engine -N ""; fi
   cache_directories:
     - ~/.ssh
 
