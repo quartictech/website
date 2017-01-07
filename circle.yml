@@ -10,7 +10,7 @@ deployment:
   live:
     branch: /.*/    # TODO: should only match develop
     commands:
-      - curl https://raw.githubusercontent.com/quartictech/circleci-utils/develop/circleci-gcloud-login | bash -s --no-docker
+      - curl https://raw.githubusercontent.com/quartictech/circleci-utils/develop/circleci-gcloud-login | bash -s -- --no-docker
       - sudo /opt/google-cloud-sdk/bin/gcloud compute copy-files _site/ balls:/opt/quartic/website
 
 general:
