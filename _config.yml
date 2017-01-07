@@ -9,3 +9,6 @@ profile: true
 port: 4000
 
 source: src
+
+sass:
+  style: compressed
