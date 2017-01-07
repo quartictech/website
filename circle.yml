@@ -1,3 +1,7 @@
 compile:
   override:
     - bundle exec jekyll build --verbose
+
+general:
+  artifacts:
+    - _site/
