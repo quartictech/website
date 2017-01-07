@@ -1,3 +1,7 @@
+dependencies:
+  pre:
+    - ssh-keygen -f ~/.ssh/google_compute_engine -N ""
+
 compile:
   override:
     - bundle exec jekyll build --verbose
