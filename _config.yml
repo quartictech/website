@@ -7,3 +7,8 @@ timezone: Europe/London
 
 profile: true
 port: 4000
+
+#markdown
+markdown: kramdown
+kramdown:
+  input: GFM
