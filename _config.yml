@@ -10,5 +10,7 @@ port: 4000
 
 source: src
 
+exclude: [images/unused]
+
 sass:
   style: compressed
