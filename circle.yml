@@ -1,0 +1,24 @@
+dependencies:
+  pre:
+    - if [ ! -e ~/.ssh/google_compute_engine ]; then ssh-keygen -f ~/.ssh/google_compute_engine -N ""; fi
+  cache_directories:
+    - ~/.ssh
+
+compile:
+  override:
+    - bundle exec jekyll build --verbose
+
+test:
+  override:
+    - echo "Nothing to do"
+
+deployment:
+  live:
+    branch: develop
+    commands:
+      - curl https://raw.githubusercontent.com/quartictech/circleci-utils/develop/circleci-gcloud-login | bash -s -- --no-docker
+      - sudo /opt/google-cloud-sdk/bin/gcloud compute copy-files --zone ${GCLOUD_ZONE} _site/ ${GCLOUD_SERVICE_ACCOUNT}@${GCLOUD_WEB_INSTANCE}:/opt/quartic/website
+
+general:
+  artifacts:
+    - _site/
