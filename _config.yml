@@ -12,3 +12,10 @@ port: 4000
 markdown: kramdown
 kramdown:
   input: GFM
+
+source: src
+
+exclude: [images/unused]
+
+sass:
+  style: compressed
