@@ -1,9 +1,4 @@
 <!DOCTYPE HTML>
-<!--
-    Landed by HTML5 UP
-    html5up.net | @ajlkn
-    Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
 <html>
     <head>
         <title>Quartic</title>
@@ -38,30 +33,32 @@
     </head>
 
 
-    <body class="{{ page.body_class }}">
-        <div id="page-wrapper">
+    <body>
+        <div class="title-bar" style="width:100%;background-color: #262626;">
+            <div id="responsive-menu" >
+                <div class="top-bar-title">
+                    <img id="logo" src="images/quartic_logo_dark.png" width="100px" style="position: relative; transform: translateY(-15%);"/>
+                </div>
 
-            <header id="header">
-                <h1 id="logo">
-                    <a href="index.html"><img id="logo" src="images/quartic_logo_dark.png" width="150px" style="position: relative; top: 50%; transform: translateY(-50%);"/></a>
-                </h1>
-                <nav id="nav">
-                    <ul>
-                        <li><a href="products.html">Products</a>
-                        <ul>
-                          <li><a href="base.html">Base</a></li>
-                          <li><a href="satellite.html">Remote</a></li>
-                        </ul>
-                      </li>
+                <div class="top-bar-left">
+                    <ul class="menu vertical medium-horizontal" data-responsive-menu="drilldown medium-dropdown">
+                        <li><a href="products.html">Products</a></li>
                         <li><a href="features.html">Features</a></li>
-                        <li><a href="team.html">Team</a></li>
                     </ul>
-                </nav>
-            </header>
+                </div>
+
+                <div class="top-bar-right">
+                    <ul class="dropdown vertical medium-horizontal menu">
+                        <li><a href="team.html">Team</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
 
             {{ content }}
 
-            <footer id="footer">
+            <!-- <footer id="footer">
                 <ul class="icons">
                     <li><a href="https://twitter.com/quartictech" class="icon alt fa-twitter"><span class="label">Twitter</span></a></li>
                     <li><a href="https://www.linkedin.com/company/quartic-technologies" class="icon alt fa-linkedin"><span class="label">LinkedIn</span></a></li>
@@ -76,9 +73,7 @@
                         <a href='https://www.mapbox.com/about/maps/'>&copy; Mapbox</a>
                     </li>
                 </ul>
-            </footer>
-
-        </div>
+            </footer> -->
 
         <script src="js/vendor/jquery.js"></script>
         <script src="js/vendor/what-input.js"></script>
