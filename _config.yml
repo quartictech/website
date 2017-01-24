@@ -1,8 +1,10 @@
 # Site settings
-language:               ""
-title:                  "Site Title"
-description:            "Site description"
+language:               "English"
+title:                  "Quartic Technologies"
+description:            "Quartic Technologies"
 google-verification:    ""
+encoding: "utf-8"
+timezone: "Europe/London"
 
 # Handling Reading
 include:
@@ -11,6 +13,7 @@ include:
 
 exclude:
   - "/assets/"
+  - "images/unused/"
   - "bower.json"
   - "composer.json"
   - "composer.lock"
@@ -45,3 +48,10 @@ paginate:         5
 compress_html:
   ignore:
     envs: [development]
+
+sass:
+  style: compressed
+
+markdown: kramdown
+kramdown:
+  input: GFM
