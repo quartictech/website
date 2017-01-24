@@ -6,7 +6,7 @@ _site/
 assets/css/app.css
 
 # Javascript
-assets/js/all/js
+assets/js/all.js
 rev-manifest.json
 
 # Thumbnails
