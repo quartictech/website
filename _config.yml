@@ -1,21 +1,47 @@
-#https://jekyllrb.com/docs/configuration/
+# Site settings
+language:               ""
+title:                  "Site Title"
+description:            "Site description"
+google-verification:    ""
 
-encoding: utf-8
-timezone: Europe/London
+# Handling Reading
+include:
+  - ".htaccess"
+  - "_pages"
 
-#careful with <destination> folder specifcation. Contents are cleared on build.
+exclude:
+  - "/assets/"
+  - "bower.json"
+  - "composer.json"
+  - "composer.lock"
+  - "DOC.md"
+  - "Gemfile"
+  - "Gemfile.lock"
+  - "/gulp/"
+  - "gulpfile.js"
+  - "LICENSE.md"
+  - "Makefile"
+  - "node_modules"
+  - "npm-debug.log"
+  - "package.json"
+  - "README.md"
+  - "rev-manifest.json"
 
-profile: true
-port: 4000
+# Plugins
+gems:             ["jekyll-sitemap", "jekyll-paginate"]
 
-#markdown
-markdown: kramdown
-kramdown:
-  input: GFM
+# Conversion
+incremental:      true
 
-source: src
+# Serving
+# url:            ""
+# baseurl:        "" # does not include hostname
 
-exclude: [images/unused]
+# Outputting
+permalink:        "/blog/:year/:title/"
+paginate_path:    "/blog/page:num"
+paginate:         5
 
-sass:
-  style: compressed
+compress_html:
+  ignore:
+    envs: [development]

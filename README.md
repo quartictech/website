@@ -1,39 +1,18 @@
-# Website
+# Jekyll Foundation
 
-## Prerequisites
+[![Build Status](https://travis-ci.org/core77/jekyll-foundation.svg)](https://travis-ci.org/core77/jekyll-foundation)
+[![devDependencies](https://david-dm.org/core77/jekyll-foundation/dev-status.svg)](https://david-dm.org/core77/jekyll-foundation#info=devDependencies)
+[![Join the chat at https://gitter.im/core77/jekyll-foundation](https://badges.gitter.im/core77/jekyll-foundation.svg)](https://gitter.im/core77/jekyll-foundation?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
-Ruby:
+Quickstart your Jekyll (v3) project with Zurb Foundation for Sites (v6, sass).
 
-```
-brew install ruby
-```
+This package is meant to build your Site on your local machine.
 
-[Bundler](http://bundler.io/):
+It provides a [Gulp.js](http://gulpjs.com/) workflow with
 
-```
-gem install bundler
-```
+- Browsersync (live reload and synchronised browser testing)
+- Concatenation and minification of CSS and JavaScript files
+- Asset management is done by Bower (and Composer if you need serverside libraries)  
+- Deployment with rsync
 
-## Running locally
-
-First install dependencies:
-
-```
-bundle install
-```
-
-Then get Jekyll to watch:
-
-```
-bundle exec jekyll serve
-```
-
-You should be able to see the content at http://localhost:4000.
-
-## CI
-
-This deploys to a GCloud VM instance via CircleCI.  Prerequisites:
-
-- A VM has been provisioned with the `webserver` Ansible playbook in the `infra` repo.
-- A GCloud service account for CircleCI has been configured according to [these instructions](https://docs.google.com/a/quartic.io/document/d/1YFuPEG12E8Q-ACrsNcrmR7odc9GHxjPYHg9NSOIJy9o/edit?usp=sharing).
-- The `GCLOUD_WEB_INSTANCE` environment variable is set in the build config.
+[Getting started](https://github.com/core77/jekyll-foundation/wiki/Getting-started)
