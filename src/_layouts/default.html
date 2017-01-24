@@ -34,21 +34,23 @@
 
 
     <body>
-        <div class="title-bar" style="width:100%;background-color: #262626;">
-            <div id="responsive-menu" >
-                <div class="top-bar-title">
-                    <img id="logo" src="images/quartic_logo_dark.png" width="100px" style="position: relative; transform: translateY(-15%);"/>
-                </div>
-
+        <div class="title-bar" style="width:100%;background-color: #262626;" data-responsive-toggle="example-menu" data-hide-for="medium">
+            <button class="menu-icon" type="button" data-toggle="example-menu"></button>
+            <div class="title-bar-title">Menu</div>
+        </div>
+            <div class="top-bar" id="example-menu">
                 <div class="top-bar-left">
-                    <ul class="menu vertical medium-horizontal" data-responsive-menu="drilldown medium-dropdown">
+                    <ul class="dropdown menu">
+                        <li class="menu-text">
+                            <img id="logo" src="images/quartic_logo_dark.png" width="100px" style="position: relative; transform: translateY(-15%);"/>
+                        </li>
                         <li><a href="products.html">Products</a></li>
                         <li><a href="features.html">Features</a></li>
                     </ul>
                 </div>
 
                 <div class="top-bar-right">
-                    <ul class="dropdown vertical medium-horizontal menu">
+                    <ul class="dropdown menu">
                         <li><a href="team.html">Team</a></li>
                         <li><a href="#">Contact</a></li>
                     </ul>
