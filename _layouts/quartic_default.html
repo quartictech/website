@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
     <head>
-        <title>Quartic</title>
+        <title>Quartic Technologies</title>
         <meta charset="utf-8" />
         <meta name="description" content="Quartic builds software to manage and analyse real time data." />
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
@@ -33,48 +33,60 @@
 
 
     <body>
-        <div class="title-bar" style="width:100%;background-color: #262626;" data-responsive-toggle="example-menu" data-hide-for="medium">
-            <button class="menu-icon" type="button" data-toggle="example-menu"></button>
-            <div class="title-bar-title">Menu</div>
-        </div>
-            <div class="top-bar" id="example-menu">
-                <div class="top-bar-left">
-                    <ul class="dropdown menu">
-                        <li class="menu-text">
-                            <img id="logo" src="/assets/img/quartic_logo_dark.png" width="100px" style="position: relative; transform: translateY(-15%);"/>
-                        </li>
-                        <li><a href="/products">Products</a></li>
-                        <li><a href="/features">Features</a></li>
-                    </ul>
-                </div>
 
-                <div class="top-bar-right">
-                    <ul class="dropdown menu">
-                        <li><a href="/team">Team</a></li>
-                        <li><a href="#">Contact</a></li>
-                    </ul>
-                </div>
-            </div>
+      <div class="top-bar">
+        <div class="top-bar-left">
+          <ul class="dropdown menu" data-dropdown-menu>
+            <li class="menu-text">Site Title</li>
+            <li>
+              <a href="#">One</a>
+              <ul class="menu vertical">
+                <li><a href="#">One</a></li>
+                <li><a href="#">Two</a></li>
+                <li><a href="#">Three</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Two</a></li>
+            <li><a href="#">Three</a></li>
+          </ul>
         </div>
+        <div class="top-bar-right">
+          <ul class="menu">
+            <li><input type="search" placeholder="Search"></li>
+            <li><button type="button" class="button">Search</button></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- <div class="top-bar">
+        <div class="top-bar-title">
+          <span data-responsive-toggle="responsive-menu" data-hide-for="medium">
+            <button class="menu-icon dark" type="button" data-toggle></button>
+          </span>
+          <img id="logo" src="/assets/img/quartic_logo_dark.png" width="100px" style="position: relative; transform: translateY(-15%);"/>
+        </div>
+        <div id="responsive-menu">
+          <div class="top-bar-left">
+            <ul class="dropdown menu" data-dropdown-menu>
+              <li>
+                <a href="/products">Products</a>
+                <a href="/features">Features</a>
+                <ul class="menu vertical">
+                  <li><a href="#">One</a></li>
+                  <li><a href="#">Two</a></li>
+                  <li><a href="#">Three</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          <div class="top-bar-right">
+              <li><a href="/team">Team</a></li>
+              <li><a href="#">Contact</a></li>
+          </div>
+        </div>
+</div> -->
 
             {{ content }}
-
-            <!-- <footer id="footer">
-                <ul class="icons">
-                    <li><a href="https://twitter.com/quartictech" class="icon alt fa-twitter"><span class="label">Twitter</span></a></li>
-                    <li><a href="https://www.linkedin.com/company/quartic-technologies" class="icon alt fa-linkedin"><span class="label">LinkedIn</span></a></li>
-                    <li><a href="https://www.github.com/quartictech" class="icon alt fa-github"><span class="label">GitHub</span></a></li>
-                    <li><a href="mailto:contact@quartic.io" class="icon alt fa-envelope"><span class="label">Email</span></a></li>
-                </ul>
-                <ul class="copyright">
-                    <li>&copy; Quartic Technologies 2017</li>
-                    <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-                    <li>Maps:
-                        <a href="https://www.openstreetmap.org/copyright">&copy; OpenStreetMap</a>,
-                        <a href='https://www.mapbox.com/about/maps/'>&copy; Mapbox</a>
-                    </li>
-                </ul>
-            </footer> -->
 
         <script src="/assets/js/all.js"></script>
     </body>
