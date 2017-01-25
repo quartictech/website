@@ -30,19 +30,20 @@ exclude:
   - "rev-manifest.json"
 
 # Plugins
-gems:             ["jekyll-sitemap", "jekyll-paginate"]
+gems: ["jekyll-sitemap", "jekyll-paginate"]
 
 # Conversion
-incremental:      true
+incremental: true
 
 # Serving
 # url:            ""
 # baseurl:        "" # does not include hostname
 
 # Outputting
-permalink:        "/blog/:year/:title/"
-paginate_path:    "/blog/page:num"
-paginate:         5
+# permalink: "/blog/:year/:title/"
+permalink: pretty
+paginate_path: "/blog/page:num"
+paginate: 5
 
 compress_html:
   ignore:
