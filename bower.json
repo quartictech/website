@@ -1,12 +1,22 @@
 {
-  "name": "jekyll-foundation",
-  "version": "0.5",
-  "description": "Starts a Jekyll + ZURB Foundation project",
+  "name": "foundation-ssg",
+  "version": "1.0.0",
+  "authors": [
+    "ZURB <foundation@zurb.com>"
+  ],
+  "description": "Static site generator for Foundation for Sites.",
+  "main": "gulpfile.js",
   "license": "MIT",
-  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
   "dependencies": {
-    "foundation-sites": "~6.3",
-    "motion-ui": "~1.2"
+    "foundation-sites": "~6.3.0",
+    "motion-ui": "~1.2.2"
   },
   "private": true
 }
