@@ -83,3 +83,7 @@ color: #FFFFFF;
 .qt-button {
     @include foundation-button;
 }
+
+.qt-container {
+    padding: 50px;
+}
