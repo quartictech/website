@@ -58,16 +58,28 @@ $qt-gradient-2: darken($qt-gradient-1, 10%);
 
 .qt-leader {
 /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ff5db1+0,ef017c+100;Pink+3D+%231 */
-background: $primary-color; /* Old browsers */
-background: -moz-linear-gradient(top,  $primary-color 0%, darken($primary-color, 10%) 100%); /* FF3.6-15 */
-background: -webkit-linear-gradient(top,  $primary-color 0%,darken($primary-color, 10%) 100%); /* Chrome10-25,Safari5.1-6 */
+background: $qt-gradient-1; /* Old browsers */
+background: -moz-linear-gradient(top,  $qt-gradient-1 0%, $qt-gradient-2 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  $qt-gradient-1 0%,$qt-gradient-2 100%); /* Chrome10-25,Safari5.1-6 */
 background: linear-gradient(to bottom,  $qt-gradient-1 0%, $qt-gradient-2 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff5db1', endColorstr='#ef017c',GradientType=0 ); /* IE6-9 */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$qt-gradient-1', endColorstr='$qt-gradient-2',GradientType=0 ); /* IE6-9 */
 color: #FFFFFF;
 }
 
-.qt-top-bar {
-    @include foundation-top-bar;
-    background-color: $qt-gradient-1;
-    height: 40px;
+// .qt-top-bar {
+//     @include foundation-top-bar;
+//     background-color: $qt-gradient-1;
+//     height: 50px;
+// }
+
+.qt-menu {
+    color: white !important;
+}
+
+.qt-logo {
+    height: 35px;
+}
+
+.qt-button {
+    @include foundation-button;
 }

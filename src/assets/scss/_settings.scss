@@ -55,6 +55,7 @@ $foundation-palette: (
   success: #3adb76,
   warning: #ffae00,
   alert: #cc4b37,
+  white: #FFFFFF,
 );
 $light-gray: #e6e6e6;
 $medium-gray: #cacaca;
@@ -588,7 +589,7 @@ $thumbnail-radius: $global-radius;
 // 35. Title Bar
 // -------------
 
-$titlebar-background: $black;
+$titlebar-background: #4682B4;
 $titlebar-color: $white;
 $titlebar-padding: 0.5rem;
 $titlebar-text-font-weight: bold;
@@ -613,7 +614,7 @@ $tooltip-radius: $global-radius;
 // -----------
 
 $topbar-padding: 0.5rem;
-$topbar-background: $light-gray;
+$topbar-background: #4682B4;
 $topbar-submenu-background: $topbar-background;
 $topbar-title-spacing: 0.5rem 1rem 0.5rem 0;
 $topbar-input-width: 200px;
