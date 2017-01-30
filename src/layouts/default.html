@@ -35,17 +35,16 @@
 
 
     <body>
-
       <div class="top-bar" style="background-color:white">
-  <div class="top-bar-title">
-    <span data-responsive-toggle="responsive-menu" data-hide-for="medium">
-      <button class="menu-icon dark" type="button" data-toggle></button>
-    </span>
-    <a href="{{root}}/"><img src="{{root}}assets/img/quartic_logo_dark.png" width="100px" style="position:relative; transform: translateY(-15%);"></a>
-  </div>
+        <div class="top-bar-title">
+          <span data-responsive-toggle="responsive-menu" data-hide-for="medium">
+            <button class="menu-icon dark" type="button" data-toggle></button>
+          </span>
+          <a href="{{root}}/"><img src="{{root}}assets/img/quartic_logo_dark.png" width="100px" style="position:relative; transform: translateY(-15%);"></a>
+        </div>
   <div id="responsive-menu">
     <div class="top-bar-left">
-      <ul class="dropdown menu" data-dropdown-menu>
+      <ul class="vertical menu medium-horizontal" data-responsive-menu="drilldown medium-dropdown">
         <li>
           <a href="{{root}}products.html" style="background-color:white">Products</a>
           <ul class="menu vertical">
@@ -57,7 +56,7 @@
       </ul>
     </div>
     <div class="top-bar-right">
-        <ul class="menu">
+        <ul class="vertical medium-horizontal menu">
             <li><a href="{{root}}about.html" style="background-color:white">About</a></li>
             <li><a href="#" style="background-color:white">Request a demo</a></li>
         </ul>
