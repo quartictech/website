@@ -8,6 +8,7 @@
   <meta charset="utf-8" />
   <meta name="description" content="Quartic builds software to manage and analyse real time data." />
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+  <link href="http://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css" rel="stylesheet">
   <link rel="stylesheet" href="{{root}}assets/css/app.css" />
   <meta class="foundation-mq" />
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
@@ -63,7 +64,30 @@
 
   </div>
 
+
   {{!-- Pages you create in the src/pages/ folder are inserted here when the flattened page is created. --}} {{> body}}
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="row full-width">
+      <img src="{{root}}assets/img/quartic_logo_white.png" class="qt-logo" />
+
+      <ul class="footer-icons">
+        <li><a href="https://twitter.com/quartictech" class="fi-social-twitter" style="font-size: 2em"></a></li>
+        <li><a href="https://www.linkedin.com/company/quartic-technologies" class="fi-social-linkedin" style="font-size: 2em"></a></li>
+        <li><a href="mailto:contact@quartic.io" class="fi-mail" style="font-size: 2em"></a></li>
+      </ul>
+
+      <ul class="footer-links">
+        <li>&copy; Quartic Technologies 2017</li>
+        <li>Maps:
+            <a href="https://www.openstreetmap.org/copyright">&copy; OpenStreetMap</a>,
+            <a href='https://www.mapbox.com/about/maps/'>&copy; Mapbox</a>
+        </li>
+      </ul>
+    </div>
+  </footer>
+
 
   <script src="{{root}}assets/js/app.js"></script>
 </body>
