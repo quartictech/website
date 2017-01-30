@@ -45,27 +45,24 @@
   </div>
 
   <div class="top-bar">
-  <div id="responsive-menu">
-    <div class="top-bar-left">
-      <a href="{{root}}/">
-        <img src="{{root}}assets/img/quartic_logo.png" class="qt-logo" />
-      </a>
-      <!--<ul class="vertical menu medium-horizontal" data-responsive-menu="drilldown medium-dropdown">
-      </ul>-->
+    <div id="responsive-menu">
+      <div class="top-bar-left">
+        <a href="{{root}}/">
+          <img src="{{root}}assets/img/quartic_logo.png" class="qt-logo" />
+        </a>
+        <!--<ul class="vertical menu medium-horizontal" data-responsive-menu="drilldown medium-dropdown">
+        </ul>-->
+      </div>
+      <div class="top-bar-right" style="height: 100%">
+        <ul class="vertical medium-horizontal menu">
+          <li><a class="qt-menu" href="{{root}}about.html">About</a></li>
+          <li><a class="qt-menu" href="{{root}}register.html">Request a demo</a></li>
+        </ul>
+      </div>
     </div>
-    <div class="top-bar-right" style="height: 100%">
-      <ul class="vertical medium-horizontal menu">
-        <li><a class="qt-menu" href="{{root}}about.html">About</a></li>
-        <li><a class="qt-menu" href="#">Request a demo</a></li>
-      </ul>
-    </div>
-  </div>
   </div>
 
-  </div>
-
-
-  {{!-- Pages you create in the src/pages/ folder are inserted here when the flattened page is created. --}} {{> body}}
+  {{> body}}
 
   <!-- Footer -->
   <footer class="footer">
@@ -73,6 +70,9 @@
       <img src="{{root}}assets/img/quartic_logo_white.png" class="qt-logo" />
 
       <ul class="footer-icons">
+        <li>
+          <a href="https://www.facebook.com/quartictech/?fref=ts" class="fi-social-facebook" style="font-size: 2em"></a>
+        </li>
         <li><a href="https://twitter.com/quartictech" class="fi-social-twitter" style="font-size: 2em"></a></li>
         <li><a href="https://www.linkedin.com/company/quartic-technologies" class="fi-social-linkedin" style="font-size: 2em"></a></li>
         <li><a href="mailto:contact@quartic.io" class="fi-mail" style="font-size: 2em"></a></li>
@@ -91,5 +91,4 @@
 
   <script src="{{root}}assets/js/app.js"></script>
 </body>
-
 </html>
