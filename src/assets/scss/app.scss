@@ -87,11 +87,28 @@ a {
 
 .qt-button {
     @extend .button;
+    background-color: transparent;
+    border-color: $white;
+    color: $white;
     &:hover {
         background-color: $primary-color;
-        color: red;
+        border-color: $primary-color;
+        color: $white !important;
     }
 }
+
+.qt-other-button {
+    @extend .button;
+    background-color: transparent;
+    border-color: $primary-color;
+    color: $primary-color;
+    &:hover {
+        background-color: $primary-color;
+        border-color: $primary-color;
+        color: $white !important;
+    }
+}
+
 
 .qt-container {
     padding: 50px;
