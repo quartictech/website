@@ -1,4 +1,32 @@
 _site/
 .sass-cache/
 .DS_Store
+bower_components/
+*.swp
 
+# Stylesheet
+assets/css/app.css
+
+# Javascript
+assets/js/all.js
+rev-manifest.json
+
+# Thumbnails
+._*
+
+#gulp.js
+.gulp/
+node_modules/**/*
+npm-debug.log
+
+# Jekyll
+_site
+.jekyll-metadata
+
+# Vendor directory
+assets/vendor/
+
+# Composer
+composer.lock
+
+dist/

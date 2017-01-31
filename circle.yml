@@ -1,12 +1,20 @@
-dependencies:
+machine:
   pre:
     - if [ ! -e ~/.ssh/google_compute_engine ]; then ssh-keygen -f ~/.ssh/google_compute_engine -N ""; fi
+  post:
+    - curl https://raw.githubusercontent.com/quartictech/circleci-utils/develop/circleci-gcloud-login | bash -s -- --no-docker
+
+dependencies:
+  override:
+    - npm install
+    - bower install
   cache_directories:
     - ~/.ssh
+    - bower_components
 
 compile:
   override:
-    - bundle exec jekyll build --verbose
+    - npm run build 
 
 test:
   override:
@@ -14,11 +22,14 @@ test:
 
 deployment:
   live:
+    branch: master
+    commands:
+      - sudo rsync -e "gcloud compute ssh circleci@www" --delete -avz dist/ :/opt/quartic/www.quartic.io
+  test:
     branch: develop
     commands:
-      - curl https://raw.githubusercontent.com/quartictech/circleci-utils/develop/circleci-gcloud-login | bash -s -- --no-docker
-      - sudo /opt/google-cloud-sdk/bin/gcloud compute copy-files --zone ${GCLOUD_ZONE} _site/ ${GCLOUD_SERVICE_ACCOUNT}@${GCLOUD_WEB_INSTANCE}:/opt/quartic/
+      - sudo rsync -e "gcloud compute ssh circleci@www" --delete -avz dist/ :/opt/quartic/www-test.quartic.io
 
 general:
   artifacts:
-    - _site/
+    - dist/
