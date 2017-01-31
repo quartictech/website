@@ -1,15 +1,16 @@
-dependencies:
+machine:
   pre:
     - if [ ! -e ~/.ssh/google_compute_engine ]; then ssh-keygen -f ~/.ssh/google_compute_engine -N ""; fi
     - curl https://raw.githubusercontent.com/quartictech/circleci-utils/develop/circleci-gcloud-login | bash -s -- --no-docker
+
+dependencies:
   override:
     - npm install
     - bower install
   cache_directories:
     - ~/.ssh
-    - ~/website/bower_components
+    - bower_components
 
-dependencies:
 compile:
   override:
     - npm run build 
