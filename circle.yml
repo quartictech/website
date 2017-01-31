@@ -24,11 +24,11 @@ deployment:
   live:
     branch: master
     commands:
-      - sudo rsync -e "/opt/google-cloud-sdk/bin/gcloud compute ssh --zone ${GCLOUD_ZONE} circleci@www" --delete -avz dist/ :/opt/quartic/www.quartic.io
+      - sudo rsync -e "/opt/google-cloud-sdk/bin/gcloud compute ssh ${GCLOUD_SERVICE_ACCOUNT}@${GCLOUD_WEB_INSTANCE}" --delete -avz dist/ :/opt/quartic/www.quartic.io
   test:
     branch: develop
     commands:
-      - sudo rsync -e "/opt/google-cloud-sdk/bin/gcloud compute ssh --zone ${GCLOUD_ZONE} circleci@www" --delete -avz dist/ :/opt/quartic/www-test.quartic.io
+      - sudo rsync -e "/opt/google-cloud-sdk/bin/gcloud compute ssh ${GCLOUD_SERVICE_ACCOUNT}@${GCLOUD_WEB_INSTANCE}" --delete -avz dist/ :/opt/quartic/www-test.quartic.io
 
 general:
   artifacts:
