@@ -24,11 +24,11 @@ deployment:
   live:
     branch: master
     commands:
-      - sudo rsync -e "gcloud compute ssh circleci@www" -avz dist/ :/opt/quartic/www.quartic.io
+      - sudo rsync -e "gcloud compute ssh circleci@www" --delete -avz dist/ :/opt/quartic/www.quartic.io
   test:
     branch: develop
     commands:
-      - sudo rsync -e "gcloud compute ssh circleci@www" -avz dist/ :/opt/quartic/www-test.quartic.io
+      - sudo rsync -e "gcloud compute ssh circleci@www" --delete -avz dist/ :/opt/quartic/www-test.quartic.io
 
 general:
   artifacts:
