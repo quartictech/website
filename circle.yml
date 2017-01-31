@@ -1,11 +1,14 @@
 dependencies:
   pre:
     - if [ ! -e ~/.ssh/google_compute_engine ]; then ssh-keygen -f ~/.ssh/google_compute_engine -N ""; fi
+    - curl https://raw.githubusercontent.com/quartictech/circleci-utils/develop/circleci-gcloud-login | bash -s -- --no-docker
   cache_directories:
     - ~/.ssh
 
 compile:
   override:
+    - npm install
+    - bower install
     - npm run build 
 
 test:
@@ -16,13 +19,11 @@ deployment:
   live:
     branch: master
     commands:
-      - curl https://raw.githubusercontent.com/quartictech/circleci-utils/develop/circleci-gcloud-login | bash -s -- --no-docker
       - sudo rsync -e "gcloud compute ssh circleci@www" -avz dist/ :/opt/quartic/www.quartic.io
   test:
     branch: develop
     commands:
-      - curl https://raw.githubusercontent.com/quartictech/circleci-utils/develop/circleci-gcloud-login | bash -s -- --no-docker
-      - sudo rsync -e "gcloud compute ssh circleci@www" -avz dist/ :/opt/quartic/wwwtest.quartic.io
+      - sudo rsync -e "gcloud compute ssh circleci@www" -avz dist/ :/opt/quartic/www-test.quartic.io
 
 general:
   artifacts:
