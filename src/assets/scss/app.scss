@@ -71,7 +71,15 @@ $qt-gradient-faded-2: fade-out($qt-gradient-2, 0.1);
 
 .qt-menu {
     color: white !important;
+    font-weight: bolder;
 }
+
+a {
+  &:hover {
+    color: $primary-color !important;
+  }
+}
+
 
 .qt-logo {
     height: 35px;
@@ -118,10 +126,6 @@ $text-color: #fff;
     font-weight: 300;
     font-size: .8em;
     color: $text-color;
-
-    &:hover {
-      color: $primary-color;
-    }
   }
 }
 
