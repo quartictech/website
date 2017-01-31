@@ -7,8 +7,8 @@
 @import 'motion-ui';
 
 @include foundation-global-styles;
-@include foundation-grid;
-// @include foundation-flex-grid;
+//@include foundation-grid;
+ @include foundation-flex-grid;
 @include foundation-typography;
 @include foundation-button;
 @include foundation-forms;
@@ -47,7 +47,7 @@
 @include foundation-top-bar;
 @include foundation-visibility-classes;
 @include foundation-float-classes;
-// @include foundation-flex-classes;
+@include foundation-flex-classes;
 
 @include motion-ui-transitions;
 @include motion-ui-animations;
@@ -71,19 +71,44 @@ $qt-gradient-faded-2: fade-out($qt-gradient-2, 0.1);
 
 .qt-menu {
     color: white !important;
+    font-weight: bolder;
+}
+
+a {
+  &:hover {
+    color: $primary-color !important;
+  }
 }
 
 .qt-logo {
+    padding-left: 0.5em;
     height: 35px;
 }
 
 .qt-button {
     @extend .button;
+    background-color: transparent;
+    border-color: $white;
+    color: $white;
     &:hover {
         background-color: $primary-color;
-        color: red;
+        border-color: $primary-color;
+        color: $white !important;
     }
 }
+
+.qt-other-button {
+    @extend .button;
+    background-color: transparent;
+    border-color: $primary-color;
+    color: $primary-color;
+    &:hover {
+        background-color: $primary-color;
+        border-color: $primary-color;
+        color: $white !important;
+    }
+}
+
 
 .qt-container {
     padding: 50px;
@@ -118,10 +143,6 @@ $text-color: #fff;
     font-weight: 300;
     font-size: .8em;
     color: $text-color;
-
-    &:hover {
-      color: $primary-color;
-    }
   }
 }
 
