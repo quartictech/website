@@ -26,7 +26,7 @@ deployment:
     commands:
       - sudo rsync -e "/opt/google-cloud-sdk/bin/gcloud compute ssh ${GCLOUD_SERVICE_ACCOUNT}@${GCLOUD_WEB_INSTANCE}" --delete -avz dist/ :/opt/quartic/www.quartic.io
   test:
-    branch: develop
+    branch: fix/circle-please
     commands:
       - sudo rsync -e "/opt/google-cloud-sdk/bin/gcloud compute ssh ${GCLOUD_SERVICE_ACCOUNT}@${GCLOUD_WEB_INSTANCE}" --delete -avz dist/ :/opt/quartic/www-test.quartic.io
 
