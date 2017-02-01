@@ -20,93 +20,15 @@ title: Quartic Technologies
 
 <div class="qt-container">
 
-    <!-- ##########################
-      What it does
-    ############################### -->
-
-    <div class="row">
-      <div class="text-center columns">
-        <p>&nbsp;</p>
-
-        <h1>What it does</h1>
-          <h4 class="subheader">
-              Our control platform and field app disseminate timely and useful information to field operatives and collect data straight from the field. <b>All in real time.</b>
-          </h4>
-      </div>
-    </div>
-
-    <div class="row medium-unstack">
-      <div class="text-center columns">
-        <h4>Collect</h4>
-          <p class="lead">
-              Collect, clean and manage all your enterprise data including from the field
-          </p>
-          <p><b>eg</b>, telemetry, databases, point-of-sale data</p>
-      </div>
-        <div class="text-center columns">
-            <h4>Alert</h4>
-            <p class="lead">
-                Alert and notify your field and office personnel with important information
-            </p>
-            <p><b>eg</b>, update delivery routes as orders come in</p>
-        </div>
-        <div class="text-center columns">
-            <h4>Optimise</h4>
-            <p class="lead">
-                Analyse, visualise, and eliminate inefficiencies across the enterprise
-            </p>
-            <p><b>eg</b>, optimise routes and staffing over time</p>
-        </div>
-    </div>
+    {{> what_it_does}}
 
 <p>&nbsp;</p>
 
-    <div class="qt-stripe" style="background-color: #333; color: #FFF">
-        <div class="row">
-        	<div class="text-center columns">
-        		<section>
-        		<h1>Context across the enterprise. In real time.</h1>
-        		</section>
-        	</div>
-        </div>
-
-        <div class="row">
-        	<div class="small-12 small-centered text-center columns">
-        		<img src="{{root}}assets/img/products_image.png">
-        	</div>
-        </div>
-
-
-        <!-- ##########################
-          Quartic in action
-        ############################### -->
-        <p>&nbsp;</p>
-
-        <div class="row">
-              <div class="columns small-12 medium-6">
-              <div class="responsive-embed widescreen">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/0A-Pm09gZ-o?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen style="box-shadow: 0 0 1em #888;"></iframe>
-                  </div>
-
-              </div>
-
-                    <div class="columns text-left small-12 medium-6">
-                    <h2>See it in action</h2>
-
-                    <p class="lead">An engineer crosses three different safety areas on a construction site.</p>
-                    <ul>
-                      <li>Integrate site locations, asset data and health and safety requirements into Quartic.</li>
-                      <li>Deploy <b>Quartic Remote</b> to your field engineers.</li>
-                      <li>Use <b>Quartic GroundControl</b> to monitor and setup geoboundaries on the site.</li>
-                      <li>Receive and send automated locations ensuring safe practices and efficient operations.</li>
-                    </ul>
-                  </div>
-        </div>
-
+    <div class="qt-stripe-dark">
+        {{> media}}
     </div>
 
-
-    <div class="qt-stripe">
+    <div class="qt-stripe-light">
         {{> ground_control}}
 
         <p>&nbsp;</p>
@@ -115,7 +37,5 @@ title: Quartic Technologies
 
         <a href="register.html" class="qt-other-button large">Request a demo</a>
     </div>
-
-
 
 </div>
