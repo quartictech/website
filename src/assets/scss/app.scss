@@ -122,6 +122,11 @@ a {
     text-align: center;
 }
 
+// See http://foundation.zurb.com/forum/posts/39187-responsive-menu-flashes-on-page-load
+.title-bar {
+   display: none;
+}
+
 ////////////////////////////////
 // Footer (originally taken from http://zurb.com/building-blocks/footer)
 ////////////////////////////////
