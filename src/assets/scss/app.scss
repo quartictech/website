@@ -61,9 +61,9 @@ $qt-gradient-faded-2: fade-out($qt-gradient-2, 0.1);
 .qt-leader {
     /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ff5db1+0,ef017c+100;Pink+3D+%231 */
     background: $qt-gradient-1; /* Old browsers */
-    background: -moz-linear-gradient(top,  $qt-gradient-faded-1 0%, $qt-gradient-faded-2 100%), url('/assets/img/geofence_trimmed.png') no-repeat center; /* FF3.6-15 */
-    background: -webkit-linear-gradient(top,  $qt-gradient-faded-1 0%,$qt-gradient-faded-2 100%), url('/assets/img/geofence_trimmed.png') no-repeat center; /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(to bottom,  $qt-gradient-faded-1 0%, $qt-gradient-faded-2 100%), url('/assets/img/geofence_trimmed.png') no-repeat center; /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    background: -moz-linear-gradient(top,  $qt-gradient-faded-1 0%, $qt-gradient-faded-2 100%), url('/assets/img/geofence_trimmed.jpg') no-repeat center; /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  $qt-gradient-faded-1 0%,$qt-gradient-faded-2 100%), url('/assets/img/geofence_trimmed.jpg') no-repeat center; /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  $qt-gradient-faded-1 0%, $qt-gradient-faded-2 100%), url('/assets/img/geofence_trimmed.jpg') no-repeat center; /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$qt-gradient-1', endColorstr='$qt-gradient-2',GradientType=0 ); /* IE6-9 */
     background-size: cover;
     color: #FFFFFF;
