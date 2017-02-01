@@ -3,7 +3,6 @@ machine:
     - if [ ! -e ~/.ssh/google_compute_engine ]; then ssh-keygen -f ~/.ssh/google_compute_engine -N ""; fi
   post:
     - curl https://raw.githubusercontent.com/quartictech/circleci-utils/develop/circleci-gcloud-login | bash -s -- --no-docker
-    - ./scripts/configure.sh
 
 dependencies:
   override:
@@ -15,6 +14,7 @@ dependencies:
 
 compile:
   override:
+    - ./scripts/configure.sh
     - npm run build 
 
 test:
