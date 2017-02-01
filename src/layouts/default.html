@@ -46,24 +46,24 @@
 <body>
     <div class="title-bar" data-responsive-toggle="responsive-menu" data-hide-for="medium">
         <button class="menu-icon" type="button" data-toggle="example-menu"></button>
-        <div class="title-bar-title">Menu</div>
+        <div class="title-bar-title">
+            <a href="{{root}}/">
+                <img src="{{root}}assets/img/quartic_logo.png" class="qt-logo" />
+            </a>
+        </div>
     </div>
 
-    <div class="top-bar">
-        <div id="responsive-menu">
-            <div class="top-bar-left">
-                <a href="{{root}}/">
-                    <img src="{{root}}assets/img/quartic_logo.png" class="qt-logo" />
-                </a>
-                <!--<ul class="vertical menu medium-horizontal" data-responsive-menu="drilldown medium-dropdown">
-        </ul>-->
-            </div>
-            <div class="top-bar-right" style="height: 100%">
-                <ul class="vertical medium-horizontal menu">
-                    <li><a class="qt-menu" href="{{root}}about.html">About</a></li>
-                    <li><a class="qt-menu" href="{{root}}register.html">Request a demo</a></li>
-                </ul>
-            </div>
+    <div class="top-bar" id="responsive-menu">
+        <div class="top-bar-left hide-for-small-only">
+            <a href="{{root}}/">
+                <img src="{{root}}assets/img/quartic_logo.png" class="qt-logo" />
+            </a>
+        </div>
+        <div class="top-bar-right" style="height: 100%">
+            <ul class="vertical medium-horizontal menu">
+                <li><a class="qt-menu" href="{{root}}about.html">About</a></li>
+                <li><a class="qt-menu" href="{{root}}register.html">Request a demo</a></li>
+            </ul>
         </div>
     </div>
 
