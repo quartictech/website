@@ -1,12 +1,10 @@
-{{!-- This is the base layout for your project, and will be used on every page. --}}
-
 <!DOCTYPE HTML>
 <html class="no-js" lang="en">
 
 <head>
     <title>Quartic</title>
     <meta charset="utf-8" />
-    <meta name="description" content="Send and receive critical information to and from the field, in real time."/>
+    <meta name="description" content="Take the enterprise to the field. Send and receive critical information to and from the field, in real time."/>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css" rel="stylesheet">
     <link rel="stylesheet" href="{{root}}assets/css/app.css" />
@@ -22,7 +20,7 @@
 
     <meta property="og:url" content="https://www.quartic.io/">
     <meta property="og:title" content="Quartic Technologies">
-    <meta property="og:description" content="Quartic builds software to manage and analyse real time data.">
+    <meta property="og:description" content="Take the enterprise to the field. Send and receive critical information to and from the field, in real time.">
     <meta property="og:site_name" content="Quartic.io">
     <meta property="og:image" content="https://www.quartic.io/assets/img/quartic_logo_dark.png">
     <meta property="og:type" content="website">
@@ -32,28 +30,30 @@
 
 
 <body>
-    <div class="title-bar" data-responsive-toggle="responsive-menu" data-hide-for="medium">
-        <button class="menu-icon" type="button" data-toggle="example-menu"></button>
-        <div class="title-bar-title">
-            <a href="{{root}}/">
-                <img src="{{root}}assets/img/quartic_logo.png" class="qt-logo" />
-            </a>
+    <nav>
+        <div class="title-bar" data-responsive-toggle="responsive-menu" data-hide-for="medium">
+            <button class="menu-icon" type="button" data-toggle="example-menu"></button>
+            <div class="title-bar-title">
+                <a href="{{root}}/">
+                    <img src="{{root}}assets/img/quartic_logo.png" class="qt-logo" />
+                </a>
+            </div>
         </div>
-    </div>
 
-    <div class="top-bar" id="responsive-menu">
-        <div class="top-bar-left hide-for-small-only">
-            <a href="{{root}}/">
-                <img src="{{root}}assets/img/quartic_logo.png" class="qt-logo" />
-            </a>
+        <div class="top-bar" id="responsive-menu">
+            <div class="top-bar-left hide-for-small-only">
+                <a href="{{root}}/">
+                    <img src="{{root}}assets/img/quartic_logo.png" class="qt-logo" />
+                </a>
+            </div>
+            <div class="top-bar-right" style="height: 100%">
+                <ul class="vertical medium-horizontal menu">
+                    <li><a class="qt-menu" href="{{root}}about.html">About</a></li>
+                    <li><a class="qt-menu" href="{{root}}register.html">Request a demo</a></li>
+                </ul>
+            </div>
         </div>
-        <div class="top-bar-right" style="height: 100%">
-            <ul class="vertical medium-horizontal menu">
-                <li><a class="qt-menu" href="{{root}}about.html">About</a></li>
-                <li><a class="qt-menu" href="{{root}}register.html">Request a demo</a></li>
-            </ul>
-        </div>
-    </div>
+    </nav>
 
     {{> body}}
 
@@ -66,6 +66,9 @@
                 <ul class="footer-icons">
                     <li>
                         <a href="https://twitter.com/quartictech" class="fi-social-twitter" style="font-size: 2em"></a>
+                    </li>
+                    <li>
+                        <a href="https://facebook.com/quartictech" class="fi-social-facebook" style="font-size: 2em"></a>
                     </li>
                     <li>
                         <a href="https://www.linkedin.com/company/quartic-technologies" class="fi-social-linkedin" style="font-size: 2em"></a>
@@ -89,7 +92,9 @@
     {{#if build.production}}
     {{> google_analytics}}
     {{/if}}
+    
     <script src="{{root}}assets/js/app.js"></script>
+    <script src="//code.tidio.co/iqsyzk6yplajd2nqrcxg25jwls9snqnt.js"></script>
 </body>
 
 </html>
