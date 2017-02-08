@@ -74,9 +74,12 @@ $qt-gradient-faded-2: fade-out($qt-gradient-2, 0.1);
     font-weight: bolder;
 }
 
-a {
+p a {
+  border-bottom: 1px dotted $black;
+
   &:hover {
     color: $primary-color !important;
+    border-bottom: 1px dotted $primary-color;
   }
 }
 
@@ -169,6 +172,7 @@ $text-color: #fff;
     font-weight: 300;
     font-size: .8em;
     color: $text-color;
+    border-bottom: none;
   }
 }
 

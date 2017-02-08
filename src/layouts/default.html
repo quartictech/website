@@ -4,23 +4,23 @@
 <head>
     <title>Quartic Technologies - {{ title }}</title>
     <meta charset="utf-8" />
-    <meta name="description" content="Take the enterprise to the field. Send and receive critical information to and from the field, in real time."/>
+    <meta name="description" content="{{ description }}"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css" rel="stylesheet">
-    <link rel="stylesheet" href="{{root}}assets/css/app.css" />
+    <link rel="stylesheet" href="/assets/css/app.css" />
     <meta class="foundation-mq" />
-    <link rel="shortcut icon" type="image/ico" href="{{root}}assets/img/icons/favicon.ico" />
-    <link rel="apple-touch-icon" sizes="180x180" href="{{root}}assets/img/icons/apple-touch-icon.png">
-    <link rel="icon" type="image/png" href="{{root}}assets/img/icons/favicon-32x32.png" sizes="32x32">
-    <link rel="icon" type="image/png" href="{{root}}assets/img/icons/favicon-16x16.png" sizes="16x16">
-    <link rel="manifest" href="{{root}}assets/img/icons/manifest.json">
-    <link rel="mask-icon" href="{{root}}assets/img/icons/safari-pinned-tab.svg" color="#dd137b">
-    <meta name="msapplication-config" content="{{root}}assets/img/icons/browserconfig.xml" />
+    <link rel="shortcut icon" type="image/ico" href="/assets/img/icons/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="/assets/img/icons/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/assets/img/icons/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="/assets/img/icons/manifest.json">
+    <link rel="mask-icon" href="/assets/img/icons/safari-pinned-tab.svg" color="#dd137b">
+    <meta name="msapplication-config" content="/assets/img/icons/browserconfig.xml" />
     <meta name="theme-color" content="#ffffff">
 
     <meta property="og:url" content="https://www.quartic.io/">
     <meta property="og:title" content="Quartic Technologies">
-    <meta property="og:description" content="Take the enterprise to the field. Send and receive critical information to and from the field, in real time.">
+    <meta property="og:description" content="Take the enterprise to the field. Exchange critical information with the field, in real time.">
     <meta property="og:site_name" content="Quartic.io">
     <meta property="og:image" content="https://www.quartic.io/assets/img/quartic_logo_dark.png">
     <meta property="og:type" content="website">
@@ -36,23 +36,23 @@
         <div class="title-bar" data-responsive-toggle="responsive-menu" data-hide-for="medium">
             <button class="menu-icon" type="button" data-toggle="example-menu"></button>
             <div class="title-bar-title">
-                <a href="{{root}}/">
-                    <img src="{{root}}assets/img/quartic_logo.png" class="qt-logo" />
+                <a href="/">
+                    <img src="/assets/img/quartic_logo.png" class="qt-logo" />
                 </a>
             </div>
         </div>
 
         <div class="top-bar" id="responsive-menu">
             <div class="top-bar-left hide-for-small-only">
-                <a href="{{root}}/">
-                    <img src="{{root}}assets/img/quartic_logo.png" class="qt-logo" />
+                <a href="/">
+                    <img src="/assets/img/quartic_logo.png" class="qt-logo" />
                 </a>
             </div>
             <div class="top-bar-right" style="height: 100%">
                 <ul class="vertical medium-horizontal menu">
-                    <li><a class="qt-menu" href="{{root}}about.html">About</a></li>
+                    <li><a class="qt-menu" href="/about.html">About</a></li>
                     <li><a class="qt-menu" href="https://medium.com/quartictech">Blog</a></li>
-                    <li><a class="qt-menu" href="{{root}}register.html">Request a demo</a></li>
+                    <li><a class="qt-menu" href="/demo.html">Request a demo</a></li>
                 </ul>
             </div>
         </div>
@@ -64,7 +64,7 @@
     <footer class="footer">
         <div class="row full-width align-center">
             <div class="column">
-                <img src="{{root}}assets/img/quartic_logo_white.png" class="qt-logo" />
+                <img src="/assets/img/quartic_logo_white.png" class="qt-logo" />
 
                 <ul class="footer-icons">
                     <li>
@@ -83,7 +83,7 @@
 
                 <ul class="footer-links">
                     <li>&copy; Quartic Technologies 2017</li>
-                    <li><a href="{{root}}/privacy_policy.html">Privacy Policy</a></li>
+                    <li><a href="/privacy_policy.html">Privacy Policy</a></li>
                     <li>Maps:
                         <a href="https://www.openstreetmap.org/copyright">&copy; OpenStreetMap</a>,
                         <a href='https://www.mapbox.com/about/maps/'>&copy; Mapbox</a>
@@ -96,8 +96,8 @@
     {{#if build.production}}
     {{> google_analytics}}
     {{/if}}
-    
-    <script src="{{root}}assets/js/app.js"></script>
+
+    <script src="/assets/js/app.js"></script>
     <script src="//code.tidio.co/iqsyzk6yplajd2nqrcxg25jwls9snqnt.js"></script>
 </body>
 
