@@ -78,8 +78,13 @@ p a {
   border-bottom: 1px dotted $black;
 
   &:hover {
-    color: $primary-color !important;
     border-bottom: 1px dotted $primary-color;
+  }
+}
+
+a {
+  &:hover {
+    color: $primary-color !important;
   }
 }
 
