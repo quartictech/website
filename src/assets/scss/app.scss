@@ -52,25 +52,14 @@
 @include motion-ui-transitions;
 @include motion-ui-animations;
 
-$qt-gradient-1: #808588;
-$qt-gradient-2: darken($qt-gradient-1, 100%);
-
-$qt-gradient-faded-1: fade-out($qt-gradient-1, 0.3);
-$qt-gradient-faded-2: fade-out($qt-gradient-2, 0.1);
-
 .qt-leader {
-    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ff5db1+0,ef017c+100;Pink+3D+%231 */
-    background: $qt-gradient-1; /* Old browsers */
-    background: -moz-linear-gradient(top,  $qt-gradient-faded-1 0%, $qt-gradient-faded-2 100%), url('/assets/img/geofence_trimmed.jpg') no-repeat center; /* FF3.6-15 */
-    background: -webkit-linear-gradient(top,  $qt-gradient-faded-1 0%,$qt-gradient-faded-2 100%), url('/assets/img/geofence_trimmed.jpg') no-repeat center; /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(to bottom,  $qt-gradient-faded-1 0%, $qt-gradient-faded-2 100%), url('/assets/img/geofence_trimmed.jpg') no-repeat center; /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$qt-gradient-1', endColorstr='$qt-gradient-2',GradientType=0 ); /* IE6-9 */
+    background: url('/assets/img/noobs.jpg') no-repeat top;
     background-size: cover;
-    color: #FFFFFF;
+    color: $white;
 }
 
 .qt-menu {
-    color: white !important;
+    color: $white !important;
     font-weight: bolder;
 }
 
@@ -90,7 +79,7 @@ a {
 
 .qt-logo {
     padding-left: 0.5em;
-    height: 35px;
+    height: 50px;
 }
 
 .qt-button {
@@ -155,7 +144,7 @@ a {
 $text-color: #fff;
 
 .footer {
-  background-color: $qt-gradient-1;
+  background-color: #808588;
   padding: 2rem 4rem;
   text-align: center;
   color: $text-color;
