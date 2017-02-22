@@ -46,9 +46,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:zoom="11.2"
-     inkscape:cx="325.47874"
-     inkscape:cy="119.43883"
+     inkscape:zoom="0.7"
+     inkscape:cx="661.957"
+     inkscape:cy="272.91131"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -495,12 +495,12 @@
          id="tspan5917">field operations.</tspan></text>
     <path
        style="fill:none;fill-rule:evenodd;stroke:#ffffff;stroke-width:0.63700002;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.63700002, 3.82200008;stroke-dashoffset:0;stroke-opacity:1"
-       d="M 377.9006,101.40569 V 325.37766"
+       d="M 379.3185,101.40569 V 325.37766"
        id="path5571-3-4"
        inkscape:connector-curvature="0" />
     <path
        style="fill:none;fill-rule:evenodd;stroke:#ffffff;stroke-width:0.63700002;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.63700001, 3.82200004;stroke-dashoffset:0;stroke-opacity:1"
-       d="M -0.73983333,97.247949 V 321.21992"
+       d="M -1.6815,97.247949 V 321.21992"
        id="path5571-38"
        inkscape:connector-curvature="0" />
   </g>
