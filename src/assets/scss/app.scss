@@ -113,7 +113,7 @@ a {
 
 .qt-gimpy-icon {
   color: $primary-color;
-  font-size: 3em;
+  font-size: 5em;
 }
 
 .qt-stripe-light {
@@ -225,4 +225,10 @@ $text-color: #fff;
 
 .qt-pad-bottom {
   padding-bottom: 20px; 
+}
+
+/* Used for our how it works diagram */
+.qt-diagram {
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
