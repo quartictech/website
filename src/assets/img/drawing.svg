@@ -9,9 +9,9 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="336.33038mm"
+   width="337.97025mm"
    height="158.32127mm"
-   viewBox="0 0 336.33038 158.32127"
+   viewBox="0 0 337.97024 158.32127"
    version="1.1"
    id="svg8"
    inkscape:version="0.92.1 r"
@@ -47,8 +47,8 @@
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.7"
-     inkscape:cx="582.00679"
-     inkscape:cy="361.0696"
+     inkscape:cx="444.33678"
+     inkscape:cy="361.06962"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -80,7 +80,7 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(-23.153491,-133.62628)">
+     transform="translate(-22.348028,-133.62628)">
     <path
        style="fill:none;fill-rule:evenodd;stroke:#ffffff;stroke-width:0.63700002;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.637, 3.822;stroke-dashoffset:0;stroke-opacity:1"
        d="M 125.65184,94.086374 V 318.05834"
@@ -102,81 +102,81 @@
        ry="4.9100833" />
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:10.58333302px;line-height:6.61458302px;font-family:Roboto;-inkscape-font-specification:'Roboto Light';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.58333302px;line-height:6.61458302px;font-family:Roboto;-inkscape-font-specification:Roboto;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        x="31.340019"
        y="189.54585"
        id="text16"><tspan
          sodipodi:role="line"
          x="31.340019"
          y="189.54585"
-         style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:4.93888903px;line-height:3.54541659px;font-family:Roboto;-inkscape-font-specification:'Roboto Light';writing-mode:lr-tb;fill:#ffffff;fill-opacity:1;stroke-width:0.26458332px"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93888903px;line-height:3.54541659px;font-family:Roboto;-inkscape-font-specification:Roboto;writing-mode:lr-tb;fill:#ffffff;fill-opacity:1;stroke-width:0.26458332px"
          id="tspan823">Asset Registers</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:10.58333302px;line-height:6.61458349px;font-family:Roboto;-inkscape-font-specification:'Roboto Light';letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.58333302px;line-height:6.61458349px;font-family:Roboto;-inkscape-font-specification:Roboto;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        x="43.849388"
        y="141.56378"
        id="text16-7"><tspan
          sodipodi:role="line"
          x="43.849388"
          y="141.56378"
-         style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;line-height:10.58333302px;font-family:Roboto;-inkscape-font-specification:'Roboto Light';writing-mode:lr-tb;fill:#ffffff;fill-opacity:1;stroke-width:0.26458332px"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:10.58333302px;font-family:Roboto;-inkscape-font-specification:Roboto;writing-mode:lr-tb;fill:#ffffff;fill-opacity:1;stroke-width:0.26458332px"
          id="tspan823-7">Observe</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:6.61458302px;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.58333302px;line-height:6.61458302px;font-family:Roboto;-inkscape-font-specification:Roboto;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        x="113.85682"
        y="139.44243"
        id="text873"><tspan
          sodipodi:role="line"
          id="tspan871"
          x="113.85682"
-         y="145.4989"
-         style="stroke-width:0.26458332px"></tspan></text>
+         y="145.39555"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Roboto;-inkscape-font-specification:Roboto;stroke-width:0.26458332px"></tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:10.58333302px;line-height:6.61458349px;font-family:Roboto;-inkscape-font-specification:'Roboto Light';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.58333302px;line-height:6.61458349px;font-family:Roboto;-inkscape-font-specification:Roboto;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        x="175.1927"
        y="141.37775"
        id="text16-4"><tspan
          sodipodi:role="line"
          x="175.1927"
          y="141.37775"
-         style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;line-height:10.58333302px;font-family:Roboto;-inkscape-font-specification:'Roboto Light';writing-mode:lr-tb;fill:#ffffff;fill-opacity:1;stroke-width:0.26458332px"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:10.58333302px;font-family:Roboto;-inkscape-font-specification:Roboto;writing-mode:lr-tb;fill:#ffffff;fill-opacity:1;stroke-width:0.26458332px"
          id="tspan823-1">Learn</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:6.61458302px;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.58333302px;line-height:6.61458302px;font-family:Roboto;-inkscape-font-specification:Roboto;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        x="143.52373"
        y="179.53249"
        id="text889"><tspan
          sodipodi:role="line"
          id="tspan887"
          x="143.52373"
-         y="185.58896"
-         style="stroke-width:0.26458332px"></tspan></text>
+         y="185.48561"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Roboto;-inkscape-font-specification:Roboto;stroke-width:0.26458332px"></tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:10.58333302px;line-height:6.61458349px;font-family:Roboto;-inkscape-font-specification:'Roboto Light';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.58333302px;line-height:6.61458349px;font-family:Roboto;-inkscape-font-specification:Roboto;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        x="301.03076"
        y="141.56378"
        id="text16-7-7"><tspan
          sodipodi:role="line"
          x="301.03076"
          y="141.56378"
-         style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;line-height:10.58333302px;font-family:Roboto;-inkscape-font-specification:'Roboto Light';writing-mode:lr-tb;fill:#ffffff;fill-opacity:1;stroke-width:0.26458332px"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:10.58333302px;font-family:Roboto;-inkscape-font-specification:Roboto;writing-mode:lr-tb;fill:#ffffff;fill-opacity:1;stroke-width:0.26458332px"
          id="tspan823-7-0">Apply</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:6.61458302px;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.58333302px;line-height:6.61458302px;font-family:Roboto;-inkscape-font-specification:Roboto;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        x="150.05655"
        y="185.11852"
        id="text1015"><tspan
          sodipodi:role="line"
          id="tspan1013"
          x="150.05655"
-         y="191.17499"
-         style="stroke-width:0.26458332px"></tspan></text>
+         y="191.07164"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Roboto;-inkscape-font-specification:Roboto;stroke-width:0.26458332px"></tspan></text>
     <path
        id="path1065"
        d="m 53.445095,168.29795 q 0.215854,0 0.373594,0.15775 0.15774,0.15773 0.15774,0.37359 v 13.81468 q 0,0.21585 -0.15774,0.37359 -0.15774,0.15774 -0.373594,0.15774 H 42.818418 q -0.215856,0 -0.373595,-0.15774 -0.15774,-0.15774 -0.15774,-0.37359 v -13.81468 q 0,-0.21586 0.15774,-0.37359 0.157739,-0.15775 0.373595,-0.15775 z m -6.907341,2.391 v 0.53134 q 0,0.11623 0.07472,0.19095 0.07472,0.0747 0.190948,0.0747 h 0.531334 q 0.116229,0 0.190948,-0.0747 0.07472,-0.0747 0.07472,-0.19095 v -0.53134 q 0,-0.11623 -0.07472,-0.19095 -0.07472,-0.0747 -0.190948,-0.0747 h -0.531334 q -0.116229,0 -0.190948,0.0747 -0.07472,0.0747 -0.07472,0.19095 z m 0,2.12534 v 0.53134 q 0,0.11622 0.07472,0.19094 0.07472,0.0747 0.190948,0.0747 h 0.531334 q 0.116229,0 0.190948,-0.0747 0.07472,-0.0747 0.07472,-0.19094 v -0.53134 q 0,-0.11623 -0.07472,-0.19094 -0.07472,-0.0747 -0.190948,-0.0747 h -0.531334 q -0.116229,0 -0.190948,0.0747 -0.07472,0.0747 -0.07472,0.19094 z m 0,2.12534 v 0.53133 q 0,0.11623 0.07472,0.19095 0.07472,0.0747 0.190948,0.0747 h 0.531334 q 0.116229,0 0.190948,-0.0747 0.07472,-0.0747 0.07472,-0.19095 v -0.53133 q 0,-0.11623 -0.07472,-0.19095 -0.07472,-0.0747 -0.190948,-0.0747 h -0.531334 q -0.116229,0 -0.190948,0.0747 -0.07472,0.0747 -0.07472,0.19095 z m 0,2.12533 v 0.53134 q 0,0.11623 0.07472,0.19094 0.07472,0.0747 0.190948,0.0747 h 0.531334 q 0.116229,0 0.190948,-0.0747 0.07472,-0.0747 0.07472,-0.19094 v -0.53134 q 0,-0.11623 -0.07472,-0.19095 -0.07472,-0.0747 -0.190948,-0.0747 h -0.531334 q -0.116229,0 -0.190948,0.0747 -0.07472,0.0747 -0.07472,0.19095 z m -1.062667,2.65667 v -0.53133 q 0,-0.11623 -0.07472,-0.19095 -0.07472,-0.0747 -0.190948,-0.0747 h -0.531334 q -0.116229,0 -0.190949,0.0747 -0.07472,0.0747 -0.07472,0.19095 v 0.53133 q 0,0.11623 0.07472,0.19095 0.07472,0.0747 0.190949,0.0747 h 0.531334 q 0.116229,0 0.190948,-0.0747 0.07472,-0.0747 0.07472,-0.19095 z m 0,-2.12533 v -0.53134 q 0,-0.11623 -0.07472,-0.19095 -0.07472,-0.0747 -0.190948,-0.0747 h -0.531334 q -0.116229,0 -0.190949,0.0747 -0.07472,0.0747 -0.07472,0.19095 v 0.53134 q 0,0.11623 0.07472,0.19094 0.07472,0.0747 0.190949,0.0747 h 0.531334 q 0.116229,0 0.190948,-0.0747 0.07472,-0.0747 0.07472,-0.19094 z m 0,-2.12534 v -0.53133 q 0,-0.11623 -0.07472,-0.19095 -0.07472,-0.0747 -0.190948,-0.0747 h -0.531334 q -0.116229,0 -0.190949,0.0747 -0.07472,0.0747 -0.07472,0.19095 v 0.53133 q 0,0.11623 0.07472,0.19095 0.07472,0.0747 0.190949,0.0747 h 0.531334 q 0.116229,0 0.190948,-0.0747 0.07472,-0.0747 0.07472,-0.19095 z m 0,-2.12533 v -0.53134 q 0,-0.11623 -0.07472,-0.19094 -0.07472,-0.0747 -0.190948,-0.0747 h -0.531334 q -0.116229,0 -0.190949,0.0747 -0.07472,0.0747 -0.07472,0.19094 v 0.53134 q 0,0.11622 0.07472,0.19094 0.07472,0.0747 0.190949,0.0747 h 0.531334 q 0.116229,0 0.190948,-0.0747 0.07472,-0.0747 0.07472,-0.19094 z m 0,-2.12534 v -0.53134 q 0,-0.11623 -0.07472,-0.19095 -0.07472,-0.0747 -0.190948,-0.0747 h -0.531334 q -0.116229,0 -0.190949,0.0747 -0.07472,0.0747 -0.07472,0.19095 v 0.53134 q 0,0.11623 0.07472,0.19095 0.07472,0.0747 0.190949,0.0747 h 0.531334 q 0.116229,0 0.190948,-0.0747 0.07472,-0.0747 0.07472,-0.19095 z m 4.250671,10.62668 v -1.594 q 0,-0.11624 -0.07472,-0.19095 -0.07472,-0.0747 -0.190948,-0.0747 h -2.65667 q -0.116229,0 -0.190948,0.0747 -0.07472,0.0747 -0.07472,0.19095 v 1.594 q 0,0.11623 0.07472,0.19095 0.07472,0.0747 0.190948,0.0747 h 2.65667 q 0.116228,0 0.190948,-0.0747 0.07472,-0.0747 0.07472,-0.19095 z m 0,-4.25067 v -0.53134 q 0,-0.11623 -0.07472,-0.19095 -0.07472,-0.0747 -0.190948,-0.0747 h -0.531335 q -0.116229,0 -0.190947,0.0747 -0.07472,0.0747 -0.07472,0.19095 v 0.53134 q 0,0.11623 0.07472,0.19094 0.07472,0.0747 0.190947,0.0747 h 0.531335 q 0.116228,0 0.190948,-0.0747 0.07472,-0.0747 0.07472,-0.19094 z m 0,-2.12534 v -0.53133 q 0,-0.11623 -0.07472,-0.19095 -0.07472,-0.0747 -0.190948,-0.0747 h -0.531335 q -0.116229,0 -0.190947,0.0747 -0.07472,0.0747 -0.07472,0.19095 v 0.53133 q 0,0.11623 0.07472,0.19095 0.07472,0.0747 0.190947,0.0747 h 0.531335 q 0.116228,0 0.190948,-0.0747 0.07472,-0.0747 0.07472,-0.19095 z m 0,-2.12533 v -0.53134 q 0,-0.11623 -0.07472,-0.19094 -0.07472,-0.0747 -0.190948,-0.0747 h -0.531335 q -0.116229,0 -0.190947,0.0747 -0.07472,0.0747 -0.07472,0.19094 v 0.53134 q 0,0.11622 0.07472,0.19094 0.07472,0.0747 0.190947,0.0747 h 0.531335 q 0.116228,0 0.190948,-0.0747 0.07472,-0.0747 0.07472,-0.19094 z m 0,-2.12534 v -0.53134 q 0,-0.11623 -0.07472,-0.19095 -0.07472,-0.0747 -0.190948,-0.0747 h -0.531335 q -0.116229,0 -0.190947,0.0747 -0.07472,0.0747 -0.07472,0.19095 v 0.53134 q 0,0.11623 0.07472,0.19095 0.07472,0.0747 0.190947,0.0747 h 0.531335 q 0.116228,0 0.190948,-0.0747 0.07472,-0.0747 0.07472,-0.19095 z m 2.125336,8.50134 v -0.53133 q 0,-0.11623 -0.07472,-0.19095 -0.07472,-0.0747 -0.190949,-0.0747 h -0.531333 q -0.11623,0 -0.190949,0.0747 -0.07472,0.0747 -0.07472,0.19095 v 0.53133 q 0,0.11623 0.07472,0.19095 0.07472,0.0747 0.190949,0.0747 h 0.531333 q 0.116229,0 0.190949,-0.0747 0.07472,-0.0747 0.07472,-0.19095 z m 0,-2.12533 v -0.53134 q 0,-0.11623 -0.07472,-0.19095 -0.07472,-0.0747 -0.190949,-0.0747 h -0.531333 q -0.11623,0 -0.190949,0.0747 -0.07472,0.0747 -0.07472,0.19095 v 0.53134 q 0,0.11623 0.07472,0.19094 0.07472,0.0747 0.190949,0.0747 h 0.531333 q 0.116229,0 0.190949,-0.0747 0.07472,-0.0747 0.07472,-0.19094 z m 0,-2.12534 v -0.53133 q 0,-0.11623 -0.07472,-0.19095 -0.07472,-0.0747 -0.190949,-0.0747 h -0.531333 q -0.11623,0 -0.190949,0.0747 -0.07472,0.0747 -0.07472,0.19095 v 0.53133 q 0,0.11623 0.07472,0.19095 0.07472,0.0747 0.190949,0.0747 h 0.531333 q 0.116229,0 0.190949,-0.0747 0.07472,-0.0747 0.07472,-0.19095 z m 0,-2.12533 v -0.53134 q 0,-0.11623 -0.07472,-0.19094 -0.07472,-0.0747 -0.190949,-0.0747 h -0.531333 q -0.11623,0 -0.190949,0.0747 -0.07472,0.0747 -0.07472,0.19094 v 0.53134 q 0,0.11622 0.07472,0.19094 0.07472,0.0747 0.190949,0.0747 h 0.531333 q 0.116229,0 0.190949,-0.0747 0.07472,-0.0747 0.07472,-0.19094 z m 0,-2.12534 v -0.53134 q 0,-0.11623 -0.07472,-0.19095 -0.07472,-0.0747 -0.190949,-0.0747 h -0.531333 q -0.11623,0 -0.190949,0.0747 -0.07472,0.0747 -0.07472,0.19095 v 0.53134 q 0,0.11623 0.07472,0.19095 0.07472,0.0747 0.190949,0.0747 h 0.531333 q 0.116229,0 0.190949,-0.0747 0.07472,-0.0747 0.07472,-0.19095 z"
@@ -189,19 +189,19 @@
        style="fill:#db1e7b;fill-opacity:1;stroke-width:0.00854709" />
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:10.58333302px;line-height:6.61458349px;font-family:Roboto;-inkscape-font-specification:'Roboto Light';text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.58333302px;line-height:6.61458349px;font-family:Roboto;-inkscape-font-specification:Roboto;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        x="83.716545"
        y="189.7412"
        id="text16-6"><tspan
          sodipodi:role="line"
-         x="84.319435"
+         x="84.329086"
          y="189.7412"
-         style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:4.93888903px;line-height:3.54541659px;font-family:Roboto;-inkscape-font-specification:'Roboto Light';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke-width:0.26458332px"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93888903px;line-height:3.54541659px;font-family:Roboto;-inkscape-font-specification:Roboto;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke-width:0.26458332px"
          id="tspan1158">Workforce </tspan><tspan
          sodipodi:role="line"
          x="83.716545"
          y="196.35577"
-         style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:4.93888903px;line-height:3.54541659px;font-family:Roboto;-inkscape-font-specification:'Roboto Light';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke-width:0.26458332px"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93888903px;line-height:3.54541659px;font-family:Roboto;-inkscape-font-specification:Roboto;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke-width:0.26458332px"
          id="tspan1584">Management</tspan></text>
     <path
        id="path1208"
@@ -210,14 +210,14 @@
        style="fill:#db1e7b;fill-opacity:1;stroke-width:0.00995946" />
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:10.58333302px;line-height:6.61458349px;font-family:Roboto;-inkscape-font-specification:'Roboto Light';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.58333302px;line-height:6.61458349px;font-family:Roboto;-inkscape-font-specification:Roboto;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        x="32.379406"
        y="218.42442"
        id="text16-6-5"><tspan
          sodipodi:role="line"
          x="32.379406"
          y="218.42442"
-         style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:4.93888903px;line-height:3.54541659px;font-family:Roboto;-inkscape-font-specification:'Roboto Light';writing-mode:lr-tb;fill:#ffffff;fill-opacity:1;stroke-width:0.26458332px"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93888903px;line-height:3.54541659px;font-family:Roboto;-inkscape-font-specification:Roboto;writing-mode:lr-tb;fill:#ffffff;fill-opacity:1;stroke-width:0.26458332px"
          id="tspan1158-9">Telemetry/IoT</tspan></text>
     <g
        style="fill:#ffffff"
@@ -246,19 +246,19 @@
        style="fill:#db1e7b;fill-opacity:1;stroke-width:0.00845886" />
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:10.58333302px;line-height:6.61458349px;font-family:Roboto;-inkscape-font-specification:'Roboto Light';text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.58333302px;line-height:6.61458349px;font-family:Roboto;-inkscape-font-specification:Roboto;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        x="328.52621"
        y="232.80583"
        id="text16-41"><tspan
          sodipodi:role="line"
          x="328.52621"
          y="232.80583"
-         style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:4.93888903px;line-height:3.54541659px;font-family:Roboto;-inkscape-font-specification:'Roboto Light';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke-width:0.26458332px"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93888903px;line-height:3.54541659px;font-family:Roboto;-inkscape-font-specification:Roboto;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke-width:0.26458332px"
          id="tspan823-4">Schedule</tspan><tspan
          sodipodi:role="line"
          x="328.52621"
          y="239.42041"
-         style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:4.93888903px;line-height:3.54541659px;font-family:Roboto;-inkscape-font-specification:'Roboto Light';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke-width:0.26458332px"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93888903px;line-height:3.54541659px;font-family:Roboto;-inkscape-font-specification:Roboto;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke-width:0.26458332px"
          id="tspan1582">Maintenance</tspan></text>
     <path
        id="path1553"
@@ -267,62 +267,62 @@
        style="fill:#db1e7b;fill-opacity:1;stroke-width:0.00961539" />
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:10.58333302px;line-height:6.61458349px;font-family:Roboto;-inkscape-font-specification:'Roboto Light';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.58333302px;line-height:6.61458349px;font-family:Roboto;-inkscape-font-specification:Roboto;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        x="292.89966"
        y="194.91258"
        id="text16-41-1"><tspan
          sodipodi:role="line"
          x="292.89966"
          y="194.91258"
-         style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:4.93888903px;line-height:3.54541659px;font-family:Roboto;-inkscape-font-specification:'Roboto Light';writing-mode:lr-tb;fill:#ffffff;fill-opacity:1;stroke-width:0.26458332px"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93888903px;line-height:3.54541659px;font-family:Roboto;-inkscape-font-specification:Roboto;writing-mode:lr-tb;fill:#ffffff;fill-opacity:1;stroke-width:0.26458332px"
          id="tspan823-4-5">Predict Failures</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:6.61458302px;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.58333302px;line-height:6.61458302px;font-family:Roboto;-inkscape-font-specification:Roboto;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        x="78.844505"
        y="158.95282"
        id="text1588"><tspan
          sodipodi:role="line"
          id="tspan1586"
          x="78.844505"
-         y="165.00929"
-         style="stroke-width:0.26458332px"></tspan></text>
+         y="164.90594"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Roboto;-inkscape-font-specification:Roboto;stroke-width:0.26458332px"></tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:10.58333302px;line-height:6.61458349px;font-family:Roboto;-inkscape-font-specification:'Roboto Light';text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.58333302px;line-height:6.61458349px;font-family:Roboto;-inkscape-font-specification:Roboto;text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        x="62.41983"
        y="236.75694"
        id="text16-7-5"><tspan
          sodipodi:role="line"
-         x="63.022724"
+         x="63.032368"
          y="236.75694"
-         style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:4.93888903px;line-height:0px;font-family:Roboto;-inkscape-font-specification:'Roboto Light';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke-width:0.26458332px"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93888903px;line-height:0px;font-family:Roboto;-inkscape-font-specification:Roboto;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke-width:0.26458332px"
          id="tspan5422">...and captures data from </tspan><tspan
          sodipodi:role="line"
          x="62.41983"
          y="243.37152"
-         style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:4.93888903px;line-height:0px;font-family:Roboto;-inkscape-font-specification:'Roboto Light';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke-width:0.26458332px"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93888903px;line-height:0px;font-family:Roboto;-inkscape-font-specification:Roboto;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke-width:0.26458332px"
          id="tspan5619">our mobile app.</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:10.58333302px;line-height:6.61458349px;font-family:Roboto;-inkscape-font-specification:'Roboto Light';text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.58333302px;line-height:6.61458349px;font-family:Roboto;-inkscape-font-specification:Roboto;text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        x="191.64136"
        y="175.51183"
        id="text16-7-5-9"><tspan
          sodipodi:role="line"
-         x="192.24425"
+         x="192.25389"
          y="175.51183"
-         style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:4.93888903px;line-height:0px;font-family:Roboto;-inkscape-font-specification:'Roboto Light';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke-width:0.26458332px"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93888903px;line-height:0px;font-family:Roboto;-inkscape-font-specification:Roboto;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke-width:0.26458332px"
          id="tspan5483">Quartic collates all </tspan><tspan
          sodipodi:role="line"
-         x="192.24425"
+         x="192.25389"
          y="182.1264"
-         style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:4.93888903px;line-height:0px;font-family:Roboto;-inkscape-font-specification:'Roboto Light';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke-width:0.26458332px"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93888903px;line-height:0px;font-family:Roboto;-inkscape-font-specification:Roboto;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke-width:0.26458332px"
          id="tspan5626">of your data and applies </tspan><tspan
          sodipodi:role="line"
          x="191.64136"
          y="188.741"
-         style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:4.93888903px;line-height:0px;font-family:Roboto;-inkscape-font-specification:'Roboto Light';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke-width:0.26458332px"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93888903px;line-height:0px;font-family:Roboto;-inkscape-font-specification:Roboto;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke-width:0.26458332px"
          id="tspan5632">machine learning algorithms...</tspan></text>
     <path
        id="path5388"
@@ -331,14 +331,14 @@
        style="fill:#db1e7b;fill-opacity:1;stroke-width:0.01902946" />
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:10.58333302px;line-height:6.61458349px;font-family:Roboto;-inkscape-font-specification:'Roboto Light';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.58333302px;line-height:6.61458349px;font-family:Roboto;-inkscape-font-specification:Roboto;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        x="62.517498"
        y="156.33524"
        id="text16-7-5-2"><tspan
          sodipodi:role="line"
          x="62.517498"
          y="156.33524"
-         style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:4.93888903px;line-height:0px;font-family:Roboto;-inkscape-font-specification:'Roboto Light';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke-width:0.26458332px"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93888903px;line-height:0px;font-family:Roboto;-inkscape-font-specification:Roboto;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke-width:0.26458332px"
          id="tspan1612-7">Quartic monitors your existing data...</tspan></text>
     <rect
        style="fill:none;fill-opacity:1;stroke:#ffffff;stroke-width:0.373;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
@@ -410,19 +410,19 @@
        sodipodi:nodetypes="csscc" />
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:10.58333302px;line-height:6.61458349px;font-family:Roboto;-inkscape-font-specification:'Roboto Light';text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.58333302px;line-height:6.61458349px;font-family:Roboto;-inkscape-font-specification:Roboto;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        x="317.55234"
        y="281.27109"
        id="text16-41-9"><tspan
          sodipodi:role="line"
          x="317.55234"
          y="281.27109"
-         style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:4.93888903px;line-height:3.54541659px;font-family:Roboto;-inkscape-font-specification:'Roboto Light';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke-width:0.26458332px"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93888903px;line-height:3.54541659px;font-family:Roboto;-inkscape-font-specification:Roboto;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke-width:0.26458332px"
          id="tspan1582-2">Update</tspan><tspan
          sodipodi:role="line"
          x="317.55234"
          y="287.88568"
-         style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:4.93888903px;line-height:3.54541659px;font-family:Roboto;-inkscape-font-specification:'Roboto Light';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke-width:0.26458332px"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93888903px;line-height:3.54541659px;font-family:Roboto;-inkscape-font-specification:Roboto;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke-width:0.26458332px"
          id="tspan5663">Processes</tspan></text>
     <rect
        style="fill:none;fill-opacity:0;stroke:#ffffff;stroke-width:0.51943719;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
@@ -483,19 +483,19 @@
        sodipodi:nodetypes="csscc" />
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:10.58333302px;line-height:6.61458349px;font-family:Roboto;-inkscape-font-specification:'Roboto Light';text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.58333302px;line-height:6.61458349px;font-family:Roboto;-inkscape-font-specification:Roboto;text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        x="313.75333"
        y="156.33524"
        id="text16-7-5-9-2"><tspan
          sodipodi:role="line"
          x="313.75333"
          y="156.33524"
-         style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:4.93888903px;line-height:0px;font-family:Roboto;-inkscape-font-specification:'Roboto Light';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke-width:0.26458332px"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93888903px;line-height:0px;font-family:Roboto;-inkscape-font-specification:Roboto;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke-width:0.26458332px"
          id="tspan5632-6">...and uses this knowledge to improve your</tspan><tspan
          sodipodi:role="line"
          x="313.75333"
          y="162.94981"
-         style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:4.93888903px;line-height:0px;font-family:Roboto;-inkscape-font-specification:'Roboto Light';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke-width:0.26458332px"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93888903px;line-height:0px;font-family:Roboto;-inkscape-font-specification:Roboto;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke-width:0.26458332px"
          id="tspan5917">field operations.</tspan></text>
     <path
        style="fill:none;fill-rule:evenodd;stroke:#ffffff;stroke-width:0.63700002;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.63700002, 3.82200008;stroke-dashoffset:0;stroke-opacity:1"
