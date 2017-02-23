@@ -239,3 +239,21 @@ $text-color: #fff;
   text-align: center;
   display: block;
 }
+
+.qt-signup .email {
+    border: 1px solid #ccc;
+    font-size:12px;
+    height: 40px;
+    padding: 8px;
+    border-radius: 4px 0 0 4px;
+    color: #333;
+    font-weight: bold;
+    width: 300px;
+    float: left;
+}
+
+.qt-signup .button {
+  height: 40px;
+  border-radius: 0 4px 4px 0;
+  border: 1px solid #db1e7b;
+}
