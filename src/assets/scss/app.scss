@@ -52,6 +52,11 @@
 @include motion-ui-transitions;
 @include motion-ui-animations;
 
+.qt-trialform {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
 .qt-leader {
     background: url('/assets/img/engineers.jpg') no-repeat top;
     background-size: cover;
