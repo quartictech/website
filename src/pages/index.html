@@ -11,6 +11,11 @@ $(document).ready(
         $(window).on("open.zf.reveal", function() {
             $("#quartic-video").attr('src', url);
         });
+
+        $(window).on("closed.zf.reveal", function() {
+            $("#quartic-video").attr('src', '');
+        });
+
     }
 )
 </script>
