@@ -5,7 +5,7 @@
     <title>Quartic Technologies - {{ title }}</title>
     <meta charset="utf-8" />
     <meta name="description" content="{{ description }}"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css" rel="stylesheet">
     <link rel="stylesheet" href="/assets/css/app.css" />
     <meta class="foundation-mq" />
@@ -20,10 +20,11 @@
 
     <meta property="og:url" content="https://www.quartic.io/">
     <meta property="og:title" content="Quartic Technologies">
-    <meta property="og:description" content="Take the enterprise to the field. Exchange critical information with the field, in real time.">
+    <meta property="og:description" content="Take the enterprise to the field. Exchange critical information with operatives and engineers, in real time.">
     <meta property="og:site_name" content="Quartic.io">
     <meta property="og:image" content="https://www.quartic.io/assets/img/quartic_logo_dark.png">
     <meta property="og:type" content="website">
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 
     <!-- Version {{build.version}} -->
 
@@ -32,32 +33,6 @@
 
 
 <body>
-    <nav>
-        <div class="title-bar" data-responsive-toggle="responsive-menu" data-hide-for="medium">
-            <button class="menu-icon" type="button" data-toggle="example-menu"></button>
-            <div class="title-bar-title">
-                <a href="/">
-                    <img src="/assets/img/quartic_logo.png" class="qt-logo" />
-                </a>
-            </div>
-        </div>
-
-        <div class="top-bar" id="responsive-menu">
-            <div class="top-bar-left hide-for-small-only">
-                <a href="/">
-                    <img src="/assets/img/quartic_logo.png" class="qt-logo" />
-                </a>
-            </div>
-            <div class="top-bar-right" style="height: 100%">
-                <ul class="vertical medium-horizontal menu">
-                    <li><a class="qt-menu" href="/about.html">About</a></li>
-                    <li><a class="qt-menu" href="https://medium.com/quartictech">Blog</a></li>
-                    <li><a class="qt-menu" href="/demo.html">Request a demo</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
     {{> body}}
 
     <!-- Footer -->

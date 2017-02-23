@@ -1,42 +1,77 @@
 ---
 layout: default
-title: Combine enterprise analytics with real-time workforce management
-description: Take the enterprise to the field. Exchange critical information with the field, in real time.
+title: Field maintenance that works
+description: Use past data to avoid future failures.  Field operations with added intelligence.
 ---
+<script>
+$(document).ready(
+    function() {
+        var url = $("#quartic-video").attr('src');
+        $("#quartic-video").attr('src', '');
+        $(window).on("open.zf.reveal", function() {
+            $("#quartic-video").attr('src', url);
+        });
+
+        $(window).on("closed.zf.reveal", function() {
+            $("#quartic-video").attr('src', '');
+        });
+    }
+)
+</script>
 <div class="qt-leader">
+    {{> nav}}
+
     <div class="row medium-expand">
         <div class="text-center columns">
             <p>&nbsp;</p>
             <p>&nbsp;</p>
-            <h1>Take the enterprise to the field.</h1>
+            <h1>Maintenance that works.</h1>
             <h3>
-                Exchange critical information with the field, in real time.
+                Use past data to avoid future failures.<br/>  Field operations with added intelligence.
             </h3>
+
             <p>&nbsp;</p>
-            <a href="demo.html" class="qt-button large">Request a demo</a>
             <p>&nbsp;</p>
+
+            <a data-open="videoModal" class="qt-play-button">
+                <i class="fi-play-circle"></i>
+            </a>
+
+            <div class="row align-center">
+                <div class="columns small-6 text-center">
+                    <a class="qt-button large" href="/demo.html">Request a demo</a>
+                </div>
+                <div class="columns small-6 text-center">
+                    <a class="qt-button large" href="/trial.html">Start a free trial</a>
+                    <p>&nbsp;</p>
+                </div>
+            </div>
         </div>
     </div>
 </div>
 
 <div class="qt-container">
-
-    {{> what_it_does}}
-
-    <p>&nbsp;</p>
-
     <div class="qt-stripe-dark">
-        {{> media}}
+        {{> what_it_does}}
     </div>
 
     <div class="qt-stripe-light">
         {{> ground_control}}
+    </div>
+</div>
+ <div class="qt-stripe-dark">
+     <h1>Join our newsletter!</h1>
+     <h3 class="subheader">Find out how big data is changing the world of field work.</p>
+    {{> newsletter}}
+</div>
 
-        <p>&nbsp;</p>
 
-        {{> remote}}
-
-        <a href="demo.html" class="qt-other-button large">Request a demo</a>
+<div class="large reveal" id="videoModal" data-reveal data-reset-on-close="true">
+    <div class="responsive-embed widescreen">
+        <iframe id="quartic-video" width="1280" height="720" src="https://www.youtube.com/embed/cAR_z7QRptQ?rel=0&showinfo=0&autoplay=1" frameborder="0" allowfullscreen></iframe>
     </div>
 
+    <button class="close-button" data-close aria-label="Close video" type="button">
+        <span aria-hidden="true">&times;</span>
+    </button>
 </div>

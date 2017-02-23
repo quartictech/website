@@ -61,7 +61,7 @@ $light-gray: #e6e6e6;
 $medium-gray: #cacaca;
 $dark-gray: #8a8a8a;
 $black: #0a0a0a;
-$white: #fefefe;
+$white: #f5f5f5;
 $body-background: $white;
 $body-font-color: $black;
 $body-font-family: Roboto, 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -589,7 +589,7 @@ $thumbnail-radius: $global-radius;
 // 35. Title Bar
 // -------------
 
-$titlebar-background: $black;
+$titlebar-background: rgba(0,0,0,0);
 $titlebar-color: $white;
 $titlebar-padding: 0.5rem;
 $titlebar-text-font-weight: bold;
@@ -614,7 +614,7 @@ $tooltip-radius: $global-radius;
 // -----------
 
 $topbar-padding: 0.5rem;
-$topbar-background: $black;
+$topbar-background: rgba(0,0,0,0);
 $topbar-submenu-background: $topbar-background;
 $topbar-title-spacing: 0.5rem 1rem 0.5rem 0;
 $topbar-input-width: 200px;
