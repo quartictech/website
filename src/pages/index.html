@@ -4,6 +4,23 @@ title: Field maintenance that works
 description: Use past data to avoid future failures.  Field operations with added intelligence.
 ---
 <script>
+ $(function() {
+     jQuery(".typing").typed({
+            strings: [
+                "Maintenance",
+                "Manufacturing", 
+                "Infrastructure services", 
+                "Oil and gas", 
+                "Highway maintenance",
+                "Plant and equipment",
+                "Utilities",
+            ], 
+            typeSpeed: 100,
+            backDelay: 1000,
+            backSpeed: 50,
+            loop: true,
+        });
+ });
 $(document).ready(
     function() {
         var url = $("#quartic-video").attr('src');
@@ -16,8 +33,8 @@ $(document).ready(
         $(window).on("closed.zf.reveal", function() {
             $("#quartic-video").attr('src', '');
         });
-    }
-)
+   }
+);
 </script>
 <div class="qt-leader">
     {{> nav}}
@@ -30,8 +47,9 @@ $(document).ready(
             <h3>
                 Use past data to avoid future failures.<br/>  Field operations with added intelligence.
             </h3>
-
             <p>&nbsp;</p>
+            <h2>&nbsp;<span class="typing"/></h2>
+
             <p>&nbsp;</p>
 
             <a data-open="videoModal" class="qt-play-button">
