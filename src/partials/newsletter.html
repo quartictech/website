@@ -1,6 +1,7 @@
 <form action="/post/newsletter" method="POST" class="qt-signup" id="newsletter-form">
 <div class="qt-signup row align-center">
     <div class="columns shrink">
+         <input type="text" name="_gotcha" style="display:none" />
         <input type="email" class="email" name="email" id="email" value="" placeholder="Email address">
         <input type="submit" class="button qt-signup" value="Subscribe" onclick="gaFormEvent('Form', 'signup', 'newsletter', '#newsletter-form');"/>
     <input type="hidden" name="_next" value="/subscribed.html" />
