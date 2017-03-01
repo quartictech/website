@@ -39,3 +39,7 @@ function gaEvent(category, action, label) {
     console.log("sending event", category, action, label);
   }
 }
+
+function gaFormEvent(category, action, label, form) {
+  return gaEvent(category, action, label + " : " + $(form).serialize());
+}
