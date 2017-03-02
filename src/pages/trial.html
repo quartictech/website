@@ -19,7 +19,7 @@ description: If you think Quartic's platform may be what you're looking for, or 
 </div>
 
 <div class="row medium-expand align-center qt-trialform">
-    <div class="small-expand small-centered medium-10 columns">
+    <div class="small-expand small-centered medium-10 columns qt-form-container">
         <form action="/post/trial" method="POST" id="trial-form">
             <input type="text" name="_gotcha" style="display:none" />
             <div class="row">
@@ -32,34 +32,34 @@ description: If you think Quartic's platform may be what you're looking for, or 
             <div class="row">
                 <div class="medium-8 columns">
                     <div class="form-group">
-                        <input type="text" name="Full name" id="name" value="" />
-                        <i class="bar"></i>
+                        <input type="text" name="Full name" id="name" required />
                         <label class="control-label" for="input">Full name</label>
+                        <i class="bar"></i>
                     </div>
                 </div>
             </div>
             <div class="row">
                 <div class="medium-8 columns text-left">
                     <div class="form-group">
-                        <input type="text" name="Company" id="company" value="" />
-                        <i class="bar"></i>
+                        <input type="text" name="Company" id="company" required />
                         <label class="control-label" for="input">Company Name</label>
+                        <i class="bar"></i>
                     </div>
                 </div>
             </div>
             <div class="row">
                 <div class="medium-6 columns">
                     <div class="form-group">
-                        <input type="text" name="Email" id="email" value="" />
-                        <i class="bar"></i>
+                        <input type="email" name="Email" id="email"  required />
                         <label class="control-label" for="input">Email</label>
+                        <i class="bar"></i>
                     </div>
                 </div>
                 <div class="medium-6 columns">
                     <div class="form-group">
-                        <input type="text" name="Confirm Email" id="email" value="" />
-                        <i class="bar"></i>
+                        <input type="email" name="Confirm Email" id="email" required />
                         <label class="control-label" for="input">Confirm Email</label>
+                        <i class="bar"></i>
                     </div>
                 </div>
             </div>
