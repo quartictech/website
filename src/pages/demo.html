@@ -19,51 +19,68 @@ description: If you think Quartic's platform may be what you're looking for, or 
 </div>
 
 <div class="row align-center qt-trialform">
-    <div class="small-expand medium-8 columns callout">
+    <div class="small-expand medium-10 columns">
         <form action="/post/demo" method="POST" id="demo-form">
             <input type="text" name="_gotcha" style="display:none" />
             <div class="row">
-                    <div class="medium-12 columns text-left">
-                        <h3 class="subheader">
-                            We'd love to show you how our software can transform your business. Please fill out the form below and a member of our team will be in touch shortly to arrange a demo.
-                        </h3>
-                    </div>
-                </div>
-
-            <div class="row">
-                <div class="medium-6 columns">
-                    <label><h3>Name</h3>
-                    <input type="text" name="Full name" id="name" value="" placeholder="Full name">
-                    </label>
-                </div>
-                <div class="medium-6 columns">
-                    <label><h3>Email</h3>
-                        <input type="email" name="email" id="email" value="" placeholder="Work email">
-                    </label>
+                <div class="medium-12 columns text-left">
+                    <h3 class="subheader">
+                        We'd love to show you how our software can transform your business. Please fill out the form below and a member of our team will be in touch shortly to arrange a demo.
+                    </h3>
                 </div>
             </div>
             <div class="row">
                 <div class="medium-8 columns">
-                    <label><h3>Company</h3>
-                    <input type="text" name="company" id="company" value="" placeholder="Company Name">
-                    </label>
+                    <div class="form-group">
+                        <input type="text" name="Full name" id="name" required />
+                        <label class="control-label" for="input">Full name</label>
+                        <i class="bar"></i>
+                    </div>
                 </div>
             </div>
             <div class="row">
+                <div class="medium-8 columns text-left">
+                    <div class="form-group">
+                        <input type="text" name="Company" id="company" required />
+                        <label class="control-label" for="input">Company Name</label>
+                        <i class="bar"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="medium-6 small-12 columns">
+                    <div class="form-group">
+                        <input type="email" name="Email" id="email" required />
+                        <label class="control-label" for="input">Email</label>
+                        <i class="bar"></i>
+                    </div>
+                </div>
+                <div class="medium-6 small-12 columns">
+                    <div class="form-group">
+                        <input type="email" name="Confirm Email" id="email" required />
+                        <i class="bar"></i>
+                        <label class="control-label" for="input">Confirm Email</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
                 <div class="medium-12 columns">
-                    <label><h3>Anything else?</h3>
-                    <textarea type="text" name="other" id="other" value="" rows=3 placeholder="Anything else?"></textarea>
-                    </label>
+                    <div class="form-group">
+                        <textarea name="other" id="other" rows=3 required> </textarea>
+                        <label class="control-label" for="textarea">Anything else?</label>
+                        <i class="bar"></i>
+                    </div>
                 </div>
             </div>
 
-            <div class="row align-center">
-                <div class="medium-8 text-center">
-                    <input type="submit" class="qt-other-button large" value="Request demo" onclick="gaFormEvent('Form', 'signup', 'demo', '#demo-form');"/>
+                <div class="row align-center">
+                    <div class="medium-8 text-center">
+                        <input type="submit" class="button large" value="Request demo" onclick="gaFormEvent('Form', 'signup', 'demo', '#demo-form');" />
+                    </div>
                 </div>
-            </div>
 
-            <input type="hidden" name="_next" value="/thanks.html" />
+                <input type="hidden" name="_next" value="/thanks.html" />
         </form>
+        </div>
     </div>
-</div>
