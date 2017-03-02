@@ -1,0 +1,91 @@
+<script type="text/javascript">
+    $(function() {
+        $(document).foundation();
+
+        downloadScript("//code.tidio.co/iqsyzk6yplajd2nqrcxg25jwls9snqnt.js");
+        downloadScript("//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.js");
+        downloadScript("//cdnjs.cloudflare.com/ajax/libs/typed.js/1.1.4/typed.min.js");
+        initCookieConsent();
+        initTyping();
+        initVideo();
+    });
+
+    function downloadScript(url) {
+        var element = document.createElement("script");
+        element.src = url;
+        document.body.appendChild(element);
+    }
+
+    function initCookieConsent() {
+        // Because the external script may not have loaded yet
+        var element = window.cookieconsent;
+        if (element) {
+            element.initialise({
+                "palette": {
+                    "popup": {
+                        "background": "#333"
+                    },
+                    "button": {
+                        "background": "transparent",
+                        "text": "#f1d600",
+                        "border": "#f1d600"
+                    }
+                },
+                "position": "bottom",
+            });
+        } else {
+            setTimeout(initCookieConsent, 500);
+        }
+    }
+
+    function initTyping() {
+        // Because the external script may not have loaded yet
+        var element = $(".typing").typed;
+        if (element) {
+            $(".typing").typed({
+                strings: [
+                    "Field operations",
+                    "Manufacturing", 
+                    "Infrastructure services", 
+                    "Oil and gas", 
+                    "Highway maintenance",
+                    "Plant and equipment",
+                    "Utilities networks",
+                    "Aerospace",
+                    "Construction",
+                ], 
+                typeSpeed: 100,
+                backDelay: 1000,
+                backSpeed: 50,
+                loop: true,
+            });
+        } else {
+            setTimeout(initTyping, 500);
+        }
+    }
+
+    function initVideo() {
+        var url = $("#quartic-video").attr('src');
+        $("#quartic-video").attr('src', '');
+        $(window).on("open.zf.reveal", function() {
+            $("#quartic-video").attr('src', url);
+            gaEvent('Videos', 'play', 'Quartic intro video');
+        });
+
+        $(window).on("closed.zf.reveal", function() {
+            $("#quartic-video").attr('src', '');
+        });
+    }
+
+    function gaEvent(category, action, label) {
+        if (typeof ga !== 'undefined') {
+            ga('send', 'event', category, action, label);
+        } else {
+            console.log("sending event", category, action, label);
+        }
+    }
+
+    function gaFormEvent(category, action, label, form) {
+        return gaEvent(category, action, label + " : " + $(form).serialize());
+    }
+</script>
