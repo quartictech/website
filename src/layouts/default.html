@@ -34,7 +34,8 @@
 <body>
     {{> body}}
     <script src="/assets/js/app.js"></script>
-     <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/1.1.4/typed.min.js" type="text/javascript"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/1.1.4/typed.min.js" type="text/javascript"></script>
 
     <!-- Footer -->
     <footer class="footer">
@@ -73,7 +74,43 @@
     {{> google_analytics}}
     {{/if}}
 
-    <script src="//code.tidio.co/iqsyzk6yplajd2nqrcxg25jwls9snqnt.js"></script>
+    <!-- Deferred JS -->
+    <script type="text/javascript">
+        function downloadScript(url) {
+            var element = document.createElement("script");
+            element.src = url;
+            document.body.appendChild(element);
+        }
+
+        function initCookieConsent() {
+            window.cookieconsent.initialise({
+                "palette": {
+                    "popup": {
+                        "background": "#333"
+                    },
+                    "button": {
+                        "background": "transparent",
+                        "text": "#f1d600",
+                        "border": "#f1d600"
+                    }
+                },
+                "position": "bottom",
+            });
+        }
+
+        function onLoad() {
+            downloadScript("//code.tidio.co/iqsyzk6yplajd2nqrcxg25jwls9snqnt.js");
+            downloadScript("//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.js");
+        }
+
+        if (window.addEventListener)
+            window.addEventListener("load", onLoad, false);
+        else if (window.attachEvent)
+            window.attachEvent("onload", onLoad);
+        else window.onload = onLoad;
+
+        window.addEventListener("load", initCookieConsent);
+    </script>
 </body>
 
 </html>
