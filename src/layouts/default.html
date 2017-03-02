@@ -7,6 +7,7 @@
     <meta name="description" content="{{ description }}"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.css" />
     <link rel="stylesheet" href="/assets/css/app.css" />
     <meta class="foundation-mq" />
     <link rel="shortcut icon" type="image/ico" href="/assets/img/icons/favicon.ico" />
@@ -26,21 +27,17 @@
     <meta property="og:type" content="website">
 
     <!-- Version {{build.version}} -->
-
-    {{> cookie_consent }}
 </head>
 
 
 <body>
     {{> body}}
-    <script src="/assets/js/app.js"></script>
-     <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/1.1.4/typed.min.js" type="text/javascript"></script>
 
     <!-- Footer -->
     <footer class="footer">
         <div class="row full-width align-center">
             <div class="column">
-                <img src="/assets/img/quartic_logo_white.png" class="qt-logo" />
+                <img src="/assets/img/quartic_logo_white.png" alt="Quartic logo" class="qt-logo" />
 
                 <ul class="footer-icons">
                     <li>
@@ -73,7 +70,7 @@
     {{> google_analytics}}
     {{/if}}
 
-    <script src="//code.tidio.co/iqsyzk6yplajd2nqrcxg25jwls9snqnt.js"></script>
+    {{> deferred_js}}
 </body>
 
 </html>
