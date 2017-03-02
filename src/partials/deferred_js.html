@@ -66,8 +66,7 @@
     }
 
     function initVideo() {
-        var url = $("#quartic-video").attr('src');
-        $("#quartic-video").attr('src', '');
+        var url = "https://www.youtube.com/embed/cAR_z7QRptQ?rel=0&showinfo=0&autoplay=1";
         $(window).on("open.zf.reveal", function() {
             $("#quartic-video").attr('src', url);
             gaEvent('Videos', 'play', 'Quartic intro video');
