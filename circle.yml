@@ -6,16 +6,17 @@ machine:
 
 dependencies:
   override:
-    - npm install
+    - yarn install
     - bower install
   cache_directories:
     - ~/.ssh
+    - node_modules
     - bower_components
 
 compile:
   override:
     - ./scripts/configure.sh
-    - npm run build 
+    - yarn run build 
 
 test:
   override:
