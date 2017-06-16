@@ -26,11 +26,11 @@ deployment:
   live:
     branch: master
     commands:
-      - sudo /opt/google-cloud-sdk/bin/gcloud compute scp --compress --recurse --zone ${GCLOUD_ZONE} dist/ ${GCLOUD_SERVICE_ACCOUNT}@${GCLOUD_WEB_INSTANCE}:/opt/quartic/www.quartic.io
+      - sudo /opt/google-cloud-sdk/bin/gcloud compute copy-files --recurse --zone ${GCLOUD_ZONE} dist/ ${GCLOUD_SERVICE_ACCOUNT}@${GCLOUD_WEB_INSTANCE}:/opt/quartic/www.quartic.io
   test:
     branch: /.*/
     commands:
-      - sudo /opt/google-cloud-sdk/bin/gcloud compute scp --compress --recurse --zone ${GCLOUD_ZONE} dist/ ${GCLOUD_SERVICE_ACCOUNT}@${GCLOUD_WEB_INSTANCE}:/opt/quartic/www-test.quartic.io
+      - sudo /opt/google-cloud-sdk/bin/gcloud compute copy-files --recurse --zone ${GCLOUD_ZONE} dist/ ${GCLOUD_SERVICE_ACCOUNT}@${GCLOUD_WEB_INSTANCE}:/opt/quartic/www-test.quartic.io
 
 general:
   artifacts:
