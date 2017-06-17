@@ -88,6 +88,10 @@ a {
 .qt-logo {
     padding-left: 0.5em;
     height: 50px;
+
+    nav & {
+      filter: drop-shadow(0px 0px 5px #fff);
+    }
 }
 
 .qt-button {
