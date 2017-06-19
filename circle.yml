@@ -26,11 +26,15 @@ deployment:
   live:
     branch: master
     commands:
-      - sudo /opt/google-cloud-sdk/bin/gcloud compute copy-files --zone ${GCLOUD_ZONE} dist/ ${GCLOUD_SERVICE_ACCOUNT}@${GCLOUD_WEB_INSTANCE}:/opt/quartic/www.quartic.io
+      - sudo rsync -e "/opt/google-cloud-sdk/bin/gcloud compute ssh --zone ${GCLOUD_ZONE} ${GCLOUD_SERVICE_ACCOUNT}@${GCLOUD_WEB_INSTANCE} --" --delete -avz dist/ :/opt/quartic/www.quartic.io
   test:
     branch: develop
     commands:
-      - sudo /opt/google-cloud-sdk/bin/gcloud compute copy-files --zone ${GCLOUD_ZONE} dist/ ${GCLOUD_SERVICE_ACCOUNT}@${GCLOUD_WEB_INSTANCE}:/opt/quartic/www-test.quartic.io
+      - sudo rsync -e "/opt/google-cloud-sdk/bin/gcloud compute ssh --zone ${GCLOUD_ZONE} ${GCLOUD_SERVICE_ACCOUNT}@${GCLOUD_WEB_INSTANCE} --" --delete -avz dist/ :/opt/quartic/www-test.quartic.io
+  dummy:
+    branch: /.*/
+    commands:
+      - sudo rsync -e "/opt/google-cloud-sdk/bin/gcloud compute ssh --zone ${GCLOUD_ZONE} ${GCLOUD_SERVICE_ACCOUNT}@${GCLOUD_WEB_INSTANCE} --" --delete -avz dist/ :/opt/quartic/www-dummy.quartic.io
 
 general:
   artifacts:
