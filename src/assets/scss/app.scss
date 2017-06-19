@@ -64,6 +64,9 @@
     background: url('/assets/img/road.jpg') no-repeat top;
     background-size: cover;
     color: $white;
+    & > div {
+      filter: drop-shadow(2px 2px 1px $black);
+    }
 }
 
 .qt-menu {
@@ -82,6 +85,7 @@ p a {
 a {
   &:hover {
     color: $primary-color !important;
+    filter: drop-shadow(0px 0px 5px $white);
   }
 }
 
@@ -90,7 +94,7 @@ a {
     height: 50px;
 
     nav & {
-      filter: drop-shadow(0px 0px 5px #fff);
+      filter: drop-shadow(0px 0px 5px $white);
     }
 }
 
@@ -105,6 +109,7 @@ a {
         background-color: $primary-color;
         border-color: $primary-color;
         color: $white !important;
+        filter: drop-shadow(0px 0px 5px $white);
     }
 }
 
@@ -117,6 +122,7 @@ a {
         background-color: $primary-color;
         border-color: $primary-color;
         color: $white !important;
+        filter: drop-shadow(0px 0px 5px $white);
     }
 }
 
@@ -234,48 +240,6 @@ $text-color: #fff;
   color: white !important;
 }
 
-////////////////////////////////
-// Pricing (originally taken from http://zurb.com/building-blocks/pricing-table-foundation-6)
-////////////////////////////////
-
-.pricing-table {
-  -webkit-box-shadow: 0px 2px 10px 0px rgba(50, 50, 50, 0.5);
-  -moz-box-shadow: 0px 2px 10px 0px rgba(50, 50, 50, 0.5);
-  box-shadow: 0px 2px 10px 0px rgba(50, 50, 50, 0.5);
-
-  li {
-    // border-bottom: dotted 1px #DDDDDD;
-    font-size: 0.875rem;
-    padding: 0.875rem 1.125rem;
-    &:last-child {
-      border-bottom: 0;
-    }
-  }
-
-  .title {
-    background-color: #333333;
-    color: #EEEEEE;
-    font-size: 1.0rem;
-    font-weight: bold;
-    border: 0;
-  }
-
-  .price {
-    // background-color: #F6F6F6;
-    color: $primary-color;
-    font-size: 1.75rem;
-    border-bottom: 0;
-  }
-
-  .description {
-    color: #777777;
-    font-size: 0.875rem;
-  }
-
-  .button {
-    margin: 0;
-  }
-}
 /* Used in the product pages to space rows in the grid */
 .qt-product-row {
   padding-bottom:20px;
