@@ -85,7 +85,6 @@ p a {
 a {
   &:hover {
     color: $primary-color !important;
-    filter: drop-shadow(0px 0px 5px $white);
   }
 }
 
@@ -94,7 +93,7 @@ a {
     height: 50px;
 
     nav & {
-      filter: drop-shadow(0px 0px 5px $white);
+      filter: drop-shadow(0px 0px 3px $white);
     }
 }
 
@@ -109,7 +108,6 @@ a {
         background-color: $primary-color;
         border-color: $primary-color;
         color: $white !important;
-        filter: drop-shadow(0px 0px 5px $white);
     }
 }
 
@@ -122,7 +120,6 @@ a {
         background-color: $primary-color;
         border-color: $primary-color;
         color: $white !important;
-        filter: drop-shadow(0px 0px 5px $white);
     }
 }
 
@@ -132,8 +129,7 @@ a {
 }
 
 .qt-gimpy-icon {
-  color: $primary-color;
-  font-size: 5em;
+  font-size: 2em;
 }
 
 .qt-stripe-light {
