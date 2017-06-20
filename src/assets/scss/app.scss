@@ -137,6 +137,12 @@ a {
   width: 100%;
   padding: 20px;
   text-align: center;
+  display: table;
+}
+
+.qt-stripe-inner {
+  display: table-cell;
+  vertical-align: middle;
 }
 
 .qt-stripe-gimp {

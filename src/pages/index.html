@@ -7,30 +7,24 @@ description: Use past data to avoid future failures.  Field operations with adde
     {{> nav}}
 
     <div class="qt-stripe-leader">
-        <div class="row medium-expand" style="top: 50%; position: relative; transform: translateY(-90%)">
-            <div class="text-center columns">
-                <a data-open="videoModal" class="qt-play-button">
-                    <i class="fi-play-circle"></i>
-                </a>
-
-                <h1><b>Big</b> data for <b>big</b> maintenance.</h1>
-                <h2><b>Road &nbsp;&#183;&nbsp; Rail &nbsp;&#183;&nbsp; Utilities</b></h2>           
-            </div>
+        <div class="qt-stripe-inner">
+            {{> splash}}
         </div>
     </div>
 
-        <div class="qt-stripe-gimp" style="display: table">
-            <div style="display: table-cell; vertical-align: middle">
-                {{> how_it_works}}
-            </div>
+    <div class="qt-stripe-gimp" style="display: table">
+        <div class="qt-stripe-inner">
+            {{> how_it_works}}
         </div>
+    </div>
 
-        <div class="qt-stripe-light">
+    <div class="qt-stripe-light">
+        <div class="qt-stripe-inner">
             {{> ground_control}}
         </div>
+    </div>
+
     <div class="qt-stripe-dark">
-        <h1>Join our newsletter!</h1>
-        <h3 class="subheader">Find out how big data is changing the world of field work.</h3>
         {{> newsletter}}
     </div>
 
