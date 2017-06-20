@@ -54,12 +54,6 @@
 // @include motion-ui-transitions;
 // @include motion-ui-animations;
 
-.qt-trialform {
-  padding-top: 20px;
-  padding-bottom: 20px;
-  background-color: #fff;
-}
-
 @mixin shadow {
   filter: drop-shadow(1px 1px 1px $black);
 }
@@ -105,7 +99,6 @@ a {
     height: 50px;
 }
 
-
 .qt-button {
   @extend .button;
   background-color: transparent;
@@ -113,18 +106,6 @@ a {
   border-color: $white;
   color: $white;
   font-weight: bold;
-  &:hover {
-    background-color: $primary-color;
-    border-color: $primary-color;
-    color: $white !important;
-  }
-}
-
-.qt-other-button {
-  @extend .button;
-  background-color: transparent;
-  border-color: $primary-color;
-  color: $primary-color;
   &:hover {
     background-color: $primary-color;
     border-color: $primary-color;
@@ -250,10 +231,6 @@ $text-color: #fff;
   padding-bottom: 20px;
 }
 
-.qt-pad-bottom {
-  padding-bottom: 20px;
-}
-
 /* Used for our how it works diagram */
 .qt-diagram {
   padding-top: 30px;
@@ -266,6 +243,10 @@ $text-color: #fff;
   text-align: center;
   display: block;
 }
+
+////////////////////////////////
+// Signup stuff
+////////////////////////////////
 
 div.qt-signup {
   vertical-align: middle;
@@ -293,3 +274,5 @@ div.qt-signup {
   border-radius: 0 4px 4px 0;
   border: 1px solid #db1e7b;
 }
+
+////////////////////////////////
