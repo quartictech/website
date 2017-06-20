@@ -16,7 +16,12 @@
     }
 
     function initFullPage() {
-        $("#fullpage").fullpage();
+        $("#fullpage").fullpage({
+            fixedElements: "#nav",
+            navigation: true,
+            navigationPosition: "right",
+            navigationTooltips: ["Home", "How it works", "GroundControl"],
+        });
     }
 
     function initCookieConsent() {
