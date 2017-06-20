@@ -44,6 +44,11 @@
   @include shadow;
 }
 
+.qt-nav {
+  position: fixed;
+  top: 0;
+}
+
 .qt-menu {
   color: $white !important;
   font-weight: bolder;
