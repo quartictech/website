@@ -43,19 +43,6 @@ nav {
   @include shadow;
 }
 
-.qt-stripe-leader {
-  @extend .qt-stripe;
-
-  background: url('/assets/img/road.jpg') no-repeat top;
-  background-size: cover;
-  color: $white;
-  margin-top: -66px;
-
-  a, h1, h2, h3 {
-    @include shadow;
-  }
-}
-
 .qt-menu {
   color: $white !important;
   font-weight: bolder;
@@ -105,6 +92,18 @@ a {
 .qt-stripe-inner {
   display: table-cell;
   vertical-align: middle;
+}
+
+.qt-stripe-leader {
+  @extend .qt-stripe;
+
+  background: url('/assets/img/road.jpg') no-repeat top;
+  background-size: cover;
+  color: $white;
+
+  a, h1, h2, h3 {
+    @include shadow;
+  }
 }
 
 .qt-stripe-gimp {
