@@ -62,10 +62,11 @@
 
 .qt-stripe-leader {
   @extend .qt-stripe;
+
   background: url('/assets/img/road.jpg') no-repeat top;
   background-size: cover;
   color: $white;
-  margin-top: -70px;
+  margin-top: -66px;
 
   a, h1, h2, h3 {
     filter: drop-shadow(1px 1px 1px $black);
