@@ -37,8 +37,8 @@ PATHS:
     - "bower_components/foundation-sites/js/foundation.util.*.js"
     # Individual Foundation components
     # If you aren't using a component, just remove it from the list
+    - "bower_components/foundation-sites/js/foundation.responsiveToggle.js"
     - "bower_components/foundation-sites/js/foundation.responsiveMenu.js"
-    - "bower_components/foundation-sites/js/foundation.sticky.js"
 
     # Other libs
     - "bower_components/fullpage/dist/jquery.fullpage.js"
