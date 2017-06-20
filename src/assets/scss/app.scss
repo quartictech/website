@@ -64,6 +64,10 @@
   background: url('/assets/img/road.jpg') no-repeat top;
   background-size: cover;
   color: $white;
+
+  a, h1, h2, h3 {
+    filter: drop-shadow(1px 1px 1px $black);
+  }
 }
 
 .qt-menu {
@@ -88,9 +92,6 @@ a {
 .qt-logo {
     padding-left: 0.5em;
     height: 50px;
-    nav & {
-      filter: drop-shadow(1px 1px 1px $white);
-    }
 }
 
 .qt-button {
@@ -139,7 +140,7 @@ a {
   @extend .qt-stripe;
   background-color: #CA0063;
   color: $white;
-  h3 {
+  h3, h4 {
     color: $white;
   }
 }
