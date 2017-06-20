@@ -86,8 +86,11 @@ a {
 }
 
 .qt-logo {
-  padding-left: 0.5em;
-  height: 50px;
+    padding-left: 0.5em;
+    height: 50px;
+    nav & {
+      filter: drop-shadow(1px 1px 1px $white);
+    }
 }
 
 .qt-button {
