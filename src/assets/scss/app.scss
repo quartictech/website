@@ -39,7 +39,8 @@
   filter: drop-shadow(1px 1px 1px $black);
 }
 
-nav {
+.qt-nav {
+  width: 100%;
   @include shadow;
 }
 
