@@ -17,10 +17,16 @@
 
     function initFullPage() {
         $("#fullpage").fullpage({
+            recordHistory: false,
             fixedElements: "#nav",
             navigation: true,
             navigationPosition: "right",
-            navigationTooltips: ["Home", "How it works", "GroundControl"],
+            navigationTooltips: [
+                "Home",
+                "How it works",
+                "GroundControl",
+                "Miscellaneous"
+            ],
         });
     }
 
