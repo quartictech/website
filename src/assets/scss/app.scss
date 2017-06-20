@@ -107,6 +107,15 @@ a {
   }
 }
 
+.qt-stripe-imagine {
+  @extend .qt-stripe;
+  background-color: #003B00;
+  color: $white;
+  h3, h4 {
+    color: $white;
+  }
+}
+
 .qt-stripe-gimp {
   @extend .qt-stripe;
   background-color: #CA0063;
