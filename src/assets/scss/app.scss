@@ -55,20 +55,20 @@
 @include motion-ui-animations;
 
 .qt-trialform {
-    padding-top: 20px;
-    padding-bottom: 20px;
-    background-color: #fff;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: #fff;
 }
 
 .qt-leader {
-    background: url('/assets/img/road.jpg') no-repeat top;
-    background-size: cover;
-    color: $white;
+  background: url('/assets/img/road.jpg') no-repeat top;
+  background-size: cover;
+  color: $white;
 }
 
 .qt-menu {
-    color: $white !important;
-    font-weight: bolder;
+  color: $white !important;
+  font-weight: bolder;
 }
 
 p a {
@@ -86,72 +86,76 @@ a {
 }
 
 .qt-logo {
-    padding-left: 0.5em;
-    height: 50px;
+  padding-left: 0.5em;
+  height: 50px;
 }
 
 .qt-button {
-    @extend .button;
-    background-color: transparent;
-    border-width: 4px;
-    border-color: $white;
-    color: $white;
-    font-weight: bold;
-    &:hover {
-        background-color: $primary-color;
-        border-color: $primary-color;
-        color: $white !important;
-    }
+  @extend .button;
+  background-color: transparent;
+  border-width: 4px;
+  border-color: $white;
+  color: $white;
+  font-weight: bold;
+  &:hover {
+    background-color: $primary-color;
+    border-color: $primary-color;
+    color: $white !important;
+  }
 }
 
 .qt-other-button {
-    @extend .button;
-    background-color: transparent;
+  @extend .button;
+  background-color: transparent;
+  border-color: $primary-color;
+  color: $primary-color;
+  &:hover {
+    background-color: $primary-color;
     border-color: $primary-color;
-    color: $primary-color;
-    &:hover {
-        background-color: $primary-color;
-        border-color: $primary-color;
-        color: $white !important;
-    }
+    color: $white !important;
+  }
 }
 
 
 .qt-container {
-    width: 100%;
+  width: 100%;
 }
 
 .qt-gimpy-icon {
   font-size: 2em;
 }
 
-.qt-stripe-light {
-    background-color: #f5f5f5;
-    width: 100%;
-    padding: 20px;
-    text-align: center;
+.qt-stripe {
+  height: 100vh;
+  width: 100%;
+  padding: 20px;
+  text-align: center;
 }
 
-.qt-stripe-unknown {
-    background-color: #000;
-    width: 100%;
-    padding-top: 15px;
-    // padding: 20px;
-    text-align: center;
+.qt-stripe-gimp {
+  @extend .qt-stripe;
+  background-color: #CA0063;
+  color: $white;
+  h3 {
+    color: $white;
+  }
+}
+
+.qt-stripe-light {
+  @extend .qt-stripe;
+  background-color: #F5F5F5;
 }
 
 .qt-stripe-dark {
-    background-color: #181818;
-    color: $white;
-    width: 100%;
-    padding: 20px;
-    text-align: center;
+  @extend .qt-stripe;
+  background-color: #181818;
+  color: $white;
 }
 
 
 // See http://foundation.zurb.com/forum/posts/39187-responsive-menu-flashes-on-page-load
 .title-bar {
-   display: none;
+  display: none;
 }
 
 ////////////////////////////////
