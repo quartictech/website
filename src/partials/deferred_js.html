@@ -4,6 +4,7 @@
         $(document).foundation();
 
         downloadScript("//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.js");
+        initFullPage();
         initCookieConsent();
         initVideo();
     });
@@ -12,6 +13,10 @@
         var element = document.createElement("script");
         element.src = url;
         document.body.appendChild(element);
+    }
+
+    function initFullPage() {
+        $("#fullpage").fullpage();
     }
 
     function initCookieConsent() {
