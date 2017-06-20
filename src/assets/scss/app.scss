@@ -60,6 +60,14 @@
   background-color: #fff;
 }
 
+@mixin shadow {
+  filter: drop-shadow(1px 1px 1px $black);
+}
+
+nav {
+  @include shadow;
+}
+
 .qt-stripe-leader {
   @extend .qt-stripe;
 
@@ -69,7 +77,7 @@
   margin-top: -66px;
 
   a, h1, h2, h3 {
-    filter: drop-shadow(1px 1px 1px $black);
+    @include shadow;
   }
 }
 
@@ -122,14 +130,6 @@ a {
     border-color: $primary-color;
     color: $white !important;
   }
-}
-
-.qt-container {
-  width: 100%;
-}
-
-.qt-gimpy-icon {
-  font-size: 2em;
 }
 
 .qt-stripe {
