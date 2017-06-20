@@ -4,7 +4,7 @@
 
 @import 'settings';
 @import 'foundation';
-@import 'motion-ui';
+// @import 'motion-ui';
 
 @import 'forms';
 
@@ -51,8 +51,8 @@
 @include foundation-float-classes;
 @include foundation-flex-classes;
 
-@include motion-ui-transitions;
-@include motion-ui-animations;
+// @include motion-ui-transitions;
+// @include motion-ui-animations;
 
 .qt-trialform {
   padding-top: 20px;
@@ -229,17 +229,6 @@ $text-color: #fff;
   }
 }
 
-.cc-window {
-  font-family: $body-font-family !important;
-}
-
-.cc-btn {
-  height: 100% !important;
-  padding: 0 !important;
-  border-style: none !important;
-  color: white !important;
-}
-
 /* Used in the product pages to space rows in the grid */
 .qt-product-row {
   padding-bottom:20px;
@@ -298,26 +287,3 @@ div.qt-signup {
   border-radius: 0 4px 4px 0;
   border: 1px solid #db1e7b;
 }
-
-.typed-cursor{
-    opacity: 1;
-    -webkit-animation: blink 0.7s infinite;
-    -moz-animation: blink 0.7s infinite;
-    animation: blink 0.7s infinite;
-}
-@keyframes blink{
-    0% { opacity:1; }
-    50% { opacity:0; }
-    100% { opacity:1; }
-}
-@-webkit-keyframes blink{
-    0% { opacity:1; }
-    50% { opacity:0; }
-    100% { opacity:1; }
-}
-@-moz-keyframes blink{
-    0% { opacity:1; }
-    50% { opacity:0; }
-    100% { opacity:1; }
-}
-
