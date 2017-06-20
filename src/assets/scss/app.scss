@@ -109,7 +109,7 @@ a {
 
 .qt-stripe-imagine {
   @extend .qt-stripe;
-  background-color: #003B00;
+  background-color: #CA0063;
   color: $white;
   h3, h4 {
     color: $white;
@@ -118,7 +118,7 @@ a {
 
 .qt-stripe-gimp {
   @extend .qt-stripe;
-  background-color: #CA0063;
+  background-color: #5A057B;
   color: $white;
   h3, h4 {
     color: $white;
@@ -132,7 +132,8 @@ a {
 
 .qt-stripe-dark {
   @extend .qt-stripe;
-  background-color: #181818;
+  background: url('/assets/img/other-road.jpg') no-repeat top;
+  background-size: cover;
   color: $white;
 }
 
