@@ -3,44 +3,44 @@ layout: default
 title: Predictive maintenance that works
 description: Use past data to avoid future failures.  Field operations with added intelligence.
 ---
-<div class="qt-leader" style="height: 100vh">
+<div class="qt-container" data-sticky-container>
     {{> nav}}
 
-    <div class="row medium-expand" style="top: 50%; position: relative; transform: translateY(-90%)">
-        <div class="text-center columns">
-            <a data-open="videoModal" class="qt-play-button">
-                <i class="fi-play-circle"></i>
-            </a>
+    <div class="qt-stripe-leader">
+        <div class="row medium-expand" style="top: 50%; position: relative; transform: translateY(-90%)">
+            <div class="text-center columns">
+                <a data-open="videoModal" class="qt-play-button">
+                    <i class="fi-play-circle"></i>
+                </a>
 
-            <h1><b>Big</b> data for <b>big</b> maintenance.</h1>
-            <h2><b>Road &nbsp;&#183;&nbsp; Rail &nbsp;&#183;&nbsp; Utilities</b></h2>           
-        </div>
-    </div>
-</div>
-
-<div class="qt-container">
-    <div class="qt-stripe-gimp" style="display: table">
-        <div style="display: table-cell; vertical-align: middle">
-            {{> how_it_works}}
+                <h1><b>Big</b> data for <b>big</b> maintenance.</h1>
+                <h2><b>Road &nbsp;&#183;&nbsp; Rail &nbsp;&#183;&nbsp; Utilities</b></h2>           
+            </div>
         </div>
     </div>
 
-    <div class="qt-stripe-light">
-        {{> ground_control}}
-    </div>
-</div>
- <div class="qt-stripe-dark">
-     <h1>Join our newsletter!</h1>
-     <h3 class="subheader">Find out how big data is changing the world of field work.</h3>
-    {{> newsletter}}
-</div>
+        <div class="qt-stripe-gimp" style="display: table">
+            <div style="display: table-cell; vertical-align: middle">
+                {{> how_it_works}}
+            </div>
+        </div>
 
-<div class="large reveal" id="videoModal" data-reveal data-reset-on-close="true">
-    <div class="responsive-embed widescreen">
-        <iframe id="quartic-video" width="1280" height="720" src="" frameborder="0" allowfullscreen></iframe>
+        <div class="qt-stripe-light">
+            {{> ground_control}}
+        </div>
+    <div class="qt-stripe-dark">
+        <h1>Join our newsletter!</h1>
+        <h3 class="subheader">Find out how big data is changing the world of field work.</h3>
+        {{> newsletter}}
     </div>
 
-    <button class="close-button" data-close aria-label="Close video" type="button">
-        <span aria-hidden="true">&times;</span>
-    </button>
+    <div class="large reveal" id="videoModal" data-reveal data-reset-on-close="true">
+        <div class="responsive-embed widescreen">
+            <iframe id="quartic-video" width="1280" height="720" src="" frameborder="0" allowfullscreen></iframe>
+        </div>
+
+        <button class="close-button" data-close aria-label="Close video" type="button">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
 </div>
