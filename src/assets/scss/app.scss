@@ -95,6 +95,21 @@ a {
   display: table;
 }
 
+.qt-stripe-leader-alternate {
+  width: 100%;
+  padding: 20px;
+  text-align: center;
+  display: table;
+  background: url('/assets/img/road.jpg') no-repeat top;
+  background-size: cover;
+  color: $white;
+
+  a, h1, h2, h3 {
+    @include shadow;
+  }
+
+}
+
 .qt-stripe-inner {
   display: table-cell;
   vertical-align: middle;
