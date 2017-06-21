@@ -3,11 +3,9 @@
     $(function() {
         $(document).foundation();
 
-        downloadScript("//code.tidio.co/iqsyzk6yplajd2nqrcxg25jwls9snqnt.js");
         downloadScript("//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.js");
-        downloadScript("//cdnjs.cloudflare.com/ajax/libs/typed.js/1.1.4/typed.min.js");
+        initFullPage();
         initCookieConsent();
-        initTyping();
         initVideo();
     });
 
@@ -15,6 +13,24 @@
         var element = document.createElement("script");
         element.src = url;
         document.body.appendChild(element);
+    }
+
+    function initFullPage() {
+        $("#fullpage").fullpage({
+            recordHistory: false,
+            fixedElements: "#nav",
+            navigation: true,
+            navigationPosition: "right",
+            navigationTooltips: [
+                "Big data for big infrastructure.",
+                "Imagine untangling things.",
+                "Tame those spreadsheets!",
+                "Everything at your fingertips.",
+                "World class AI.",
+                "Case study: highway maintenance.",
+                "Fin."
+            ],
+        });
     }
 
     function initCookieConsent() {
@@ -36,32 +52,6 @@
             });
         } else {
             setTimeout(initCookieConsent, 500);
-        }
-    }
-
-    function initTyping() {
-        // Because the external script may not have loaded yet
-        var element = $(".typing").typed;
-        if (element) {
-            $(".typing").typed({
-                strings: [
-                    "Field operations",
-                    "Manufacturing", 
-                    "Infrastructure services", 
-                    "Oil and gas", 
-                    "Highway maintenance",
-                    "Plant and equipment",
-                    "Utilities networks",
-                    "Aerospace",
-                    "Construction",
-                ], 
-                typeSpeed: 100,
-                backDelay: 1000,
-                backSpeed: 50,
-                loop: true,
-            });
-        } else {
-            setTimeout(initTyping, 500);
         }
     }
 

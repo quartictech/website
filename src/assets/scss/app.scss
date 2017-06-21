@@ -4,19 +4,13 @@
 
 @import 'settings';
 @import 'foundation';
-@import 'motion-ui';
-
 @import 'forms';
 
 @include foundation-global-styles;
-//@include foundation-grid;
+@include foundation-grid;
 @include foundation-flex-grid;
 @include foundation-typography;
 @include foundation-button;
-// @include foundation-forms;
-// @include foundation-range-input;
-//@include foundation-accordion;
-//@include foundation-accordion-menu;
 @include foundation-badge;
 @include foundation-breadcrumbs;
 @include foundation-button-group;
@@ -31,18 +25,9 @@
 @include foundation-responsive-embed;
 @include foundation-label;
 @include foundation-media-object;
-//@include foundation-off-canvas;
-//@include foundation-orbit;
-//@include foundation-pagination;
-//@include foundation-progress-bar;
-// @include foundation-progress-element;
-// @include foundation-meter-element;
-//@include foundation-slider;
-//@include foundation-sticky;
+@include foundation-sticky;
 @include foundation-reveal;
-//@include foundation-switch;
 @include foundation-table;
-//@include foundation-tabs;
 @include foundation-thumbnail;
 @include foundation-title-bar;
 @include foundation-tooltip;
@@ -51,24 +36,20 @@
 @include foundation-float-classes;
 @include foundation-flex-classes;
 
-@include motion-ui-transitions;
-@include motion-ui-animations;
-
-.qt-trialform {
-    padding-top: 20px;
-    padding-bottom: 20px;
-    background-color: #fff;
+@mixin shadow {
+  filter: drop-shadow(1px 1px 1px $black);
 }
 
-.qt-leader {
-    background: url('/assets/img/engineers.jpg') no-repeat top;
-    background-size: cover;
-    color: $white;
+.qt-nav {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  @include shadow;
 }
 
 .qt-menu {
-    color: $white !important;
-    font-weight: bolder;
+  color: $white !important;
+  font-weight: bolder;
 }
 
 p a {
@@ -91,80 +72,211 @@ a {
 }
 
 .qt-button {
-    @extend .button;
-    background-color: transparent;
-    border-width: 4px;
-    border-color: $white;
-    color: $white;
-    font-weight: bold;
-    &:hover {
-        background-color: $primary-color;
-        border-color: $primary-color;
-        color: $white !important;
-    }
-}
-
-.qt-other-button {
-    @extend .button;
-    background-color: transparent;
+  @extend .button;
+  background-color: transparent;
+  border-width: 4px;
+  border-color: $white;
+  color: $white;
+  font-weight: bold;
+  &:hover {
+    background-color: $primary-color;
     border-color: $primary-color;
-    color: $primary-color;
-    &:hover {
-        background-color: $primary-color;
-        border-color: $primary-color;
-        color: $white !important;
-    }
+    color: $white !important;
+  }
 }
-
-
-.qt-container {
-    width: 100%;
-}
-
-.qt-gimpy-icon {
-  color: $primary-color;
-  font-size: 5em;
-}
-
-.qt-stripe-light {
-    background-color: #f5f5f5;
-    width: 100%;
-    padding: 20px;
-    text-align: center;
-}
-
-.qt-stripe-unknown {
-    background-color: #000;
-    width: 100%;
-    padding-top: 15px;
-    // padding: 20px;
-    text-align: center;
-}
-
-.qt-stripe-dark {
-    background-color: #181818;
-    color: $white;
-    width: 100%;
-    padding: 20px;
-    text-align: center;
-}
-
 
 // See http://foundation.zurb.com/forum/posts/39187-responsive-menu-flashes-on-page-load
 .title-bar {
-   display: none;
+  display: none;
 }
+
+////////////////////////////////
+// cookieconsent.js overrides
+////////////////////////////////
+
+.cc-window {
+  font-family: $body-font-family !important;
+}
+
+.cc-btn {
+  height: 100% !important;
+  padding: 0 !important;
+  border-style: none !important;
+  color: white !important;
+}
+
+////////////////////////////////
+// fullpage.js overrides
+////////////////////////////////
+
+#fp-nav ul {
+  // It's kind of in the way on a mobile
+  @include breakpoint(small only) {
+    display: none;
+  }
+
+  li, li:hover {
+    margin: 18px;
+
+    a span {
+      opacity: 0.8;
+      border: 2px solid $white;
+      background-color: $black;
+      height: 10px;
+      width: 10px;
+      margin: -6px 0 0 -6px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.5);
+    }
+
+    a.active span {
+      opacity: 1.0;
+      border: 1px solid rgba(55,68,72,0.38);
+      background-color: $white;
+      height: 16px;
+      width: 16px;
+      margin: -9px 0 0 -9px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.5);
+    }
+
+    .fp-tooltip {
+      color: $white;
+      background-color: rgba(10,10,10,0.8);
+      border-radius: 5px;
+      font-family: $body-font-family;
+      font-size: 16px;
+      font-weight: bolder;
+      height: 37px;
+      top: -13px;
+      padding: 5px 15px;
+      max-width: 400px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.5);
+    }
+  }
+}
+
+
+////////////////////////////////
+// Section stripes
+////////////////////////////////
+
+@mixin light-on-dark {
+  color: $white;
+  h1, h2, h3, h4, h5 {
+    color: $white;
+  }
+}
+
+@mixin in-your-face {
+  a, h1, h2, h3, h4, h5 {
+    @include shadow;
+  }
+}
+
+.qt-stripe {
+  width: 100%;
+  padding: 20px;
+  text-align: center;
+  display: table;
+
+  #fullpage & {
+    height: 100vh;
+  }
+
+  & > div {
+    display: table-cell;
+    vertical-align: middle;
+  }
+
+  .section[data-anchor="home"] & {
+    @include light-on-dark;
+    @include in-your-face;
+    background: url('/assets/img/road.jpg') no-repeat top;
+    background-size: cover;
+  }
+
+  .section[data-anchor="untangling-big-infrastructure"] & {
+    @include light-on-dark;
+    background-color: #CA0063;
+  }
+
+  .section[data-anchor="data-integration"] & {
+    background-color: $white;
+  }
+
+  .section[data-anchor="search"] & {
+    background-color: $light-gray;
+  }
+
+  .section[data-anchor="insights"] & {
+    background-color: $white;
+  }
+
+  .section[data-anchor="case_study"] &, .section[data-anchor="about-home"] & {
+    @include light-on-dark;
+    @include in-your-face;
+    background: url('/assets/img/other-road.jpg') no-repeat top;
+    background-size: cover;
+  }
+
+  .section[data-anchor="epilogue"] & {
+    @include light-on-dark;
+    background-color: #5A057B;
+  }
+}
+
+
+.product-section {
+  h1 {
+    padding-top: 10px;
+  }
+
+  h4, h5 {
+    padding: 5px;
+    @include breakpoint(medium) {
+      padding: 10px;
+    }
+  }
+
+  .hanging-off-screen-map {
+    @include breakpoint(small only) {
+      margin-top: -70%;
+    }
+
+    @include breakpoint(medium) {
+      margin-left: -60%;
+      width: 200%;
+      min-width: 600px;
+      max-height: 100vh;
+    }
+  }
+
+  @include breakpoint(medium) {
+    .hanging-off-screen-right {
+      margin-right: -50%;
+      width: 150%;
+      min-width: 600px;
+    }
+    .hanging-off-screen-left {
+      margin-left: -50%;
+      width: 150%;
+      min-width: 600px;
+    }
+  }
+}
+
+
+
 
 ////////////////////////////////
 // Footer (originally taken from http://zurb.com/building-blocks/footer)
 ////////////////////////////////
 
 $text-color: #fff;
-
 .footer {
-  background-color: #505558;
-  padding: 2rem 4rem;
+  @include light-on-dark;
+  background-color: #5A057B;
   text-align: center;
+  padding-bottom: 1em;
   color: $text-color;
   i {
     font-size: 100px;
@@ -211,6 +323,7 @@ $text-color: #fff;
 
 .footer-icons {
   list-style-type: none;
+  margin-left: 0px;
   li {
     display: inline-block;
     padding-left: 1em;
@@ -218,138 +331,3 @@ $text-color: #fff;
     margin-top: .5em;
   }
 }
-
-.cc-window {
-  font-family: $body-font-family !important;
-}
-
-.cc-btn {
-  height: 100% !important;
-  padding: 0 !important;
-  border-style: none !important;
-  color: white !important;
-}
-
-////////////////////////////////
-// Pricing (originally taken from http://zurb.com/building-blocks/pricing-table-foundation-6)
-////////////////////////////////
-
-.pricing-table {
-  -webkit-box-shadow: 0px 2px 10px 0px rgba(50, 50, 50, 0.5);
-  -moz-box-shadow: 0px 2px 10px 0px rgba(50, 50, 50, 0.5);
-  box-shadow: 0px 2px 10px 0px rgba(50, 50, 50, 0.5);
-
-  li {
-    // border-bottom: dotted 1px #DDDDDD;
-    font-size: 0.875rem;
-    padding: 0.875rem 1.125rem;
-    &:last-child {
-      border-bottom: 0;
-    }
-  }
-
-  .title {
-    background-color: #333333;
-    color: #EEEEEE;
-    font-size: 1.0rem;
-    font-weight: bold;
-    border: 0;
-  }
-
-  .price {
-    // background-color: #F6F6F6;
-    color: $primary-color;
-    font-size: 1.75rem;
-    border-bottom: 0;
-  }
-
-  .description {
-    color: #777777;
-    font-size: 0.875rem;
-  }
-
-  .button {
-    margin: 0;
-  }
-}
-/* Used in the product pages to space rows in the grid */
-.qt-product-row {
-  padding-bottom:20px;
-  padding-top: 20px;
-}
-
-.qt-mockup {
-  padding: 20px;
-}
-
-.qt-phone-mockup {
-  padding-top: 20px;
-  padding-bottom: 20px;
-}
-
-.qt-pad-bottom {
-  padding-bottom: 20px;
-}
-
-/* Used for our how it works diagram */
-.qt-diagram {
-  padding-top: 30px;
-  padding-bottom: 30px;
-}
-
-.qt-play-button {
-  font-size: 6em;
-  color: $white;
-  text-align: center;
-  display: block;
-}
-
-div.qt-signup {
-  vertical-align: middle;
-}
-.qt-signup .email {
-    border: 1px solid #ccc;
-    font-size:14px;
-    height: 40px;
-    padding: 8px;
-    border-radius: 4px 0 0 4px;
-    color: #333;
-    font-weight: bold;
-    width: 210px;
-    float: left;
-}
-
- @media screen and (min-width: 480px) {
-   .qt-signup .email {
-     width: 400px;
-   }
- }
-
-.qt-signup .button {
-  height: 40px;
-  border-radius: 0 4px 4px 0;
-  border: 1px solid #db1e7b;
-}
-
-.typed-cursor{
-    opacity: 1;
-    -webkit-animation: blink 0.7s infinite;
-    -moz-animation: blink 0.7s infinite;
-    animation: blink 0.7s infinite;
-}
-@keyframes blink{
-    0% { opacity:1; }
-    50% { opacity:0; }
-    100% { opacity:1; }
-}
-@-webkit-keyframes blink{
-    0% { opacity:1; }
-    50% { opacity:0; }
-    100% { opacity:1; }
-}
-@-moz-keyframes blink{
-    0% { opacity:1; }
-    50% { opacity:0; }
-    100% { opacity:1; }
-}
-

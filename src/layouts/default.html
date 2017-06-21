@@ -2,14 +2,17 @@
 <html class="no-js" lang="en">
 
 <head>
-    <title>Quartic Technologies - {{ title }}</title>
+    <title>Quartic - {{ title }}</title>
     <meta charset="utf-8" />
     <meta name="description" content="{{ description }}"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes" />
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.css" />
-    <link rel="stylesheet" href="/assets/css/app.css" />
     <meta class="foundation-mq" />
+
+    <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.min.css" />
+    <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.css" />
+    <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.4/jquery.fullpage.min.css" />
+    <link rel="stylesheet" href="/assets/css/app.css" />
+
     <link rel="shortcut icon" type="image/ico" href="/assets/img/icons/favicon.ico" />
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/icons/apple-touch-icon.png">
     <link rel="icon" type="image/png" href="/assets/img/icons/favicon-32x32.png" sizes="32x32">
@@ -21,7 +24,7 @@
 
     <meta property="og:url" content="https://www.quartic.io/">
     <meta property="og:title" content="Quartic Technologies">
-    <meta property="og:description" content="Take the enterprise to the field. Exchange critical information with operatives and engineers, in real time.">
+    <meta property="og:description" content="Big data for big maintenance.">
     <meta property="og:site_name" content="Quartic.io">
     <meta property="og:image" content="https://www.quartic.io/assets/img/quartic_logo_dark.png">
     <meta property="og:type" content="website">
@@ -29,42 +32,9 @@
     <!-- Version {{build.version}} -->
 </head>
 
-
 <body>
+    {{> nav}}
     {{> body}}
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="row full-width align-center">
-            <div class="column">
-                <img src="/assets/img/quartic_logo_white.png" alt="Quartic logo" class="qt-logo" />
-
-                <ul class="footer-icons">
-                    <li>
-                        <a href="https://twitter.com/quartictech" class="fi-social-twitter" style="font-size: 2em"></a>
-                    </li>
-                    <li>
-                        <a href="https://facebook.com/quartictech" class="fi-social-facebook" style="font-size: 2em"></a>
-                    </li>
-                    <li>
-                        <a href="https://www.linkedin.com/company/quartic-technologies" class="fi-social-linkedin" style="font-size: 2em"></a>
-                    </li>
-                    <li>
-                        <a href="mailto:contact@quartic.io" class="fi-mail" style="font-size: 2em"></a>
-                    </li>
-                </ul>
-
-                <ul class="footer-links">
-                    <li>&copy; Quartic Technologies 2017</li>
-                    <li><a href="/privacy_policy.html">Privacy Policy</a></li>
-                    <li>Maps:
-                        <a href="https://www.openstreetmap.org/copyright">&copy; OpenStreetMap</a>,
-                        <a href='https://www.mapbox.com/about/maps/'>&copy; Mapbox</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </footer>
 
     {{#if build.production}}
     {{> google_analytics}}
