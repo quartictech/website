@@ -261,6 +261,7 @@ $text-color: #fff;
   @include light-on-dark;
   background-color: #5A057B;
   text-align: center;
+  padding-bottom: 1em;
   color: $text-color;
   i {
     font-size: 100px;
