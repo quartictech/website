@@ -84,6 +84,11 @@ a {
   }
 }
 
+// See http://foundation.zurb.com/forum/posts/39187-responsive-menu-flashes-on-page-load
+.title-bar {
+  display: none;
+}
+
 ////////////////////////////////
 // Section stripes
 ////////////////////////////////
@@ -151,11 +156,6 @@ a {
     background: url('/assets/img/other-road.jpg') no-repeat top;
     background-size: cover;
   }
-}
-
-// See http://foundation.zurb.com/forum/posts/39187-responsive-menu-flashes-on-page-load
-.title-bar {
-  display: none;
 }
 
 ////////////////////////////////
