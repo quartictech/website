@@ -41,12 +41,9 @@
 
 .qt-nav {
   width: 100%;
-  @include shadow;
-}
-
-.qt-nav {
   position: fixed;
   top: 0;
+  @include shadow;
 }
 
 .qt-menu {
@@ -87,76 +84,74 @@ a {
   }
 }
 
+////////////////////////////////
+// Section stripes
+////////////////////////////////
+
+@mixin light-on-dark {
+  color: $white;
+  h1, h2, h3, h4 {
+    color: $white;
+  }
+}
+
+@mixin in-your-face {
+  a, h1, h2, h3, h4 {
+    @include shadow;
+  }
+}
+
 .qt-stripe {
-  height: 100vh;
   width: 100%;
   padding: 20px;
   text-align: center;
   display: table;
-}
 
-.qt-stripe-leader-alternate {
-  width: 100%;
-  padding: 20px;
-  text-align: center;
-  display: table;
-  background: url('/assets/img/road.jpg') no-repeat top;
-  background-size: cover;
-  color: $white;
-
-  a, h1, h2, h3 {
-    @include shadow;
+  #fullpage & {
+    height: 100vh;
   }
 
-}
+  & > div {
+    display: table-cell;
+    vertical-align: middle;
+  }
 
-.qt-stripe-inner {
-  display: table-cell;
-  vertical-align: middle;
-}
+  .section[data-anchor="home"] & {
+    @include light-on-dark;
+    @include in-your-face;
+    background: url('/assets/img/road.jpg') no-repeat top;
+    background-size: cover;
+  }
 
-.qt-stripe-leader {
-  @extend .qt-stripe;
+  .section[data-anchor="untangling-big-infrastructure"] & {
+    @include light-on-dark;
+    background-color: #CA0063;
+  }
 
-  background: url('/assets/img/road.jpg') no-repeat top;
-  background-size: cover;
-  color: $white;
+  .section[data-anchor="how-it-works"] & {
+    @include light-on-dark;
+    background-color: #5A057B;
+  }
 
-  a, h1, h2, h3 {
-    @include shadow;
+  .section[data-anchor="data-integration"] & {
+    background-color: #F5F5F5;
+  }
+
+  .section[data-anchor="search"] & {
+    background-color: #F5F5F5;
+  }
+
+  .section[data-anchor="insights"] & {
+    background-color: #F5F5F5;
+  }
+
+  .section[data-anchor="miscellaneous"] & {
+    @include light-on-dark;
+    @include in-your-face;
+    background: url('/assets/img/other-road.jpg') no-repeat top;
+    background-size: cover;
   }
 }
-
-.qt-stripe-imagine {
-  @extend .qt-stripe;
-  background-color: #CA0063;
-  color: $white;
-  h3, h4 {
-    color: $white;
-  }
-}
-
-.qt-stripe-gimp {
-  @extend .qt-stripe;
-  background-color: #5A057B;
-  color: $white;
-  h3, h4 {
-    color: $white;
-  }
-}
-
-.qt-stripe-light {
-  @extend .qt-stripe;
-  background-color: #F5F5F5;
-}
-
-.qt-stripe-dark {
-  @extend .qt-stripe;
-  background: url('/assets/img/other-road.jpg') no-repeat top;
-  background-size: cover;
-  color: $white;
-}
-
 
 // See http://foundation.zurb.com/forum/posts/39187-responsive-menu-flashes-on-page-load
 .title-bar {
