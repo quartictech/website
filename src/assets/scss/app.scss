@@ -7,6 +7,7 @@
 @import 'forms';
 
 @include foundation-global-styles;
+@include foundation-grid;
 @include foundation-flex-grid;
 @include foundation-typography;
 @include foundation-button;
@@ -215,6 +216,14 @@ a {
     padding: 5px;
   }
 
+  @media screen and (min-width: 640px) {
+    .hanging-off-screen {
+      margin-right: -50%;
+      width: 150%;
+      min-width: 600px;
+    }
+  }
+
   @media screen and (min-width: 480px) {
     h4, h5 {
       padding: 10px;
@@ -222,10 +231,7 @@ a {
   }
 }
 
-.hanging-off-screen {
-  margin-left: -250px;
-  width: 150%;
-}
+
 
 
 ////////////////////////////////
