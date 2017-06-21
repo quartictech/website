@@ -164,8 +164,11 @@ a {
 
 $text-color: #fff;
 
-.footer {
+footer.footer {
   background-color: #505558;
+}
+
+.footer {
   padding: 2rem 4rem;
   text-align: center;
   color: $text-color;
