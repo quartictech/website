@@ -146,13 +146,13 @@ a {
 
 @mixin light-on-dark {
   color: $white;
-  h1, h2, h3, h4 {
+  h1, h2, h3, h4, h5 {
     color: $white;
   }
 }
 
 @mixin in-your-face {
-  a, h1, h2, h3, h4 {
+  a, h1, h2, h3, h4, h5 {
     @include shadow;
   }
 }
