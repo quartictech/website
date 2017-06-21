@@ -212,24 +212,24 @@ a {
 
   h4, h5 {
     padding: 5px;
-    @media #{$medium-up} {
+    @include breakpoint(medium) {
       padding: 10px;
     }
   }
 
   .hanging-off-screen-map {
-    @media #{$small-only} {
+    @include breakpoint(small only) {
       margin-top: -70%;
     }
 
-    @media #{$medium-up} {
+    @include breakpoint(medium) {
       margin-left: -60%;
       width: 200%;
       min-width: 600px;
     }
   }
 
-  @media #{$medium-up} {
+  @include breakpoint(medium) {
     .hanging-off-screen-right {
       margin-right: -50%;
       width: 150%;
