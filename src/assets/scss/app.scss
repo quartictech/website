@@ -133,11 +133,6 @@ a {
     background-color: #CA0063;
   }
 
-  .section[data-anchor="how-it-works"] & {
-    @include light-on-dark;
-    background-color: #5A057B;
-  }
-
   .section[data-anchor="data-integration"] & {
     background-color: $white;
   }
