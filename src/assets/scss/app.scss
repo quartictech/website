@@ -49,12 +49,12 @@
   width: 100%;
   position: fixed;
   top: 0;
-  @include shadow;
 }
 
 .qt-menu {
   color: $white !important;
   font-weight: bolder;
+  @include shadow;
 }
 
 p a {
