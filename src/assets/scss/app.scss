@@ -91,6 +91,21 @@ a {
 }
 
 ////////////////////////////////
+// cookieconsent.js overrides
+////////////////////////////////
+
+.cc-window {
+  font-family: $body-font-family !important;
+}
+
+.cc-btn {
+  height: 100% !important;
+  padding: 0 !important;
+  border-style: none !important;
+  color: white !important;
+}
+
+////////////////////////////////
 // fullpage.js overrides
 ////////////////////////////////
 
