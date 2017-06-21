@@ -150,11 +150,16 @@ a {
     background-color: $white;
   }
 
-  .section[data-anchor="miscellaneous"] &, .section[data-anchor="about-home"] & {
+  .section[data-anchor="case_study"] &, .section[data-anchor="about-home"] & {
     @include light-on-dark;
     @include in-your-face;
     background: url('/assets/img/other-road.jpg') no-repeat top;
     background-size: cover;
+  }
+
+  .section[data-anchor="epilogue"] & {
+    @include light-on-dark;
+    background-color: #5A057B;
   }
 }
 

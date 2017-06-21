@@ -38,35 +38,7 @@
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="row full-width align-center">
-            <div class="column">
-                <img src="/assets/img/quartic_logo_white.png" alt="Quartic logo" class="qt-logo" />
-
-                <ul class="footer-icons">
-                    <li>
-                        <a href="https://twitter.com/quartictech" class="fi-social-twitter" style="font-size: 2em"></a>
-                    </li>
-                    <li>
-                        <a href="https://facebook.com/quartictech" class="fi-social-facebook" style="font-size: 2em"></a>
-                    </li>
-                    <li>
-                        <a href="https://www.linkedin.com/company/quartic-technologies" class="fi-social-linkedin" style="font-size: 2em"></a>
-                    </li>
-                    <li>
-                        <a href="mailto:contact@quartic.io" class="fi-mail" style="font-size: 2em"></a>
-                    </li>
-                </ul>
-
-                <ul class="footer-links">
-                    <li>&copy; Quartic Technologies 2017</li>
-                    <li><a href="/privacy_policy.html">Privacy Policy</a></li>
-                    <li>Maps:
-                        <a href="https://www.openstreetmap.org/copyright">&copy; OpenStreetMap</a>,
-                        <a href='https://www.mapbox.com/about/maps/'>&copy; Mapbox</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
+        {{> footer}}
     </footer>
 
     {{#if build.production}}
