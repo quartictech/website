@@ -134,18 +134,18 @@ a {
   }
 
   .section[data-anchor="data-integration"] & {
-    background-color: #F5F5F5;
+    background-color: $white;
   }
 
   .section[data-anchor="search"] & {
-    background-color: #F5F5F5;
+    background-color: $light-gray;
   }
 
   .section[data-anchor="insights"] & {
-    background-color: #F5F5F5;
+    background-color: $white;
   }
 
-  .section[data-anchor="miscellaneous"] & {
+  .section[data-anchor="miscellaneous"] &, .section[data-anchor="about-home"] & {
     @include light-on-dark;
     @include in-your-face;
     background: url('/assets/img/other-road.jpg') no-repeat top;
