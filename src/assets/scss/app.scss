@@ -95,6 +95,11 @@ a {
 ////////////////////////////////
 
 #fp-nav ul {
+  // It's kind of in the way on a mobile
+  @include breakpoint(small only) {
+    display: none;
+  }
+
   li, li:hover {
     margin: 18px;
 
