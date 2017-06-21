@@ -331,31 +331,3 @@ $text-color: #fff;
     margin-top: .5em;
   }
 }
-
-/* Used in the product pages to space rows in the grid */
-.qt-product-row {
-  padding-bottom:20px;
-  padding-top: 20px;
-}
-
-.qt-mockup {
-  padding: 20px;
-}
-
-.qt-phone-mockup {
-  padding-top: 20px;
-  padding-bottom: 20px;
-}
-
-/* Used for our how it works diagram */
-.qt-diagram {
-  padding-top: 30px;
-  padding-bottom: 30px;
-}
-
-.qt-play-button {
-  font-size: 6em;
-  color: $white;
-  text-align: center;
-  display: block;
-}
