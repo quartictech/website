@@ -95,7 +95,6 @@ a {
 ////////////////////////////////
 
 #fp-nav ul {
-
   li, li:hover {
     margin: 18px;
 
@@ -121,7 +120,6 @@ a {
 
     .fp-tooltip {
       color: $white;
-      // border: 1px solid rgba(55,68,72,0.8);
       background-color: rgba(10,10,10,0.8);
       border-radius: 5px;
       font-family: $body-font-family;
@@ -214,9 +212,24 @@ a {
 
   h4, h5 {
     padding: 5px;
+    @media #{$medium-up} {
+      padding: 10px;
+    }
   }
 
-  @media screen and (min-width: 640px) {
+  .hanging-off-screen-map {
+    @media #{$small-only} {
+      margin-top: -70%;
+    }
+
+    @media #{$medium-up} {
+      margin-left: -60%;
+      width: 200%;
+      min-width: 600px;
+    }
+  }
+
+  @media #{$medium-up} {
     .hanging-off-screen-right {
       margin-right: -50%;
       width: 150%;
@@ -226,13 +239,6 @@ a {
       margin-left: -50%;
       width: 150%;
       min-width: 600px;
-    }
-
-  }
-
-  @media screen and (min-width: 480px) {
-    h4, h5 {
-      padding: 10px;
     }
   }
 }
