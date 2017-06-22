@@ -325,6 +325,10 @@ $text-color: #fff;
   }
 }
 
+input, textarea, button {
+  font-family: $body-font-family;
+}
+
 .form-row {
   padding: 10px;
 
