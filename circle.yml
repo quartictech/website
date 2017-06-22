@@ -6,16 +6,17 @@ machine:
 
 dependencies:
   override:
-    - npm install
+    - yarn install
     - bower install
   cache_directories:
     - ~/.ssh
+    - node_modules
     - bower_components
 
 compile:
   override:
     - ./scripts/configure.sh
-    - npm run build 
+    - yarn run build 
 
 test:
   override:
@@ -25,12 +26,16 @@ deployment:
   live:
     branch: master
     commands:
-      - sudo rsync -e "/opt/google-cloud-sdk/bin/gcloud compute ssh --zone ${GCLOUD_ZONE} ${GCLOUD_SERVICE_ACCOUNT}@${GCLOUD_WEB_INSTANCE}" --delete -avz dist/ :/opt/quartic/www.quartic.io
+      - sudo rsync -e "/opt/google-cloud-sdk/bin/gcloud compute ssh --zone ${GCLOUD_ZONE} ${GCLOUD_SERVICE_ACCOUNT}@${GCLOUD_WEB_INSTANCE} --" --delete -avz dist/ :/opt/quartic/www.quartic.io
   test:
     branch: develop
     commands:
-      - sudo rsync -e "/opt/google-cloud-sdk/bin/gcloud compute ssh --zone ${GCLOUD_ZONE} ${GCLOUD_SERVICE_ACCOUNT}@${GCLOUD_WEB_INSTANCE}" --delete -avz dist/ :/opt/quartic/www-test.quartic.io
+      - sudo rsync -e "/opt/google-cloud-sdk/bin/gcloud compute ssh --zone ${GCLOUD_ZONE} ${GCLOUD_SERVICE_ACCOUNT}@${GCLOUD_WEB_INSTANCE} --" --delete -avz dist/ :/opt/quartic/www-test.quartic.io
+  dummy:
+    branch: /.*/
+    commands:
+      - sudo rsync -e "/opt/google-cloud-sdk/bin/gcloud compute ssh --zone ${GCLOUD_ZONE} ${GCLOUD_SERVICE_ACCOUNT}@${GCLOUD_WEB_INSTANCE} --" --delete -avz dist/ :/opt/quartic/www-dummy.quartic.io
 
-general:
-  artifacts:
-    - dist/
+# general:
+#   artifacts:
+#     - dist/

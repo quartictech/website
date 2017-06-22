@@ -1,65 +1,49 @@
-# ZURB Template
+# Website
 
-[![devDependency Status](https://david-dm.org/zurb/foundation-zurb-template/dev-status.svg)](https://david-dm.org/zurb/foundation-zurb-template#info=devDependencies)
+The Quartic public website, at https://www.quartic.io.
 
-**Please open all issues with this template on the main [Foundation for Sites](https://github.com/zurb/foundation-sites/issues) repo.**
+## Local development
 
-This is the official ZURB Template for use with [Foundation for Sites](http://foundation.zurb.com/sites). We use this template at ZURB to deliver static code to our clients. It has a Gulp-powered build system with these features:
+You need the following installed locally:
 
-- Handlebars HTML templates with Panini
-- Sass compilation and prefixing
-- JavaScript concatenation
-- Built-in BrowserSync server
-- For production builds:
-  - CSS compression
-  - JavaScript compression
-  - Image compression
+- NodeJS
+- Yarn
+- Bower
 
-## Installation
+First install dependencies:
 
-To use this template, your computer needs:
-
-- [NodeJS](https://nodejs.org/en/) (0.12 or greater)
-- [Git](https://git-scm.com/)
-
-This template can be installed with the Foundation CLI, or downloaded and set up manually.
-
-### Using the CLI
-
-Install the Foundation CLI with this command:
-
-```bash
-npm install foundation-cli --global
 ```
-
-Use this command to set up a blank Foundation for Sites project with this template:
-
-```bash
-foundation new --framework sites --template zurb
-```
-
-The CLI will prompt you to give your project a name. The template will be downloaded into a folder with this name.
-
-### Manual Setup
-
-To manually set up the template, first download it with Git:
-
-```bash
-git clone https://github.com/zurb/foundation-zurb-template projectname
-```
-
-Then open the folder in your command line, and install the needed dependencies:
-
-```bash
-cd projectname
-npm install
+yarn install
 bower install
 ```
 
-Finally, run `npm start` to run Gulp. Your finished site will be created in a folder called `dist`, viewable at this URL:
+To run a local hot-development server:
 
 ```
-http://localhost:8000
+yarn run start
 ```
 
-To create compressed, production-ready assets, run `npm run build`.
+Site will be available at http://localhost:8000.
+
+
+## Submitting changes
+
+Changes should be submitted as PRs via the normal process.  When merged to `develop` branch, the CircleCI build
+will automatically deploy to http://www-test.quartic.io (behind basic auth, creds can be found in the normal place).
+When merged to `master`, CircleCI will automatically deploy to https://www.quartic.io.
+
+
+## Hosting
+
+Both http://www-test.quartic.io and https://www.quartic.io are hosted on the same GCE node, which was provisioned
+via Ansible (see the `infra` repo).
+
+
+## Framework
+
+This is based on [Zurb Fondation 6](http://foundation.zurb.com/sites/download.html/), originally created via:
+
+```
+npm install -g foundation-cli
+foundation new --framework sites --template zurb
+```
