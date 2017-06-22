@@ -4,7 +4,6 @@
 
 @import 'settings';
 @import 'foundation';
-@import 'forms';
 
 @include foundation-global-styles;
 @include foundation-grid;
@@ -166,7 +165,7 @@ a {
 
 @mixin light-on-dark {
   color: $white;
-  h1, h2, h3, h4, h5 {
+  a, h1, h2, h3, h4, h5 {
     color: $white;
   }
 }
@@ -229,7 +228,6 @@ a {
   }
 }
 
-
 .product-section {
   h1 {
     padding-top: 10px;
@@ -289,6 +287,9 @@ $text-color: #fff;
 }
 
 .footer {
+  padding-top: 1em;
+  padding-bottom: 1em;
+
   h4 {
     color: $text-color;
     font-size: 1em;
@@ -310,29 +311,28 @@ $text-color: #fff;
     margin: 1em;
 }
 
-@media only screen and (min-width: 40.063em) {
-.footer {
-  .columns:nth-child(n+2) {
-    border-left: 1px solid scale-color($text-color, $lightness: -30%);
-    min-height: 280px;
-  }
- }
-}
-
-.footer-links {
-  list-style-type: none;
-  li {
-    margin-top: .5em;
-  }
-}
-
 .footer-icons {
   list-style-type: none;
   margin-left: 0px;
   li {
     display: inline-block;
-    padding-left: 1em;
     padding-right: 1em;
-    margin-top: .5em;
+    padding-left: 0em;
+    padding-top: 0em;
+    padding-bottom: 0em;
+    line-height: 1;
+
+  }
+}
+
+.form-row {
+  padding: 10px;
+
+  input, textarea {
+    width: 100%;
+    max-width: 400px;
+    padding: 10px 0 10px 10px; 
+    border-radius: 4px;
+    border-color: $white;
   }
 }
