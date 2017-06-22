@@ -19,6 +19,10 @@ UNCSS_OPTIONS:
 PATHS:
   # Path to dist folder
   dist: "dist"
+  # Paths to images
+  images:
+    - "src/assets/img/**/*"
+    - "!src/assets/img/originals/**/*"
   # Paths to static assets that aren't images, CSS, or JavaScript
   assets:
     - "src/assets/**/*"
