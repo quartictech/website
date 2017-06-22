@@ -60,26 +60,27 @@ description: Quartic untangles big infrastructure headaches.
                 <h3><a href="mailto:contact@quartic.io">Email us</a> or use the form below.</h3>
                 <form action="/post/contact-us" method="POST" id="contact-us-form">
                     <div class="row form-row">
-                                <div class="columns small-12">
-                                    <input type="text" placeholder="Name"/>
-                                </div>
-                            </div>
-                            <div class="row form-row">
-                                <div class="columns small-12">
-                                        <input type="text" placeholder="Email" />
-                                </div>
-                            </div>
-                            <div class="row form-row">
-                                <div class="columns small-12">
-                                    <textarea rows=4 placeholder="Message"></textarea>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="columns small-12">
-                                    <button class="qt-button" onclick="gaFormEvent('Form', 'signup', 'contact-us', '#contact-us-form');" />Send</button>
-                                </div>
-                            </div>
-                             <input type="hidden" name="_next" value="/thanks.html" />
+                        <input type="text" name="_gotcha" style="display:none" />
+                        <div class="columns small-12">
+                            <input type="text" placeholder="Name" />
+                        </div>
+                    </div>
+                    <div class="row form-row">
+                        <div class="columns small-12">
+                            <input type="text" placeholder="Email" />
+                        </div>
+                    </div>
+                    <div class="row form-row">
+                        <div class="columns small-12">
+                            <textarea rows=4 placeholder="Message"></textarea>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="columns small-12">
+                            <button class="qt-button" onclick="gaFormEvent('Form', 'signup', 'contact-us', '#contact-us-form');" />Send</button>
+                        </div>
+                    </div>
+                    <input type="hidden" name="_next" value="/thanks.html" />
                 </form>
 
                 {{> footer}}
