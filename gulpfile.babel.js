@@ -106,7 +106,7 @@ function javascript() {
 // Copy images to the "dist" folder
 // In production, the images are compressed
 function images() {
-  return gulp.src('src/assets/img/**/*')
+  return gulp.src(['src/assets/img/**/*', '!src/assets/img/originals/**/*'])
     .pipe($.if(PRODUCTION, $.imagemin({
       progressive: true
     })))
