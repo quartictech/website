@@ -45,6 +45,10 @@
   filter: drop-shadow(1px 1px 1px $black);
 }
 
+.menu-icon {
+  @include shadow;
+}
+
 .qt-nav {
   width: 100%;
   position: fixed;
