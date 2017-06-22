@@ -47,6 +47,10 @@
 
 .menu-icon {
   @include shadow;
+
+  &:focus {
+    outline: none;
+  }
 }
 
 .qt-nav {
