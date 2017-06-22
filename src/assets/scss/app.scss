@@ -182,6 +182,7 @@ a {
   padding: 20px;
   text-align: center;
   display: table;
+  overflow: hidden;
 
   #fullpage & {
     height: 100vh;
