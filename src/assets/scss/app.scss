@@ -37,6 +37,11 @@
 @include foundation-flex-classes;
 
 @mixin shadow {
+  // See https://stackoverflow.com/a/28419263/129570
+  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+      text-shadow: $black 2px 2px 2px;
+  }
+  -webkit-filter: drop-shadow(1px 1px 1px $black);
   filter: drop-shadow(1px 1px 1px $black);
 }
 
@@ -44,12 +49,12 @@
   width: 100%;
   position: fixed;
   top: 0;
-  @include shadow;
 }
 
 .qt-menu {
   color: $white !important;
   font-weight: bolder;
+  @include shadow;
 }
 
 p a {
