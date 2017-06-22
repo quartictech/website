@@ -219,7 +219,7 @@ a {
   .section[data-anchor="case_study"] &, .section[data-anchor="about-home"] & {
     @include light-on-dark;
     @include in-your-face;
-    background: url('/assets/img/other-road.jpg') no-repeat top;
+    background: url('/assets/img/desert_road.jpg') no-repeat top;
     background-size: cover;
   }
 
