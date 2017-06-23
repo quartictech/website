@@ -1,41 +1,59 @@
-machine:
-  pre:
-    - if [ ! -e ~/.ssh/google_compute_engine ]; then ssh-keygen -f ~/.ssh/google_compute_engine -N ""; fi
-  post:
-    - curl https://raw.githubusercontent.com/quartictech/circleci-utils/develop/circleci-gcloud-login | bash -s -- --no-docker
+version: 2
 
-dependencies:
-  override:
-    - yarn install
-    - bower install
-  cache_directories:
-    - ~/.ssh
-    - node_modules
-    - bower_components
+jobs:
+  build:
+    docker:
+      - image: quartic/uber-builder:41
 
-compile:
-  override:
-    - ./scripts/configure.sh
-    - yarn run build 
+    working_directory: ~/website
 
-test:
-  override:
-    - echo "Nothing to do"
+    steps:
+      - checkout
 
-deployment:
-  live:
-    branch: master
-    commands:
-      - sudo rsync -e "/opt/google-cloud-sdk/bin/gcloud compute ssh --zone ${GCLOUD_ZONE} ${GCLOUD_SERVICE_ACCOUNT}@${GCLOUD_WEB_INSTANCE} --" --delete -avz dist/ :/opt/quartic/www.quartic.io
-  test:
-    branch: develop
-    commands:
-      - sudo rsync -e "/opt/google-cloud-sdk/bin/gcloud compute ssh --zone ${GCLOUD_ZONE} ${GCLOUD_SERVICE_ACCOUNT}@${GCLOUD_WEB_INSTANCE} --" --delete -avz dist/ :/opt/quartic/www-test.quartic.io
-  dummy:
-    branch: /.*/
-    commands:
-      - sudo rsync -e "/opt/google-cloud-sdk/bin/gcloud compute ssh --zone ${GCLOUD_ZONE} ${GCLOUD_SERVICE_ACCOUNT}@${GCLOUD_WEB_INSTANCE} --" --delete -avz dist/ :/opt/quartic/www-dummy.quartic.io
+      - restore-cache:
+          keys:
+            - website-v2-ssh
 
-# general:
-#   artifacts:
-#     - dist/
+      - run:
+          name: Register SSH key
+          command: |
+            if [ ! -e ~/.ssh/google_compute_engine ]; then ssh-keygen -f ~/.ssh/google_compute_engine -N ""; fi
+
+      - save_cache:
+          key: website-v2-ssh
+          paths:
+            - ~/.ssh
+
+      - restore_cache:
+          keys:
+            - website-v2-{{ .Branch }}-yarn-{{ checksum "yarn.lock" }}
+            - website-v2-{{ .Branch }}-yarn
+            - website-v2-develop-yarn
+
+      - run:
+          name: Install dependencies
+          command: |
+            yarn install
+
+      - save_cache:
+          key: website-v2-{{ .Branch }}-yarn-{{ checksum "yarn.lock" }}
+          paths:
+            - node_modules
+
+      - run:
+          name: Build distribution
+          command: |
+            ./scripts/configure.sh
+            yarn run build
+
+      - deploy:
+          command: |
+            if [ "${CIRCLE_BRANCH}" == "master" ]; then
+              TARGET=www.quartic.io
+            elif [ "${CIRCLE_BRANCH}" == "develop" ]; then
+              TARGET=www-test.quartic.io
+            else
+              TARGET=www-dummy.quartic.io
+            fi
+            gcloud-auth
+            rsync -e "gcloud compute ssh --zone ${GCLOUD_ZONE} ${GCLOUD_SERVICE_ACCOUNT}@${GCLOUD_WEB_INSTANCE} --" --delete -avz dist/ :/opt/quartic/${TARGET}

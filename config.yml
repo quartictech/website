@@ -29,23 +29,21 @@ PATHS:
     - "!src/assets/{img,js,scss}/**/*"
   # Paths to Sass libraries, which can then be loaded with @import
   sass:
-    - "bower_components/foundation-sites/scss"
-    # - "bower_components/motion-ui/src"
+    - "node_modules/foundation-sites/scss"
   # Paths to JavaScript libraries, which are combined into one file
   javascript:
     # Libraries required by Foundation
-    - "bower_components/jquery/dist/jquery.js"
-    - "bower_components/what-input/dist/what-input.js"
+    - "node_modules/jquery/dist/jquery.js"
+    - "node_modules/what-input/dist/what-input.js"
     # Core Foundation files
-    - "bower_components/foundation-sites/js/foundation.core.js"
-    - "bower_components/foundation-sites/js/foundation.util.*.js"
+    - "node_modules/foundation-sites/js/foundation.core.js"
+    - "node_modules/foundation-sites/js/foundation.util.*.js"
     # Individual Foundation components
-    # If you aren't using a component, just remove it from the list
-    - "bower_components/foundation-sites/js/foundation.responsiveToggle.js"
-    - "bower_components/foundation-sites/js/foundation.responsiveMenu.js"
+    - "node_modules/foundation-sites/js/foundation.responsiveToggle.js"
+    - "node_modules/foundation-sites/js/foundation.responsiveMenu.js"
 
     # Other libs
-    - "bower_components/fullpage/dist/jquery.fullpage.js"
+    - "node_modules/fullpage.js/dist/jquery.fullpage.js"
 
     # Paths to your own project code are here
     - "src/assets/js/!(app).js"
