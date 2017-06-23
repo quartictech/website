@@ -30,27 +30,15 @@ jobs:
             - website-v2-{{ .Branch }}-yarn
             - website-v2-develop-yarn
 
-      - restore_cache:
-          keys:
-            - website-v2-{{ .Branch }}-bower-{{ checksum "bower.json" }}
-            - website-v2-{{ .Branch }}-bower
-            - website-v2-develop-bower
-
       - run:
           name: Install dependencies
           command: |
             yarn install
-            bower install
 
       - save_cache:
           key: website-v2-{{ .Branch }}-yarn-{{ checksum "yarn.lock" }}
           paths:
             - node_modules
-
-      - save_cache:
-          key: website-v2-{{ .Branch }}-bower-{{ checksum "bower.json" }}
-          paths:
-            - bower_components
 
       - run:
           name: Build distribution

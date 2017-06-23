@@ -14,7 +14,6 @@ First install dependencies:
 
 ```
 yarn install
-bower install
 ```
 
 To run a local hot-development server:
@@ -47,3 +46,5 @@ This is based on [Zurb Fondation 6](http://foundation.zurb.com/sites/download.ht
 npm install -g foundation-cli
 foundation new --framework sites --template zurb
 ```
+
+We then eliminated Bower (the dependencies originally in `bower.json` are now subsumed by `package.json`).
