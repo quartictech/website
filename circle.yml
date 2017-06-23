@@ -3,7 +3,7 @@ version: 2
 jobs:
   build:
     docker:
-      - image: quartic/uber-builder:38
+      - image: quartic/uber-builder:39
 
     working_directory: ~/website
 
