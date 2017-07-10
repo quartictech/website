@@ -8,7 +8,6 @@ You need the following installed locally:
 
 - NodeJS
 - Yarn
-- Bower
 
 First install dependencies:
 
