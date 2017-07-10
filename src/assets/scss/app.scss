@@ -180,13 +180,13 @@ a {
 
 @mixin light-on-dark {
   color: $white;
-  a, h1, h2, h3, h4, h5 {
+  a, h1, h2, h3, h4, h5, p {
     color: $white;
   }
 }
 
 @mixin in-your-face {
-  a, h1, h2, h3, h4, h5 {
+  a, h1, h2, h3, h4, h5, p {
     @include shadow;
   }
 }
@@ -231,7 +231,7 @@ a {
     background-color: $white;
   }
 
-  .section[data-anchor="case_study"] &, .section[data-anchor="about-home"] & {
+  .section[data-anchor="case-study"] & {
     @include light-on-dark;
     @include in-your-face;
     background: url('/assets/img/desert_road.jpg') no-repeat top;
@@ -241,6 +241,18 @@ a {
   .section[data-anchor="epilogue"] & {
     @include light-on-dark;
     background-color: #5A057B;
+  }
+
+  .section[data-anchor="mission-home"] & {
+    @include light-on-dark;
+    @include in-your-face;
+    background: url('/assets/img/mission.jpg') no-repeat center;
+    background-size: cover;
+  }
+
+  .section[data-anchor="principles"] & {
+    @include light-on-dark;
+    background-color: #CA0063;
   }
 }
 
@@ -283,7 +295,22 @@ a {
   }
 }
 
+////////////////////////////////
+// Random weirdness
+////////////////////////////////
 
+#splash {
+  h3, h4 {
+    padding: 5px;
+    @include breakpoint(medium) {
+      padding: 10px;
+    }
+  }
+}
+
+.qt-gimpy-icon {
+  font-size: 3em;
+}
 
 
 ////////////////////////////////
