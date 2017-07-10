@@ -35,6 +35,13 @@
 @include foundation-float-classes;
 @include foundation-flex-classes;
 
+////////////////////////////////
+// Our sweet colours
+////////////////////////////////
+$sexy-pink: #CA0063;
+$sultry-pink: #5A057B;
+
+
 @mixin shadow {
   // See https://stackoverflow.com/a/28419263/129570
   @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
@@ -216,7 +223,7 @@ a {
 
   .section[data-anchor="untangling-big-infrastructure"] & {
     @include light-on-dark;
-    background-color: #CA0063;
+    background-color: $sexy-pink;
   }
 
   .section[data-anchor="data-integration"] & {
@@ -240,7 +247,7 @@ a {
 
   .section[data-anchor="epilogue"] & {
     @include light-on-dark;
-    background-color: #5A057B;
+    background-color: $sultry-pink;
   }
 
   .section[data-anchor="mission-home"] & {
@@ -252,7 +259,7 @@ a {
 
   .section[data-anchor="principles"] & {
     @include light-on-dark;
-    background-color: #CA0063;
+    background-color: $sexy-pink;
   }
 }
 
@@ -317,13 +324,12 @@ a {
 // Footer (originally taken from http://zurb.com/building-blocks/footer)
 ////////////////////////////////
 
-$text-color: #fff;
 .footer {
   @include light-on-dark;
-  background-color: #5A057B;
+  background-color: $sultry-pink;
   text-align: center;
   padding-bottom: 1em;
-  color: $text-color;
+  color: $white;
   i {
     font-size: 100px;
   }
@@ -334,7 +340,7 @@ $text-color: #fff;
   padding-bottom: 1em;
 
   h4 {
-    color: $text-color;
+    color: $white;
     font-size: 1em;
     font-weight: 400;
     text-transform: uppercase;
@@ -344,7 +350,7 @@ $text-color: #fff;
   p, a {
     font-weight: 300;
     font-size: .8em;
-    color: $text-color;
+    color: $white;
     border-bottom: none;
   }
 }
