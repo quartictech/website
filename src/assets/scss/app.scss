@@ -1,6 +1,6 @@
 @charset 'utf-8';
 
-@import url("https://fonts.googleapis.com/css?family=Roboto:100,300,100italic,300italic");
+@import url("https://fonts.googleapis.com/css?family=Hind+Madurai");
 
 @import 'settings';
 @import 'foundation';
@@ -34,6 +34,13 @@
 @include foundation-visibility-classes;
 @include foundation-float-classes;
 @include foundation-flex-classes;
+
+////////////////////////////////
+// Our sweet colours
+////////////////////////////////
+$sexy-pink: #CA0063;
+$sultry-pink: #5A057B;
+
 
 @mixin shadow {
   // See https://stackoverflow.com/a/28419263/129570
@@ -180,13 +187,13 @@ a {
 
 @mixin light-on-dark {
   color: $white;
-  a, h1, h2, h3, h4, h5 {
+  a, h1, h2, h3, h4, h5, p {
     color: $white;
   }
 }
 
 @mixin in-your-face {
-  a, h1, h2, h3, h4, h5 {
+  a, h1, h2, h3, h4, h5, p {
     @include shadow;
   }
 }
@@ -216,7 +223,7 @@ a {
 
   .section[data-anchor="untangling-big-infrastructure"] & {
     @include light-on-dark;
-    background-color: #CA0063;
+    background-color: $sexy-pink;
   }
 
   .section[data-anchor="data-integration"] & {
@@ -231,7 +238,7 @@ a {
     background-color: $white;
   }
 
-  .section[data-anchor="case_study"] &, .section[data-anchor="about-home"] & {
+  .section[data-anchor="case-study"] & {
     @include light-on-dark;
     @include in-your-face;
     background: url('/assets/img/desert_road.jpg') no-repeat top;
@@ -240,7 +247,19 @@ a {
 
   .section[data-anchor="epilogue"] & {
     @include light-on-dark;
-    background-color: #5A057B;
+    background-color: $sultry-pink;
+  }
+
+  .section[data-anchor="mission-home"] & {
+    @include light-on-dark;
+    @include in-your-face;
+    background: url('/assets/img/mission.jpg') no-repeat center;
+    background-size: cover;
+  }
+
+  .section[data-anchor="values"] & {
+    @include light-on-dark;
+    background-color: $sexy-pink;
   }
 }
 
@@ -283,20 +302,34 @@ a {
   }
 }
 
+////////////////////////////////
+// Random weirdness
+////////////////////////////////
 
+#splash {
+  h3, h4 {
+    padding: 5px;
+    @include breakpoint(medium) {
+      padding: 10px;
+    }
+  }
+}
+
+.qt-gimpy-icon {
+  font-size: 3em;
+}
 
 
 ////////////////////////////////
 // Footer (originally taken from http://zurb.com/building-blocks/footer)
 ////////////////////////////////
 
-$text-color: #fff;
 .footer {
   @include light-on-dark;
-  background-color: #5A057B;
+  background-color: $sultry-pink;
   text-align: center;
   padding-bottom: 1em;
-  color: $text-color;
+  color: $white;
   i {
     font-size: 100px;
   }
@@ -307,7 +340,7 @@ $text-color: #fff;
   padding-bottom: 1em;
 
   h4 {
-    color: $text-color;
+    color: $white;
     font-size: 1em;
     font-weight: 400;
     text-transform: uppercase;
@@ -317,7 +350,7 @@ $text-color: #fff;
   p, a {
     font-weight: 300;
     font-size: .8em;
-    color: $text-color;
+    color: $white;
     border-bottom: none;
   }
 }
