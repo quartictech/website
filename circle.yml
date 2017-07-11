@@ -46,6 +46,17 @@ jobs:
             ./scripts/configure.sh
             yarn run build
 
+      - run:
+          name: Install spellchecking stuff
+          command: apt-get update && apt-get install -y hunspell myspell-en-gb
+
+      - run:
+          name: Run spellchecker
+          command: |
+            RESULTS=$(hunspell -d en_GB -p spelling.dic -H -u3 dist/*.html)
+            echo ${RESULTS}
+            test "${RESULTS}" == ""
+
       - deploy:
           command: |
             if [ "${CIRCLE_BRANCH}" == "master" ]; then

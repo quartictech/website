@@ -18,7 +18,7 @@ yarn install
 To run a local hot-development server:
 
 ```
-yarn run start
+yarn start
 ```
 
 Site will be available at http://localhost:8000.
@@ -30,6 +30,10 @@ Changes should be submitted as PRs via the normal process.  When merged to `deve
 will automatically deploy to http://www-test.quartic.io (behind basic auth, creds can be found in the normal place).
 When merged to `master`, CircleCI will automatically deploy to https://www.quartic.io.
 
+## Spellchecking
+
+The CircleCI build runs `hunspell` on the generated HTML using a GB English dictionary.  Custom words can be added to
+the `spelling.dic` file if it fails.  Please add to the correct section, and maintain in alphabetical order.
 
 ## Hosting
 
