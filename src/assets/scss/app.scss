@@ -257,7 +257,7 @@ a {
     background-size: cover;
   }
 
-  .section[data-anchor="principles"] & {
+  .section[data-anchor="values"] & {
     @include light-on-dark;
     background-color: $sexy-pink;
   }
