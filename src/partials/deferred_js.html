@@ -6,7 +6,6 @@
         downloadScript("//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.js");
         initFullPage();
         initCookieConsent();
-        initVideo();
     });
 
     function downloadScript(url) {
@@ -24,7 +23,7 @@
             navigationTooltips: [
                 "Big data for big infrastructure.",
                 "Imagine untangling things.",
-                "Tame those spreadsheets!",
+                "Good decisions start with clean data.",
                 "Everything at your fingertips.",
                 "World class AI.",
                 "Case study: highway maintenance.",
@@ -53,18 +52,6 @@
         } else {
             setTimeout(initCookieConsent, 500);
         }
-    }
-
-    function initVideo() {
-        var url = "https://www.youtube.com/embed/cAR_z7QRptQ?rel=0&showinfo=0&autoplay=1";
-        $(window).on("open.zf.reveal", function() {
-            $("#quartic-video").attr('src', url);
-            gaEvent('Videos', 'play', 'Quartic intro video');
-        });
-
-        $(window).on("closed.zf.reveal", function() {
-            $("#quartic-video").attr('src', '');
-        });
     }
 
     function gaEvent(category, action, label) {
