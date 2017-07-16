@@ -116,7 +116,14 @@ function images() {
 // Start a server with BrowserSync to preview the site in
 function server(done) {
   browser.init({
-    server: PATHS.dist, port: PORT
+    server: PATHS.dist, port: PORT,
+    middleware: function(req, res, next) {
+      // Ensure we don't rewrite when there's no path (i.e. home) or when there's already a suffix (e.g. an asset)
+      if (req.url !== "/" && !req.url.match(/.*\..*/)) {
+        req.url = req.url + ".html";
+      }
+      return next();
+    }
   });
   done();
 }
