@@ -93,11 +93,12 @@ a {
 .qt-button {
   @extend .button;
   background-color: transparent;
-  border-width: 4px;
+  border-width: 1px;
   border-color: $white;
   color: $white;
   font-weight: bold;
   margin-bottom: 0em;
+  margin-left: 0.1em;
   &:hover {
     background-color: $primary-color;
     border-color: $primary-color;
@@ -214,28 +215,12 @@ a {
     vertical-align: middle;
   }
 
-  .section[data-anchor="home"] & {
+
+  .section[data-anchor="mission"] & {
     @include light-on-dark;
     @include in-your-face;
-    background: url('/assets/img/road.jpg') no-repeat top;
+    background: url('/assets/img/background_tiles.jpg') no-repeat top;
     background-size: cover;
-  }
-
-  .section[data-anchor="untangling-big-infrastructure"] & {
-    @include light-on-dark;
-    background-color: $sexy-pink;
-  }
-
-  .section[data-anchor="data-integration"] & {
-    background-color: $white;
-  }
-
-  .section[data-anchor="search"] & {
-    background-color: $light-gray;
-  }
-
-  .section[data-anchor="insights"] & {
-    background-color: $white;
   }
 
   .section[data-anchor="case-study"] & {
@@ -245,21 +230,14 @@ a {
     background-size: cover;
   }
 
-  .section[data-anchor="epilogue"] & {
+  .section[data-anchor="product"] & {
     @include light-on-dark;
     background-color: $sultry-pink;
   }
 
-  .section[data-anchor="mission-home"] & {
+  .section[data-anchor="epilogue"] & {
     @include light-on-dark;
-    @include in-your-face;
-    background: url('/assets/img/mission.jpg') no-repeat center;
-    background-size: cover;
-  }
-
-  .section[data-anchor="values"] & {
-    @include light-on-dark;
-    background-color: $sexy-pink;
+    background-color: $sultry-pink;
   }
 }
 
