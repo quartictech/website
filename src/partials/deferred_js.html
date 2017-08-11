@@ -17,18 +17,8 @@
     function initFullPage() {
         $("#fullpage").fullpage({
             recordHistory: false,
-            fixedElements: "#nav",
-            navigation: true,
-            navigationPosition: "right",
-            navigationTooltips: [
-                "Big data for big infrastructure.",
-                "Imagine untangling things.",
-                "Good decisions start with clean data.",
-                "Everything at your fingertips.",
-                "World class AI.",
-                "Case study: highway maintenance.",
-                "Find out how Quartic can help."
-            ],
+            fixedElements: "#nav, .footer",
+            navigation: false,
         });
     }
 

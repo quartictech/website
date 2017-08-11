@@ -1,90 +1,94 @@
 ---
 layout: default
-title: Big data for big maintenance
-description: Quartic untangles big infrastructure headaches.
+title: Take the work out of data engineering.
+description: Data preparation accounts for about 80% of the work of data scientists.  Not any more.
 ---
 <div id="fullpage">
-    <div class="section" data-anchor="home">
-        <div class="qt-stripe">
-            <div>
-                {{> splash}}
-            </div>
-        </div>
-    </div>
 
-    <div class="section" data-anchor="untangling-big-infrastructure">
-        <div class="qt-stripe">
+    <div id="splash" class="section" data-anchor="mission">
+        <div class="qt-stripe" style="padding: 4em 0">
             <div>
-                {{> imagine}}
-            </div>
-        </div>
-    </div>
-
-    <div class="section" data-anchor="data-integration">
-        <div class="qt-stripe">
-            <div>
-                {{> data_integration}}
-            </div>
-        </div>
-    </div>
-
-    <div class="section" data-anchor="search">
-        <div class="qt-stripe">
-            <div>
-                {{> search}}
-            </div>
-        </div>
-    </div>
-
-    <div class="section" data-anchor="insights">
-        <div class="qt-stripe">
-            <div>
-                {{> insights}}
-            </div>
-        </div>
-    </div>
-
-    <div class="section" data-anchor="case-study">
-        <div class="qt-stripe">
-            <div>
-                {{> case_study}}
-            </div>
-        </div>
-    </div>
-
-    <div class="section fp-auto-height" data-anchor="epilogue">
-        <div class="qt-stripe">
-            <div>
-                &nbsp;
-                <h1>Find out how Quartic can help.</h1>
-                <h3><a href="mailto:contact@quartic.io">Email us</a> or use the form below.</h3>
-                <form action="/post/contact-us" method="POST" id="contact-us-form">
-                    <div class="row form-row">
-                        <input type="text" name="_gotcha" style="display:none" />
-                        <div class="columns small-12">
-                            <input type="text" name="name" placeholder="Name" />
-                        </div>
+                <div class="row">
+                    <div class="small-0 medium-3 columns">&nbsp;</div>
+                    <div class="small-12 medium-12 columns">
+                        <h1>Quartic takes the work out of data engineering.</h1>
+                        <h3>Data preparation accounts for 80% of the work of data scientists.</h3>
+                        <h3>Quartic is building the product to change this.</h3>
+                        &nbsp;
+                        <h4>Sign up to be notified when we launch.</h4>
+                        <form action="/post/contact-us" method="POST" id="contact-us-form">
+                            <input type="text" name="_gotcha" style="display:none" />
+                            <div class="row form-row">
+                                <div class="columns small-12">
+                                    <input type="text" class="inline" name="email" placeholder="Email" />
+                                    <button class="qt-button" onclick="gaFormEvent('Form', 'signup', 'contact-us', '#contact-us-form');" />Register</button>
+                                </div>
+                            </div>
+                            <input type="hidden" name="_next" value="/thanks" />
+                        </form>
                     </div>
-                    <div class="row form-row">
-                        <div class="columns small-12">
-                            <input type="text" name="email" placeholder="Email" />
-                        </div>
+                    <div class="small-12 columns">
+                      <ul class="footer-icons">
+                        <li>
+                            <a href="https://twitter.com/quartictech" class="fi-social-twitter" style="font-size: 2em"></a>
+                        </li>
+                        <li>
+                            <a href="https://facebook.com/quartictech" class="fi-social-facebook" style="font-size: 2em"></a>
+                        </li>
+                        <li>
+                            <a href="https://www.linkedin.com/company/quartic-technologies" class="fi-social-linkedin" style="font-size: 2em"></a>
+                        </li>
+                        <li>
+                            <a href="mailto:contact@quartic.io" class="fi-mail" style="font-size: 2em"></a>
+                        </li>
+                      </ul>
                     </div>
-                    <div class="row form-row">
-                        <div class="columns small-12">
-                            <textarea rows=4 name="message" placeholder="Message"></textarea>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="columns small-12">
-                            <button class="qt-button" onclick="gaFormEvent('Form', 'signup', 'contact-us', '#contact-us-form');" />Send</button>
-                        </div>
-                    </div>
-                    <input type="hidden" name="_next" value="/thanks" />
-                </form>
+                </div>
+            </div>
+        </div>
+    </div>
 
-                {{> footer}}
+    <div class="section" data-anchor="product">
+        <div class="qt-stripe">
+            <div>
+                <h1>Our product.</h1>
+                <div class="row">
+                    <div class="small-12 medium-4 columns">
+                        <i class="qt-gimpy-icon fi-refresh"></i>
+                        <h3><b>#1:</b> Automate all the things.</h3>
+                        <p>
+                            Traditional products require armies of people repeating the same data operations.
+                        </p>
+                        <p>
+                            Whenever we see that, we eliminate it with state-of-the-art automation and AI.
+                        </p>
+                    </div>
+                    <div class="small-12 medium-4 columns">
+                        <i class="qt-gimpy-icon fi-photo"></i>
+                        <h3><b>#2:</b> Build for the real world.</h3>
+                        <p>
+                            We use the product ourselves, to help our enterprise customers with their business challenges.
+                        </p>
+                        <p>
+                            This ensures it works for
+                            organisations that want practical answers, rather than over-engineered developer tools.
+                        </p>
+                    </div>
+                    <div class="small-12 medium-4 columns">
+                        <i class="qt-gimpy-icon fi-page-edit"></i>
+                        <h3><b>#3:</b> Data pipelines are code.</h3>
+                        <p>
+                            We don’t pretend otherwise.
+                        </p>
+                        <p>
+                            Our product packages the best agile software development
+                            techniques and makes them available to data science/engineering teams.
+                        </p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 </div>
+
+
