@@ -360,7 +360,7 @@ input, textarea, button {
   padding: 10px;
 
   input, textarea {
-    max-width: 400px;
+    min-width: 200px;
     padding: 10px 0 10px 10px; 
     border-radius: 4px;
     border-color: $white;
