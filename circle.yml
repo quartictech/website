@@ -63,4 +63,4 @@ jobs:
               TARGET=www-dummy.quartic.io
             fi
             gcloud-auth
-            rsync -e "gcloud compute ssh --zone ${GCLOUD_ZONE} ${GCLOUD_SERVICE_ACCOUNT}@${GCLOUD_WEB_INSTANCE} -- -t" --delete -avz dist/ :/opt/quartic/${TARGET}
+            rsync -e "gcloud compute ssh --zone ${GCLOUD_ZONE} ${GCLOUD_SERVICE_ACCOUNT}@${GCLOUD_WEB_INSTANCE} -- -T" --delete -avz dist/ :/opt/quartic/${TARGET}
