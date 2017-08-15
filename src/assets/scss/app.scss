@@ -69,6 +69,10 @@ $sultry-pink: #5A057B;
   color: $white !important;
   font-weight: bolder;
   @include shadow;
+
+  @include breakpoint(small only) {
+    background-color: rgba(10,10,10,0.6);
+  }
 }
 
 p a {
