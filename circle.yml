@@ -47,13 +47,9 @@ jobs:
             yarn run build
 
       - run:
-          name: Install spellchecking stuff
-          command: apt-get update && apt-get install -y hunspell myspell-en-gb
-
-      - run:
           name: Run spellchecker
           command: |
-            RESULTS=$(hunspell -d en_GB -p spelling.dic -H -u3 dist/*.html)
+            RESULTS=$(for f in dist/*.html; do aspell list -l en_GB --add-filter=sgml --add-extra-dicts=$(pwd)/wordlist < "${f}"; done)
             echo ${RESULTS}
             test "${RESULTS}" == ""
 
