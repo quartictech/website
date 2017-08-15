@@ -49,7 +49,7 @@ jobs:
       - run:
           name: Run spellchecker
           command: |
-            RESULTS=$(for f in dist/*.html; do aspell list -l en_GB --add-filter=sgml --add-extra-dicts=$(pwd)/wordlist < "${f}"; done)
+            RESULTS=$(for f in dist/*.html; do aspell list -l en_GB --add-filter=sgml --add-sgml-skip=script --add-extra-dicts=$(pwd)/wordlist < "${f}"; done)
             echo ${RESULTS}
             test "${RESULTS}" == ""
 
