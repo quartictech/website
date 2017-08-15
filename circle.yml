@@ -12,7 +12,7 @@ jobs:
 
       - restore-cache:
           keys:
-            - website-v2-ssh
+            - website-v3-ssh
 
       - run:
           name: Register SSH key
@@ -20,15 +20,15 @@ jobs:
             if [ ! -e ~/.ssh/google_compute_engine ]; then ssh-keygen -f ~/.ssh/google_compute_engine -N ""; fi
 
       - save_cache:
-          key: website-v2-ssh
+          key: website-v3-ssh
           paths:
             - ~/.ssh
 
       - restore_cache:
           keys:
-            - website-v2-{{ .Branch }}-yarn-{{ checksum "yarn.lock" }}
-            - website-v2-{{ .Branch }}-yarn
-            - website-v2-develop-yarn
+            - website-v3-{{ .Branch }}-yarn-{{ checksum "yarn.lock" }}
+            - website-v3-{{ .Branch }}-yarn
+            - website-v3-develop-yarn
 
       - run:
           name: Install dependencies
@@ -36,7 +36,7 @@ jobs:
             yarn install
 
       - save_cache:
-          key: website-v2-{{ .Branch }}-yarn-{{ checksum "yarn.lock" }}
+          key: website-v3-{{ .Branch }}-yarn-{{ checksum "yarn.lock" }}
           paths:
             - node_modules
 
