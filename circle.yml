@@ -63,5 +63,8 @@ jobs:
               TARGET=www-dummy.quartic.io
             fi
             gcloud-auth
-            gcloud compute ssh --zone ${GCLOUD_ZONE} ${GCLOUD_SERVICE_ACCOUNT}@${GCLOUD_WEB_INSTANCE} -- echo Hello
-            rsync -vvv -e "gcloud compute ssh --zone ${GCLOUD_ZONE} ${GCLOUD_SERVICE_ACCOUNT}@${GCLOUD_WEB_INSTANCE} -- -vvv" --delete -avz dist/ :/opt/quartic/${TARGET}
+            # gcloud ssh is weird the first time the ssh key is used causing the rsync to hang
+            # Initiate a session once first to make this regular
+            gcloud compute ssh --zone ${GCLOUD_ZONE} ${GCLOUD_SERVICE_ACCOUNT}@${GCLOUD_WEB_INSTANCE} -- true
+            # rsync
+            rsync -e "gcloud compute ssh --zone ${GCLOUD_ZONE} ${GCLOUD_SERVICE_ACCOUNT}@${GCLOUD_WEB_INSTANCE} --" --delete -avz dist/ :/opt/quartic/${TARGET}
