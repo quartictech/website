@@ -3,7 +3,7 @@ version: 2
 jobs:
   build:
     docker:
-      - image: quartic/uber-builder:91
+      - image: quartic/uber-builder:112
 
     working_directory: ~/website
 
@@ -53,18 +53,36 @@ jobs:
             echo ${RESULTS}
             test "${RESULTS}" == ""
 
-      - deploy:
+      - setup_remote_docker
+
+      - run:
+          name: Build Docker image
+          command: docker build -t website .
+
+      - run:
+          name: Publish Docker image
           command: |
-            if [ "${CIRCLE_BRANCH}" == "master" ]; then
-              TARGET=www.quartic.io
-            elif [ "${CIRCLE_BRANCH}" == "develop" ]; then
-              TARGET=www-test.quartic.io
-            else
-              TARGET=www-dummy.quartic.io
-            fi
-            gcloud-auth
-            # gcloud ssh is weird the first time the ssh key is used causing the rsync to hang
-            # Initiate a session once first to make this regular
-            gcloud compute ssh --zone ${GCLOUD_ZONE} ${GCLOUD_SERVICE_ACCOUNT}@${GCLOUD_WEB_INSTANCE} -- true
-            # rsync
-            rsync -e "gcloud compute ssh --zone ${GCLOUD_ZONE} ${GCLOUD_SERVICE_ACCOUNT}@${GCLOUD_WEB_INSTANCE} --" --delete -avz dist/ :/opt/quartic/${TARGET}
+            # TODO - move all this to helper
+            echo ${GCLOUD_SERVICE_KEY_BASE64} | base64 -d > ${HOME}/gcloud-service-key.json
+            gcloud auth activate-service-account --key-file ${HOME}/gcloud-service-key.json
+            rm ${HOME}/gcloud-service-key.json
+            docker login -u oauth2accesstoken -p "$(gcloud auth print-access-token)" https://eu.gcr.io
+
+            docker tag website ${GCLOUD_DOCKER_REPOSITORY}/website:${CIRCLE_BUILD_NUM}
+            docker push ${GCLOUD_DOCKER_REPOSITORY}/website:${CIRCLE_BUILD_NUM}
+
+      # - deploy:
+      #     command: |
+      #       if [ "${CIRCLE_BRANCH}" == "master" ]; then
+      #         TARGET=www.quartic.io
+      #       elif [ "${CIRCLE_BRANCH}" == "develop" ]; then
+      #         TARGET=www-test.quartic.io
+      #       else
+      #         TARGET=www-dummy.quartic.io
+      #       fi
+      #       gcloud-auth
+      #       # gcloud ssh is weird the first time the ssh key is used causing the rsync to hang
+      #       # Initiate a session once first to make this regular
+      #       gcloud compute ssh --zone ${GCLOUD_ZONE} ${GCLOUD_SERVICE_ACCOUNT}@${GCLOUD_WEB_INSTANCE} -- true
+      #       # rsync
+      #       rsync -e "gcloud compute ssh --zone ${GCLOUD_ZONE} ${GCLOUD_SERVICE_ACCOUNT}@${GCLOUD_WEB_INSTANCE} --" --delete -avz dist/ :/opt/quartic/${TARGET}
