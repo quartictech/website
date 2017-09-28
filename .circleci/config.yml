@@ -60,7 +60,7 @@ jobs:
           command: docker build -t website .
 
       - run:
-          name: Publish Docker image
+          name: GCloud auth
           command: |
             # TODO - move all this to helper
             echo ${GCLOUD_SERVICE_KEY_BASE64} | base64 -d > ${HOME}/gcloud-service-key.json
@@ -68,8 +68,20 @@ jobs:
             rm ${HOME}/gcloud-service-key.json
             docker login -u oauth2accesstoken -p "$(gcloud auth print-access-token)" https://eu.gcr.io
 
+      - run:
+          name: Publish Docker image
+          command: |
             docker tag website ${GCLOUD_DOCKER_REPOSITORY}/website:${CIRCLE_BUILD_NUM}
             docker push ${GCLOUD_DOCKER_REPOSITORY}/website:${CIRCLE_BUILD_NUM}
+            # Also push a latest tag to make cluster reprovisioning more pleasant
+            docker tag website ${GCLOUD_DOCKER_REPOSITORY}/website:latest
+            docker push ${GCLOUD_DOCKER_REPOSITORY}/website:latest
+
+      # - deploy:
+      #     command: |
+      #       # See https://kubernetes.io/docs/user-guide/kubectl-cheatsheet/
+      #       kubectl patch pod www -p '{"spec":{"containers":[{"name":"kubernetes-serve-hostname","image":"new image"}]}}'
+
 
       # - deploy:
       #     command: |
