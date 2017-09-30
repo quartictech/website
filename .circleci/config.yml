@@ -82,9 +82,7 @@ jobs:
                 --project ${STAGING_PROJECT_ID} \
                 --zone ${STAGING_CLUSTER_ZONE}
 
-              # See https://kubernetes.io/docs/user-guide/kubectl-cheatsheet/
-              kubectl patch pod www -n www \
-                -p "{\"spec\":{\"containers\":[{\"name\":\"www\",\"image\":\"${GCLOUD_DOCKER_REPOSITORY}/website:${CIRCLE_BUILD_NUM}\"}]}}"
+              kubectl set image -n www deployment/www www=${GCLOUD_DOCKER_REPOSITORY}/website:${CIRCLE_BUILD_NUM}
 
             # elif [ "${CIRCLE_BRANCH}" == "master" ]; then
             #   # TODO - remove this old-school stuff
