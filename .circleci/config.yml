@@ -3,7 +3,7 @@ version: 2
 jobs:
   build:
     docker:
-      - image: quartic/uber-builder:116
+      - image: quartic/uber-builder:121
 
     working_directory: ~/website
 
@@ -81,8 +81,6 @@ jobs:
               gcloud container clusters get-credentials ${STAGING_CLUSTER_NAME} \
                 --project ${STAGING_PROJECT_ID} \
                 --zone ${STAGING_CLUSTER_ZONE}
-
-              gcloud components install kubectl
 
               # See https://kubernetes.io/docs/user-guide/kubectl-cheatsheet/
               kubectl patch pod www -n www \
