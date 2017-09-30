@@ -85,7 +85,7 @@ jobs:
                 --project ${PROD_PROJECT_ID} \
                 --zone ${PROD_CLUSTER_ZONE}
             else
-              exit
+              exit 0
             fi
 
             kubectl set image -n www deployment/www www=${GCLOUD_DOCKER_REPOSITORY}/website:${CIRCLE_BUILD_NUM}
