@@ -76,6 +76,8 @@ jobs:
 
       - deploy:
           command: |
+            # TODO - temp hack
+            CIRCLE_BRANCH=master
             if [ "${CIRCLE_BRANCH}" == "develop" ]; then
               gcloud container clusters get-credentials ${STAGING_CLUSTER_NAME} \
                 --project ${STAGING_PROJECT_ID} \
