@@ -82,6 +82,8 @@ jobs:
                 --project ${STAGING_PROJECT_ID} \
                 --zone ${STAGING_CLUSTER_ZONE}
 
+              gcloud components install kubectl
+
               # See https://kubernetes.io/docs/user-guide/kubectl-cheatsheet/
               kubectl patch pod www -n www \
                 -p "{\"spec\":{\"containers\":[{\"name\":\"www\",\"image\":\"${GCLOUD_DOCKER_REPOSITORY}/website:${CIRCLE_BUILD_NUM}\"}]}}"
