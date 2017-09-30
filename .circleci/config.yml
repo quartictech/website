@@ -3,7 +3,7 @@ version: 2
 jobs:
   build:
     docker:
-      - image: quartic/uber-builder:112
+      - image: quartic/uber-builder:116
 
     working_directory: ~/website
 
@@ -61,40 +61,38 @@ jobs:
 
       - run:
           name: GCloud auth
-          command: |
-            # TODO - move all this to helper
-            echo ${GCLOUD_SERVICE_KEY_BASE64} | base64 -d > ${HOME}/gcloud-service-key.json
-            gcloud auth activate-service-account --key-file ${HOME}/gcloud-service-key.json
-            rm ${HOME}/gcloud-service-key.json
-            docker login -u oauth2accesstoken -p "$(gcloud auth print-access-token)" https://eu.gcr.io
+          command: google-cloud-auth --with-docker
 
       - run:
           name: Publish Docker image
           command: |
             docker tag website ${GCLOUD_DOCKER_REPOSITORY}/website:${CIRCLE_BUILD_NUM}
             docker push ${GCLOUD_DOCKER_REPOSITORY}/website:${CIRCLE_BUILD_NUM}
+
             # Also push a latest tag to make cluster reprovisioning more pleasant
-            docker tag website ${GCLOUD_DOCKER_REPOSITORY}/website:latest
-            docker push ${GCLOUD_DOCKER_REPOSITORY}/website:latest
+            if [ "${CIRCLE_BRANCH}" == "develop" ]; then
+              docker tag website ${GCLOUD_DOCKER_REPOSITORY}/website:develop
+              docker push ${GCLOUD_DOCKER_REPOSITORY}/website:develop
+            fi
 
-      # - deploy:
-      #     command: |
-      #       # See https://kubernetes.io/docs/user-guide/kubectl-cheatsheet/
-      #       kubectl patch pod www -p '{"spec":{"containers":[{"name":"kubernetes-serve-hostname","image":"new image"}]}}'
+      - deploy:
+          command: |
+            # if [ "${CIRCLE_BRANCH}" == "develop" ]; then
+              gcloud container clusters get-credentials ${STAGING_CLUSTER_NAME} \
+                --project ${STAGING_PROJECT_ID} \
+                --zone ${STAGING_CLUSTER_ZONE}
 
+              # See https://kubernetes.io/docs/user-guide/kubectl-cheatsheet/
+              kubectl patch pod www -n www \
+                -p "{\"spec\":{\"containers\":[{\"name\":\"www\",\"image\":\"${GCLOUD_DOCKER_REPOSITORY}/website:${CIRCLE_BUILD_NUM}\"}]}}"
 
-      # - deploy:
-      #     command: |
-      #       if [ "${CIRCLE_BRANCH}" == "master" ]; then
-      #         TARGET=www.quartic.io
-      #       elif [ "${CIRCLE_BRANCH}" == "develop" ]; then
-      #         TARGET=www-test.quartic.io
-      #       else
-      #         TARGET=www-dummy.quartic.io
-      #       fi
-      #       gcloud-auth
-      #       # gcloud ssh is weird the first time the ssh key is used causing the rsync to hang
-      #       # Initiate a session once first to make this regular
-      #       gcloud compute ssh --zone ${GCLOUD_ZONE} ${GCLOUD_SERVICE_ACCOUNT}@${GCLOUD_WEB_INSTANCE} -- true
-      #       # rsync
-      #       rsync -e "gcloud compute ssh --zone ${GCLOUD_ZONE} ${GCLOUD_SERVICE_ACCOUNT}@${GCLOUD_WEB_INSTANCE} --" --delete -avz dist/ :/opt/quartic/${TARGET}
+            # elif [ "${CIRCLE_BRANCH}" == "master" ]; then
+            #   # TODO - remove this old-school stuff
+
+            #   gcloud-auth
+            #   # gcloud ssh is weird the first time the ssh key is used causing the rsync to hang
+            #   # Initiate a session once first to make this regular
+            #   gcloud compute ssh --zone ${GCLOUD_ZONE} ${GCLOUD_SERVICE_ACCOUNT}@${GCLOUD_WEB_INSTANCE} -- true
+            #   # rsync
+            #   rsync -e "gcloud compute ssh --zone ${GCLOUD_ZONE} ${GCLOUD_SERVICE_ACCOUNT}@${GCLOUD_WEB_INSTANCE} --" --delete -avz dist/ :/opt/quartic/www.quartic.io
+            # fi
