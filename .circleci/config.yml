@@ -69,11 +69,9 @@ jobs:
             docker tag website ${GCLOUD_DOCKER_REPOSITORY}/website:${CIRCLE_BUILD_NUM}
             docker push ${GCLOUD_DOCKER_REPOSITORY}/website:${CIRCLE_BUILD_NUM}
 
-            # Also push a latest tag to make cluster reprovisioning more pleasant
-            if [ "${CIRCLE_BRANCH}" == "develop" ]; then
-              docker tag website ${GCLOUD_DOCKER_REPOSITORY}/website:develop
-              docker push ${GCLOUD_DOCKER_REPOSITORY}/website:develop
-            fi
+            # Also push a branch tag to make cluster reprovisioning more pleasant
+            docker tag website ${GCLOUD_DOCKER_REPOSITORY}/website:${CIRCLE_BRANCH}
+            docker push ${GCLOUD_DOCKER_REPOSITORY}/website:${CIRCLE_BRANCH}
 
       - deploy:
           command: |
@@ -81,16 +79,13 @@ jobs:
               gcloud container clusters get-credentials ${STAGING_CLUSTER_NAME} \
                 --project ${STAGING_PROJECT_ID} \
                 --zone ${STAGING_CLUSTER_ZONE}
-
-              kubectl set image -n www deployment/www www=${GCLOUD_DOCKER_REPOSITORY}/website:${CIRCLE_BUILD_NUM}
-
             elif [ "${CIRCLE_BRANCH}" == "master" ]; then
-              # TODO - replace this old-school stuff with kubectl
-
-              gcloud-auth
-              # gcloud ssh is weird the first time the ssh key is used causing the rsync to hang
-              # Initiate a session once first to make this regular
-              gcloud compute ssh --zone ${GCLOUD_ZONE} ${GCLOUD_SERVICE_ACCOUNT}@${GCLOUD_WEB_INSTANCE} -- true
-              # rsync
-              rsync -e "gcloud compute ssh --zone ${GCLOUD_ZONE} ${GCLOUD_SERVICE_ACCOUNT}@${GCLOUD_WEB_INSTANCE} --" --delete -avz dist/ :/opt/quartic/www.quartic.io
+              gcloud container clusters get-credentials ${PROD_CLUSTER_NAME} \
+                --project ${PROD_PROJECT_ID} \
+                --zone ${PROD_CLUSTER_ZONE}
+            else
+              exit
             fi
+
+            kubectl set image -n www deployment/www www=${GCLOUD_DOCKER_REPOSITORY}/website:${CIRCLE_BUILD_NUM}
+            
