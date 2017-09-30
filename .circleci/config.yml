@@ -70,8 +70,9 @@ jobs:
             docker push ${GCLOUD_DOCKER_REPOSITORY}/website:${CIRCLE_BUILD_NUM}
 
             # Also push a branch tag to make cluster reprovisioning more pleasant
-            docker tag website ${GCLOUD_DOCKER_REPOSITORY}/website:${CIRCLE_BRANCH}
-            docker push ${GCLOUD_DOCKER_REPOSITORY}/website:${CIRCLE_BRANCH}
+            SAFE_BRANCH=$(echo ${CIRCLE_BRANCH} | tr "/" "-")
+            docker tag website ${GCLOUD_DOCKER_REPOSITORY}/website:${SAFE_BRANCH}
+            docker push ${GCLOUD_DOCKER_REPOSITORY}/website:${SAFE_BRANCH}
 
       - deploy:
           command: |
