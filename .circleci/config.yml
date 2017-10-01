@@ -3,7 +3,8 @@ version: 2
 jobs:
   build:
     docker:
-      - image: quartic/uber-builder:121
+      - image: ${GOOGLE_DOCKER_REPOSITORY}/uber-builder:139
+        auth: { username: _json_key, password: "${GOOGLE_CREDENTIALS}" }
 
     working_directory: ~/website
 
@@ -66,13 +67,8 @@ jobs:
       - run:
           name: Publish Docker image
           command: |
-            docker tag website ${GCLOUD_DOCKER_REPOSITORY}/website:${CIRCLE_BUILD_NUM}
-            docker push ${GCLOUD_DOCKER_REPOSITORY}/website:${CIRCLE_BUILD_NUM}
-
-            # Also push a branch tag to make cluster reprovisioning more pleasant
-            SAFE_BRANCH=$(echo ${CIRCLE_BRANCH} | tr "/" "-")
-            docker tag website ${GCLOUD_DOCKER_REPOSITORY}/website:${SAFE_BRANCH}
-            docker push ${GCLOUD_DOCKER_REPOSITORY}/website:${SAFE_BRANCH}
+            docker-tag-and-push website ${CIRCLE_BUILD_NUM}
+            docker-tag-and-push website $(echo ${CIRCLE_BRANCH} | tr "/" "-") # Also push a branch tag to make cluster reprovisioning more pleasant
 
       - deploy:
           command: |
