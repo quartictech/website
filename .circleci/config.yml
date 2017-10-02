@@ -97,34 +97,24 @@ workflows:
     jobs:
       - build
 
+      - deploy_staging:
+          requires:
+            - build
+          filters:
+            branches:
+              only: develop
+
       - hold:
           type: approval
           requires:
-            - build
+            - deploy_staging
+          filters:
+            branches:
+              only: develop
 
-      - deploy_staging:
+      - deploy_prod:
           requires:
             - hold
-
-
-      # - deploy_staging:
-      #     requires:
-      #       - build
-      #     filters:
-      #       branches:
-      #         only: develop
-
-      # - hold:
-      #     type: approval
-      #     requires:
-      #       - deploy_staging
-      #     filters:
-      #       branches:
-      #         only: develop
-
-      # - deploy_prod:
-      #     requires:
-      #       - hold
-      #     filters:
-      #       branches:
-      #         only: develop
+          filters:
+            branches:
+              only: develop
