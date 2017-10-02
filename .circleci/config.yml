@@ -7,10 +7,6 @@ references:
     docker:
       - image: quartic/uber-builder:144
 
-  gcloud_auth: &gcloud_auth
-    name: GCloud auth
-    command: google-cloud-auth --with-docker
-
   create_fallback_tag: &create_fallback_tag
     name: Create fallback tag
     command: gcloud container images add-tag ${GOOGLE_DOCKER_REPOSITORY}/website:${CIRCLE_SHA1} ${GOOGLE_DOCKER_REPOSITORY}/website:${TAG}
@@ -33,9 +29,7 @@ jobs:
             - website-v3-{{ .Branch }}-yarn
             - website-v3-develop-yarn
 
-      - run:
-          name: Install dependencies
-          command: yarn install
+      - run: yarn install
 
       - save_cache:
           key: website-v3-{{ .Branch }}-yarn-{{ checksum "yarn.lock" }}
@@ -57,31 +51,25 @@ jobs:
 
       - setup_remote_docker
 
-      - run:
-          name: Build Docker image
-          command: docker build -t website .
+      - run: docker build -t website .
 
-      - run: *gcloud_auth
+      - run: google-cloud-auth --with-docker
 
-      - run:
-          name: Push Docker image
-          command: docker-tag-and-push website ${CIRCLE_SHA1}
+      - run: docker-tag-and-push website ${CIRCLE_SHA1}
 
 
   deploy_staging:
     <<: *defaults
 
     steps:
-      - run: *gcloud_auth
+      - run: google-cloud-auth
 
       - run:
           <<: *create_fallback_tag
           environment:
             TAG: staging
 
-      - run:
-          name: Get cluster credentials
-          command: gcloud container clusters get-credentials ${STAGING_CLUSTER_NAME} --project ${STAGING_PROJECT_ID} --zone ${STAGING_CLUSTER_ZONE}
+      - run: gcloud container clusters get-credentials ${STAGING_CLUSTER_NAME} --project ${STAGING_PROJECT_ID} --zone ${STAGING_CLUSTER_ZONE}
 
       - deploy: *deploy
 
@@ -90,16 +78,14 @@ jobs:
     <<: *defaults
 
     steps:
-      - run: *gcloud_auth
+      - run: google-cloud-auth
 
       - run:
           <<: *create_fallback_tag
           environment:
             TAG: prod
 
-      - run:
-          name: Get cluster credentials
-          command: gcloud container clusters get-credentials ${PROD_CLUSTER_NAME} --project ${PROD_PROJECT_ID} --zone ${PROD_CLUSTER_ZONE}
+      - run: gcloud container clusters get-credentials ${PROD_CLUSTER_NAME} --project ${PROD_PROJECT_ID} --zone ${PROD_CLUSTER_ZONE}
 
       - deploy: *deploy
 
