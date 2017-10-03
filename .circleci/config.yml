@@ -1,28 +1,27 @@
 version: 2
 
-jobs:
-  build:
+references:
+
+  defaults: &defaults
+    working_directory: ~/website
     docker:
       - image: quartic/uber-builder:144
 
-    working_directory: ~/website
+  create_fallback_tag: &create_fallback_tag
+    name: Create fallback tag
+    command: gcloud container images add-tag ${GOOGLE_DOCKER_REPOSITORY}/website:${CIRCLE_SHA1} ${GOOGLE_DOCKER_REPOSITORY}/website:${TAG}
+
+  deploy: &deploy
+    name: Deploy to cluster
+    command: kubectl set image -n www deployment/www www=${GOOGLE_DOCKER_REPOSITORY}/website:${CIRCLE_SHA1}
+
+
+jobs:
+  build:
+    <<: *defaults
 
     steps:
       - checkout
-
-      - restore-cache:
-          keys:
-            - website-v3-ssh
-
-      - run:
-          name: Register SSH key
-          command: |
-            if [ ! -e ~/.ssh/google_compute_engine ]; then ssh-keygen -f ~/.ssh/google_compute_engine -N ""; fi
-
-      - save_cache:
-          key: website-v3-ssh
-          paths:
-            - ~/.ssh
 
       - restore_cache:
           keys:
@@ -30,10 +29,7 @@ jobs:
             - website-v3-{{ .Branch }}-yarn
             - website-v3-develop-yarn
 
-      - run:
-          name: Install dependencies
-          command: |
-            yarn install
+      - run: yarn install
 
       - save_cache:
           key: website-v3-{{ .Branch }}-yarn-{{ checksum "yarn.lock" }}
@@ -43,7 +39,7 @@ jobs:
       - run:
           name: Build distribution
           command: |
-            ./scripts/configure.sh
+            echo -e "version: ${CIRCLE_SHA1}" > src/data/build.yml
             yarn run build
 
       - run:
@@ -55,33 +51,70 @@ jobs:
 
       - setup_remote_docker
 
-      - run:
-          name: Build Docker image
-          command: docker build -t website .
+      - run: docker build -t website .
+
+      - run: google-cloud-auth --with-docker
+
+      - run: docker-tag-and-push website ${CIRCLE_SHA1}
+
+
+  deploy_staging:
+    <<: *defaults
+
+    steps:
+      - run: google-cloud-auth
 
       - run:
-          name: GCloud auth
-          command: google-cloud-auth --with-docker
+          <<: *create_fallback_tag
+          environment:
+            TAG: staging
+
+      - run: gcloud container clusters get-credentials ${STAGING_CLUSTER_NAME} --project ${STAGING_PROJECT_ID} --zone ${STAGING_CLUSTER_ZONE}
+
+      - deploy: *deploy
+
+
+  deploy_prod:
+    <<: *defaults
+
+    steps:
+      - run: google-cloud-auth
 
       - run:
-          name: Publish Docker image
-          command: |
-            docker-tag-and-push website ${CIRCLE_BUILD_NUM}
-            docker-tag-and-push website $(echo ${CIRCLE_BRANCH} | tr "/" "-") # Also push a branch tag to make cluster reprovisioning more pleasant
+          <<: *create_fallback_tag
+          environment:
+            TAG: prod
 
-      - deploy:
-          command: |
-            if [ "${CIRCLE_BRANCH}" == "develop" ]; then
-              gcloud container clusters get-credentials ${STAGING_CLUSTER_NAME} \
-                --project ${STAGING_PROJECT_ID} \
-                --zone ${STAGING_CLUSTER_ZONE}
-            elif [ "${CIRCLE_BRANCH}" == "master" ]; then
-              gcloud container clusters get-credentials ${PROD_CLUSTER_NAME} \
-                --project ${PROD_PROJECT_ID} \
-                --zone ${PROD_CLUSTER_ZONE}
-            else
-              exit 0
-            fi
+      - run: gcloud container clusters get-credentials ${PROD_CLUSTER_NAME} --project ${PROD_PROJECT_ID} --zone ${PROD_CLUSTER_ZONE}
 
-            kubectl set image -n www deployment/www www=${GOOGLE_DOCKER_REPOSITORY}/website:${CIRCLE_BUILD_NUM}
-            
+      - deploy: *deploy
+
+
+workflows:
+  version: 2
+
+  build_and_deploy:
+    jobs:
+      - build
+
+      - deploy_staging:
+          requires:
+            - build
+          filters:
+            branches:
+              only: develop
+
+      - hold:
+          type: approval
+          requires:
+            - deploy_staging
+          filters:
+            branches:
+              only: develop
+
+      - deploy_prod:
+          requires:
+            - hold
+          filters:
+            branches:
+              only: develop
