@@ -83,5 +83,5 @@ jobs:
               exit 0
             fi
 
-            kubectl set image -n www deployment/www www=${GCLOUD_DOCKER_REPOSITORY}/website:${CIRCLE_BUILD_NUM}
+            kubectl set image -n www deployment/www www=${GOOGLE_DOCKER_REPOSITORY}/website:${CIRCLE_BUILD_NUM}
             
