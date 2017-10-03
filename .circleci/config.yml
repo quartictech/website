@@ -118,3 +118,10 @@ workflows:
           filters:
             branches:
               only: develop
+
+
+experimental:
+  notify:
+    branches:
+      only:
+        - develop
