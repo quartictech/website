@@ -5,7 +5,12 @@ references:
   defaults: &defaults
     working_directory: ~/website
     docker:
-      - image: quartic/uber-builder:144
+      - image: quartic/uber-builder:160
+
+  deploy_defaults: &deploy_defaults
+    working_directory: ~/website
+    docker:
+      - image: quartic/noober-builder:160
 
   create_fallback_tag: &create_fallback_tag
     name: Create fallback tag
@@ -59,7 +64,7 @@ jobs:
 
 
   deploy_staging:
-    <<: *defaults
+    <<: *deploy_defaults
 
     steps:
       - run: google-cloud-auth
@@ -75,7 +80,7 @@ jobs:
 
 
   deploy_prod:
-    <<: *defaults
+    <<: *deploy_defaults
 
     steps:
       - run: google-cloud-auth
@@ -100,9 +105,9 @@ workflows:
       - deploy_staging:
           requires:
             - build
-          filters:
-            branches:
-              only: develop
+          # filters:
+          #   branches:
+          #     only: develop
 
       - hold:
           type: approval
