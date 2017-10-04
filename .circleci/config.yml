@@ -5,12 +5,12 @@ references:
   defaults: &defaults
     working_directory: ~/website
     docker:
-      - image: quartic/uber-builder:160
+      - image: quartic/uber-builder:160     # We need the full power of uber-builder to build
 
   deploy_defaults: &deploy_defaults
     working_directory: ~/website
     docker:
-      - image: quartic/noober-builder:160
+      - image: quartic/noober-builder:160   # Speed deploys up as noober-builder is significantly smaller
 
   create_fallback_tag: &create_fallback_tag
     name: Create fallback tag
@@ -102,7 +102,7 @@ workflows:
     jobs:
       - build
 
-      - deploy_staging:
+      - deploy_to_staging:
           requires:
             - build
           filters:
@@ -112,12 +112,12 @@ workflows:
       - hold:
           type: approval
           requires:
-            - deploy_staging
+            - deploy_to_staging
           filters:
             branches:
               only: develop
 
-      - deploy_prod:
+      - deploy_to_prod:
           requires:
             - hold
           filters:
