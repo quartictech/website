@@ -63,7 +63,7 @@ jobs:
       - run: docker-tag-and-push website ${CIRCLE_SHA1}
 
 
-  deploy_staging:
+  deploy_to_staging:
     <<: *deploy_defaults
 
     steps:
@@ -79,7 +79,7 @@ jobs:
       - deploy: *deploy
 
 
-  deploy_prod:
+  deploy_to_prod:
     <<: *deploy_defaults
 
     steps:
