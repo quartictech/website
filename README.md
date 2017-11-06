@@ -24,12 +24,6 @@ yarn start
 Site will be available at http://localhost:8000.
 
 
-## Submitting changes
-
-Changes should be submitted as PRs via the normal process.  When merged to `develop` branch, the CircleCI build
-will automatically deploy to http://www-test.quartic.io (behind basic auth, creds can be found in the normal place).
-When merged to `master`, CircleCI will automatically deploy to https://www.quartic.io.
-
 ## Spellchecking
 
 The CircleCI build runs `hunspell` on the generated HTML using a GB English dictionary.  Custom words can be added to
@@ -51,3 +45,8 @@ foundation new --framework sites --template zurb
 ```
 
 We then eliminated Bower (the dependencies originally in `bower.json` are now subsumed by `package.json`).
+
+
+## License
+
+This project is made available under [BSD License 2.0](https://github.com/quartictech/website/blob/develop/LICENSE).
