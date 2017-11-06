@@ -102,17 +102,17 @@ workflows:
     jobs:
       - build
 
-      - deploy_to_staging:
-          requires:
-            - build
-          filters:
-            branches:
-              only: develop
+      # - deploy_to_staging:
+      #     requires:
+      #       - build
+      #     filters:
+      #       branches:
+      #         only: develop
 
       - hold:
           type: approval
           requires:
-            - deploy_to_staging
+            - build # deploy_to_staging
           filters:
             branches:
               only: develop
