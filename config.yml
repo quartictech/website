@@ -42,10 +42,6 @@ PATHS:
     - "node_modules/foundation-sites/js/foundation.responsiveToggle.js"
     - "node_modules/foundation-sites/js/foundation.responsiveMenu.js"
 
-    # Other libs
-    - "node_modules/fullpage.js/vendors/scrolloverflow.min.js"
-    - "node_modules/fullpage.js/dist/jquery.fullpage.js"
-
     # Paths to your own project code are here
     - "src/assets/js/!(app).js"
     - "src/assets/js/app.js"
